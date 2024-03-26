@@ -1,494 +1,534 @@
 @keyframes pulse-anim {
   0% {
-    box-shadow: 0 2px 0 hsl(190, 50%, 40%), inset 0 0 2px 1px hsla(190, 100%, 60%, 85%),
-      inset 0 1.5px 1px 1px hsl(0, 0%, 100%), inset 0 -1px 4px hsla(0, 0%, 0%, 25%),
-      0 2px 4px hsla(0, 0%, 50%, 50%);
+    box-shadow: 0 2px 0 hsl(190deg 50% 40%), inset 0 0 2px 1px hsl(190deg 100% 60% / 85%),
+      inset 0 1.5px 1px 1px hsl(0deg 0% 100%), inset 0 -1px 4px hsl(0deg 0% 0% / 25%),
+      0 2px 4px hsl(0deg 0% 50% / 50%);
     background: linear-gradient(
         to bottom,
-        hsla(0, 0%, 100%, 25%),
-        hsla(0, 0%, 100%, 50%) 50%,
+        hsl(0deg 0% 100% / 25%),
+        hsl(0deg 0% 100% / 50%) 50%,
         transparent 50%
       ),
-      linear-gradient(to bottom, hsl(200, 50%, 95%), hsl(200, 40%, 80%));
+      linear-gradient(to bottom, hsl(200deg 50% 95%), hsl(200deg 40% 80%));
   }
+
   2.5% {
-    box-shadow: 0 2px 0 hsl(190, 51.25%, 40%), inset 0 0 2.05px 1.025px hsla(190, 100%, 60%, 85%),
-      inset 0 1.5px 1px 1px hsl(0, 0%, 100%), inset 0 -1px 4px hsla(0, 0%, 0%, 25%),
-      0 2px 4px hsla(0, 0%, 50%, 50%);
+    box-shadow: 0 2px 0 hsl(190deg 51.25% 40%), inset 0 0 2.05px 1.025px hsl(190deg 100% 60% / 85%),
+      inset 0 1.5px 1px 1px hsl(0deg 0% 100%), inset 0 -1px 4px hsl(0deg 0% 0% / 25%),
+      0 2px 4px hsl(0deg 0% 50% / 50%);
     background: linear-gradient(
         to bottom,
-        hsla(0, 0%, 100%, 25%),
-        hsla(0, 0%, 100%, 50%) 50%,
+        hsl(0deg 0% 100% / 25%),
+        hsl(0deg 0% 100% / 50%) 50%,
         transparent 50%
       ),
-      linear-gradient(to bottom, hsl(200, 51%, 95%), hsl(200, 41%, 80%));
+      linear-gradient(to bottom, hsl(200deg 51% 95%), hsl(200deg 41% 80%));
   }
+
   5% {
-    box-shadow: 0 2px 0 hsl(190, 52.5%, 40%), inset 0 0 2.1px 1.05px hsla(190, 100%, 60%, 85%),
-      inset 0 1.5px 1px 1px hsl(0, 0%, 100%), inset 0 -1px 4px hsla(0, 0%, 0%, 25%),
-      0 2px 4px hsla(0, 0%, 50%, 50%);
+    box-shadow: 0 2px 0 hsl(190deg 52.5% 40%), inset 0 0 2.1px 1.05px hsl(190deg 100% 60% / 85%),
+      inset 0 1.5px 1px 1px hsl(0deg 0% 100%), inset 0 -1px 4px hsl(0deg 0% 0% / 25%),
+      0 2px 4px hsl(0deg 0% 50% / 50%);
     background: linear-gradient(
         to bottom,
-        hsla(0, 0%, 100%, 25%),
-        hsla(0, 0%, 100%, 50%) 50%,
+        hsl(0deg 0% 100% / 25%),
+        hsl(0deg 0% 100% / 50%) 50%,
         transparent 50%
       ),
-      linear-gradient(to bottom, hsl(200, 52%, 95%), hsl(200, 42%, 80%));
+      linear-gradient(to bottom, hsl(200deg 52% 95%), hsl(200deg 42% 80%));
   }
+
   7.5% {
-    box-shadow: 0 2px 0 hsl(190, 53.75%, 40%), inset 0 0 2.15px 1.075px hsla(190, 100%, 60%, 85%),
-      inset 0 1.5px 1px 1px hsl(0, 0%, 100%), inset 0 -1px 4px hsla(0, 0%, 0%, 25%),
-      0 2px 4px hsla(0, 0%, 50%, 50%);
+    box-shadow: 0 2px 0 hsl(190deg 53.75% 40%), inset 0 0 2.15px 1.075px hsl(190deg 100% 60% / 85%),
+      inset 0 1.5px 1px 1px hsl(0deg 0% 100%), inset 0 -1px 4px hsl(0deg 0% 0% / 25%),
+      0 2px 4px hsl(0deg 0% 50% / 50%);
     background: linear-gradient(
         to bottom,
-        hsla(0, 0%, 100%, 25%),
-        hsla(0, 0%, 100%, 50%) 50%,
+        hsl(0deg 0% 100% / 25%),
+        hsl(0deg 0% 100% / 50%) 50%,
         transparent 50%
       ),
-      linear-gradient(to bottom, hsl(200, 53%, 95%), hsl(200, 43%, 80%));
+      linear-gradient(to bottom, hsl(200deg 53% 95%), hsl(200deg 43% 80%));
   }
+
   10% {
-    box-shadow: 0 2px 0 hsl(190, 55%, 40%), inset 0 0 2.2px 1.1px hsla(190, 100%, 60%, 85%),
-      inset 0 1.5px 1px 1px hsl(0, 0%, 100%), inset 0 -1px 4px hsla(0, 0%, 0%, 25%),
-      0 2px 4px hsla(0, 0%, 50%, 50%);
+    box-shadow: 0 2px 0 hsl(190deg 55% 40%), inset 0 0 2.2px 1.1px hsl(190deg 100% 60% / 85%),
+      inset 0 1.5px 1px 1px hsl(0deg 0% 100%), inset 0 -1px 4px hsl(0deg 0% 0% / 25%),
+      0 2px 4px hsl(0deg 0% 50% / 50%);
     background: linear-gradient(
         to bottom,
-        hsla(0, 0%, 100%, 25%),
-        hsla(0, 0%, 100%, 50%) 50%,
+        hsl(0deg 0% 100% / 25%),
+        hsl(0deg 0% 100% / 50%) 50%,
         transparent 50%
       ),
-      linear-gradient(to bottom, hsl(200, 54%, 95%), hsl(200, 44%, 80%));
+      linear-gradient(to bottom, hsl(200deg 54% 95%), hsl(200deg 44% 80%));
   }
+
   12.5% {
-    box-shadow: 0 2px 0 hsl(190, 56.25%, 40%), inset 0 0 2.25px 1.125px hsla(190, 100%, 60%, 85%),
-      inset 0 1.5px 1px 1px hsl(0, 0%, 100%), inset 0 -1px 4px hsla(0, 0%, 0%, 25%),
-      0 2px 4px hsla(0, 0%, 50%, 50%);
+    box-shadow: 0 2px 0 hsl(190deg 56.25% 40%), inset 0 0 2.25px 1.125px hsl(190deg 100% 60% / 85%),
+      inset 0 1.5px 1px 1px hsl(0deg 0% 100%), inset 0 -1px 4px hsl(0deg 0% 0% / 25%),
+      0 2px 4px hsl(0deg 0% 50% / 50%);
     background: linear-gradient(
         to bottom,
-        hsla(0, 0%, 100%, 25%),
-        hsla(0, 0%, 100%, 50%) 50%,
+        hsl(0deg 0% 100% / 25%),
+        hsl(0deg 0% 100% / 50%) 50%,
         transparent 50%
       ),
-      linear-gradient(to bottom, hsl(200, 55%, 95%), hsl(200, 45%, 80%));
+      linear-gradient(to bottom, hsl(200deg 55% 95%), hsl(200deg 45% 80%));
   }
+
   15% {
-    box-shadow: 0 2px 0 hsl(190, 57.5%, 40%), inset 0 0 2.3px 1.15px hsla(190, 100%, 60%, 85%),
-      inset 0 1.5px 1px 1px hsl(0, 0%, 100%), inset 0 -1px 4px hsla(0, 0%, 0%, 25%),
-      0 2px 4px hsla(0, 0%, 50%, 50%);
+    box-shadow: 0 2px 0 hsl(190deg 57.5% 40%), inset 0 0 2.3px 1.15px hsl(190deg 100% 60% / 85%),
+      inset 0 1.5px 1px 1px hsl(0deg 0% 100%), inset 0 -1px 4px hsl(0deg 0% 0% / 25%),
+      0 2px 4px hsl(0deg 0% 50% / 50%);
     background: linear-gradient(
         to bottom,
-        hsla(0, 0%, 100%, 25%),
-        hsla(0, 0%, 100%, 50%) 50%,
+        hsl(0deg 0% 100% / 25%),
+        hsl(0deg 0% 100% / 50%) 50%,
         transparent 50%
       ),
-      linear-gradient(to bottom, hsl(200, 56%, 95%), hsl(200, 46%, 80%));
+      linear-gradient(to bottom, hsl(200deg 56% 95%), hsl(200deg 46% 80%));
   }
+
   17.5% {
-    box-shadow: 0 2px 0 hsl(190, 58.75%, 40%), inset 0 0 2.35px 1.175px hsla(190, 100%, 60%, 85%),
-      inset 0 1.5px 1px 1px hsl(0, 0%, 100%), inset 0 -1px 4px hsla(0, 0%, 0%, 25%),
-      0 2px 4px hsla(0, 0%, 50%, 50%);
+    box-shadow: 0 2px 0 hsl(190deg 58.75% 40%), inset 0 0 2.35px 1.175px hsl(190deg 100% 60% / 85%),
+      inset 0 1.5px 1px 1px hsl(0deg 0% 100%), inset 0 -1px 4px hsl(0deg 0% 0% / 25%),
+      0 2px 4px hsl(0deg 0% 50% / 50%);
     background: linear-gradient(
         to bottom,
-        hsla(0, 0%, 100%, 25%),
-        hsla(0, 0%, 100%, 50%) 50%,
+        hsl(0deg 0% 100% / 25%),
+        hsl(0deg 0% 100% / 50%) 50%,
         transparent 50%
       ),
-      linear-gradient(to bottom, hsl(200, 57%, 95%), hsl(200, 47%, 80%));
+      linear-gradient(to bottom, hsl(200deg 57% 95%), hsl(200deg 47% 80%));
   }
+
   20% {
-    box-shadow: 0 2px 0 hsl(190, 60%, 40%), inset 0 0 2.4px 1.2px hsla(190, 100%, 60%, 85%),
-      inset 0 1.5px 1px 1px hsl(0, 0%, 100%), inset 0 -1px 4px hsla(0, 0%, 0%, 25%),
-      0 2px 4px hsla(0, 0%, 50%, 50%);
+    box-shadow: 0 2px 0 hsl(190deg 60% 40%), inset 0 0 2.4px 1.2px hsl(190deg 100% 60% / 85%),
+      inset 0 1.5px 1px 1px hsl(0deg 0% 100%), inset 0 -1px 4px hsl(0deg 0% 0% / 25%),
+      0 2px 4px hsl(0deg 0% 50% / 50%);
     background: linear-gradient(
         to bottom,
-        hsla(0, 0%, 100%, 25%),
-        hsla(0, 0%, 100%, 50%) 50%,
+        hsl(0deg 0% 100% / 25%),
+        hsl(0deg 0% 100% / 50%) 50%,
         transparent 50%
       ),
-      linear-gradient(to bottom, hsl(200, 59%, 95%), hsl(200, 49%, 80%));
+      linear-gradient(to bottom, hsl(200deg 59% 95%), hsl(200deg 49% 80%));
   }
+
   22.5% {
-    box-shadow: 0 2px 0 hsl(190, 61.25%, 40%), inset 0 0 2.45px 1.225px hsla(190, 100%, 60%, 85%),
-      inset 0 1.5px 1px 1px hsl(0, 0%, 100%), inset 0 -1px 4px hsla(0, 0%, 0%, 25%),
-      0 2px 4px hsla(0, 0%, 50%, 50%);
+    box-shadow: 0 2px 0 hsl(190deg 61.25% 40%), inset 0 0 2.45px 1.225px hsl(190deg 100% 60% / 85%),
+      inset 0 1.5px 1px 1px hsl(0deg 0% 100%), inset 0 -1px 4px hsl(0deg 0% 0% / 25%),
+      0 2px 4px hsl(0deg 0% 50% / 50%);
     background: linear-gradient(
         to bottom,
-        hsla(0, 0%, 100%, 25%),
-        hsla(0, 0%, 100%, 50%) 50%,
+        hsl(0deg 0% 100% / 25%),
+        hsl(0deg 0% 100% / 50%) 50%,
         transparent 50%
       ),
-      linear-gradient(to bottom, hsl(200, 60%, 95%), hsl(200, 50%, 80%));
+      linear-gradient(to bottom, hsl(200deg 60% 95%), hsl(200deg 50% 80%));
   }
+
   25% {
-    box-shadow: 0 2px 0 hsl(190, 62.5%, 40%), inset 0 0 2.5px 1.25px hsla(190, 100%, 60%, 85%),
-      inset 0 1.5px 1px 1px hsl(0, 0%, 100%), inset 0 -1px 4px hsla(0, 0%, 0%, 25%),
-      0 2px 4px hsla(0, 0%, 50%, 50%);
+    box-shadow: 0 2px 0 hsl(190deg 62.5% 40%), inset 0 0 2.5px 1.25px hsl(190deg 100% 60% / 85%),
+      inset 0 1.5px 1px 1px hsl(0deg 0% 100%), inset 0 -1px 4px hsl(0deg 0% 0% / 25%),
+      0 2px 4px hsl(0deg 0% 50% / 50%);
     background: linear-gradient(
         to bottom,
-        hsla(0, 0%, 100%, 25%),
-        hsla(0, 0%, 100%, 50%) 50%,
+        hsl(0deg 0% 100% / 25%),
+        hsl(0deg 0% 100% / 50%) 50%,
         transparent 50%
       ),
-      linear-gradient(to bottom, hsl(200, 61%, 95%), hsl(200, 51%, 80%));
+      linear-gradient(to bottom, hsl(200deg 61% 95%), hsl(200deg 51% 80%));
   }
+
   27.5% {
-    box-shadow: 0 2px 0 hsl(190, 63.75%, 40%), inset 0 0 2.55px 1.275px hsla(190, 100%, 60%, 85%),
-      inset 0 1.5px 1px 1px hsl(0, 0%, 100%), inset 0 -1px 4px hsla(0, 0%, 0%, 25%),
-      0 2px 4px hsla(0, 0%, 50%, 50%);
+    box-shadow: 0 2px 0 hsl(190deg 63.75% 40%), inset 0 0 2.55px 1.275px hsl(190deg 100% 60% / 85%),
+      inset 0 1.5px 1px 1px hsl(0deg 0% 100%), inset 0 -1px 4px hsl(0deg 0% 0% / 25%),
+      0 2px 4px hsl(0deg 0% 50% / 50%);
     background: linear-gradient(
         to bottom,
-        hsla(0, 0%, 100%, 25%),
-        hsla(0, 0%, 100%, 50%) 50%,
+        hsl(0deg 0% 100% / 25%),
+        hsl(0deg 0% 100% / 50%) 50%,
         transparent 50%
       ),
-      linear-gradient(to bottom, hsl(200, 62%, 95%), hsl(200, 52%, 80%));
+      linear-gradient(to bottom, hsl(200deg 62% 95%), hsl(200deg 52% 80%));
   }
+
   30% {
-    box-shadow: 0 2px 0 hsl(190, 65%, 40%), inset 0 0 2.6px 1.3px hsla(190, 100%, 60%, 85%),
-      inset 0 1.5px 1px 1px hsl(0, 0%, 100%), inset 0 -1px 4px hsla(0, 0%, 0%, 25%),
-      0 2px 4px hsla(0, 0%, 50%, 50%);
+    box-shadow: 0 2px 0 hsl(190deg 65% 40%), inset 0 0 2.6px 1.3px hsl(190deg 100% 60% / 85%),
+      inset 0 1.5px 1px 1px hsl(0deg 0% 100%), inset 0 -1px 4px hsl(0deg 0% 0% / 25%),
+      0 2px 4px hsl(0deg 0% 50% / 50%);
     background: linear-gradient(
         to bottom,
-        hsla(0, 0%, 100%, 25%),
-        hsla(0, 0%, 100%, 50%) 50%,
+        hsl(0deg 0% 100% / 25%),
+        hsl(0deg 0% 100% / 50%) 50%,
         transparent 50%
       ),
-      linear-gradient(to bottom, hsl(200, 64%, 95%), hsl(200, 54%, 80%));
+      linear-gradient(to bottom, hsl(200deg 64% 95%), hsl(200deg 54% 80%));
   }
+
   32.5% {
-    box-shadow: 0 2px 0 hsl(190, 66.25%, 40%), inset 0 0 2.65px 1.325px hsla(190, 100%, 60%, 85%),
-      inset 0 1.5px 1px 1px hsl(0, 0%, 100%), inset 0 -1px 4px hsla(0, 0%, 0%, 25%),
-      0 2px 4px hsla(0, 0%, 50%, 50%);
+    box-shadow: 0 2px 0 hsl(190deg 66.25% 40%), inset 0 0 2.65px 1.325px hsl(190deg 100% 60% / 85%),
+      inset 0 1.5px 1px 1px hsl(0deg 0% 100%), inset 0 -1px 4px hsl(0deg 0% 0% / 25%),
+      0 2px 4px hsl(0deg 0% 50% / 50%);
     background: linear-gradient(
         to bottom,
-        hsla(0, 0%, 100%, 25%),
-        hsla(0, 0%, 100%, 50%) 50%,
+        hsl(0deg 0% 100% / 25%),
+        hsl(0deg 0% 100% / 50%) 50%,
         transparent 50%
       ),
-      linear-gradient(to bottom, hsl(200, 65%, 95%), hsl(200, 55%, 80%));
+      linear-gradient(to bottom, hsl(200deg 65% 95%), hsl(200deg 55% 80%));
   }
+
   35% {
-    box-shadow: 0 2px 0 hsl(190, 67.5%, 40%), inset 0 0 2.7px 1.35px hsla(190, 100%, 60%, 85%),
-      inset 0 1.5px 1px 1px hsl(0, 0%, 100%), inset 0 -1px 4px hsla(0, 0%, 0%, 25%),
-      0 2px 4px hsla(0, 0%, 50%, 50%);
+    box-shadow: 0 2px 0 hsl(190deg 67.5% 40%), inset 0 0 2.7px 1.35px hsl(190deg 100% 60% / 85%),
+      inset 0 1.5px 1px 1px hsl(0deg 0% 100%), inset 0 -1px 4px hsl(0deg 0% 0% / 25%),
+      0 2px 4px hsl(0deg 0% 50% / 50%);
     background: linear-gradient(
         to bottom,
-        hsla(0, 0%, 100%, 25%),
-        hsla(0, 0%, 100%, 50%) 50%,
+        hsl(0deg 0% 100% / 25%),
+        hsl(0deg 0% 100% / 50%) 50%,
         transparent 50%
       ),
-      linear-gradient(to bottom, hsl(200, 66%, 95%), hsl(200, 56%, 80%));
+      linear-gradient(to bottom, hsl(200deg 66% 95%), hsl(200deg 56% 80%));
   }
+
   37.5% {
-    box-shadow: 0 2px 0 hsl(190, 68.75%, 40%), inset 0 0 2.75px 1.375px hsla(190, 100%, 60%, 85%),
-      inset 0 1.5px 1px 1px hsl(0, 0%, 100%), inset 0 -1px 4px hsla(0, 0%, 0%, 25%),
-      0 2px 4px hsla(0, 0%, 50%, 50%);
+    box-shadow: 0 2px 0 hsl(190deg 68.75% 40%), inset 0 0 2.75px 1.375px hsl(190deg 100% 60% / 85%),
+      inset 0 1.5px 1px 1px hsl(0deg 0% 100%), inset 0 -1px 4px hsl(0deg 0% 0% / 25%),
+      0 2px 4px hsl(0deg 0% 50% / 50%);
     background: linear-gradient(
         to bottom,
-        hsla(0, 0%, 100%, 25%),
-        hsla(0, 0%, 100%, 50%) 50%,
+        hsl(0deg 0% 100% / 25%),
+        hsl(0deg 0% 100% / 50%) 50%,
         transparent 50%
       ),
-      linear-gradient(to bottom, hsl(200, 67%, 95%), hsl(200, 57%, 80%));
+      linear-gradient(to bottom, hsl(200deg 67% 95%), hsl(200deg 57% 80%));
   }
+
   40% {
-    box-shadow: 0 2px 0 hsl(190, 70%, 40%), inset 0 0 2.8px 1.4px hsla(190, 100%, 60%, 85%),
-      inset 0 1.5px 1px 1px hsl(0, 0%, 100%), inset 0 -1px 4px hsla(0, 0%, 0%, 25%),
-      0 2px 4px hsla(0, 0%, 50%, 50%);
+    box-shadow: 0 2px 0 hsl(190deg 70% 40%), inset 0 0 2.8px 1.4px hsl(190deg 100% 60% / 85%),
+      inset 0 1.5px 1px 1px hsl(0deg 0% 100%), inset 0 -1px 4px hsl(0deg 0% 0% / 25%),
+      0 2px 4px hsl(0deg 0% 50% / 50%);
     background: linear-gradient(
         to bottom,
-        hsla(0, 0%, 100%, 25%),
-        hsla(0, 0%, 100%, 50%) 50%,
+        hsl(0deg 0% 100% / 25%),
+        hsl(0deg 0% 100% / 50%) 50%,
         transparent 50%
       ),
-      linear-gradient(to bottom, hsl(200, 69%, 95%), hsl(200, 59%, 80%));
+      linear-gradient(to bottom, hsl(200deg 69% 95%), hsl(200deg 59% 80%));
   }
+
   42.5% {
-    box-shadow: 0 2px 0 hsl(190, 71.25%, 40%), inset 0 0 2.85px 1.425px hsla(190, 100%, 60%, 85%),
-      inset 0 1.5px 1px 1px hsl(0, 0%, 100%), inset 0 -1px 4px hsla(0, 0%, 0%, 25%),
-      0 2px 4px hsla(0, 0%, 50%, 50%);
+    box-shadow: 0 2px 0 hsl(190deg 71.25% 40%), inset 0 0 2.85px 1.425px hsl(190deg 100% 60% / 85%),
+      inset 0 1.5px 1px 1px hsl(0deg 0% 100%), inset 0 -1px 4px hsl(0deg 0% 0% / 25%),
+      0 2px 4px hsl(0deg 0% 50% / 50%);
     background: linear-gradient(
         to bottom,
-        hsla(0, 0%, 100%, 25%),
-        hsla(0, 0%, 100%, 50%) 50%,
+        hsl(0deg 0% 100% / 25%),
+        hsl(0deg 0% 100% / 50%) 50%,
         transparent 50%
       ),
-      linear-gradient(to bottom, hsl(200, 70%, 95%), hsl(200, 60%, 80%));
+      linear-gradient(to bottom, hsl(200deg 70% 95%), hsl(200deg 60% 80%));
   }
+
   45% {
-    box-shadow: 0 2px 0 hsl(190, 72.5%, 40%), inset 0 0 2.9px 1.45px hsla(190, 100%, 60%, 85%),
-      inset 0 1.5px 1px 1px hsl(0, 0%, 100%), inset 0 -1px 4px hsla(0, 0%, 0%, 25%),
-      0 2px 4px hsla(0, 0%, 50%, 50%);
+    box-shadow: 0 2px 0 hsl(190deg 72.5% 40%), inset 0 0 2.9px 1.45px hsl(190deg 100% 60% / 85%),
+      inset 0 1.5px 1px 1px hsl(0deg 0% 100%), inset 0 -1px 4px hsl(0deg 0% 0% / 25%),
+      0 2px 4px hsl(0deg 0% 50% / 50%);
     background: linear-gradient(
         to bottom,
-        hsla(0, 0%, 100%, 25%),
-        hsla(0, 0%, 100%, 50%) 50%,
+        hsl(0deg 0% 100% / 25%),
+        hsl(0deg 0% 100% / 50%) 50%,
         transparent 50%
       ),
-      linear-gradient(to bottom, hsl(200, 71%, 95%), hsl(200, 61%, 80%));
+      linear-gradient(to bottom, hsl(200deg 71% 95%), hsl(200deg 61% 80%));
   }
+
   47.5% {
-    box-shadow: 0 2px 0 hsl(190, 73.75%, 40%), inset 0 0 2.95px 1.475px hsla(190, 100%, 60%, 85%),
-      inset 0 1.5px 1px 1px hsl(0, 0%, 100%), inset 0 -1px 4px hsla(0, 0%, 0%, 25%),
-      0 2px 4px hsla(0, 0%, 50%, 50%);
+    box-shadow: 0 2px 0 hsl(190deg 73.75% 40%), inset 0 0 2.95px 1.475px hsl(190deg 100% 60% / 85%),
+      inset 0 1.5px 1px 1px hsl(0deg 0% 100%), inset 0 -1px 4px hsl(0deg 0% 0% / 25%),
+      0 2px 4px hsl(0deg 0% 50% / 50%);
     background: linear-gradient(
         to bottom,
-        hsla(0, 0%, 100%, 25%),
-        hsla(0, 0%, 100%, 50%) 50%,
+        hsl(0deg 0% 100% / 25%),
+        hsl(0deg 0% 100% / 50%) 50%,
         transparent 50%
       ),
-      linear-gradient(to bottom, hsl(200, 72%, 95%), hsl(200, 62%, 80%));
+      linear-gradient(to bottom, hsl(200deg 72% 95%), hsl(200deg 62% 80%));
   }
+
   50% {
-    box-shadow: 0 2px 0 hsl(190, 75%, 40%), inset 0 0 3px 1.5px hsla(190, 100%, 60%, 85%),
-      inset 0 1.5px 1px 1px hsl(0, 0%, 100%), inset 0 -1px 4px hsla(0, 0%, 0%, 25%),
-      0 2px 4px hsla(0, 0%, 50%, 50%);
+    box-shadow: 0 2px 0 hsl(190deg 75% 40%), inset 0 0 3px 1.5px hsl(190deg 100% 60% / 85%),
+      inset 0 1.5px 1px 1px hsl(0deg 0% 100%), inset 0 -1px 4px hsl(0deg 0% 0% / 25%),
+      0 2px 4px hsl(0deg 0% 50% / 50%);
     background: linear-gradient(
         to bottom,
-        hsla(0, 0%, 100%, 25%),
-        hsla(0, 0%, 100%, 50%) 50%,
+        hsl(0deg 0% 100% / 25%),
+        hsl(0deg 0% 100% / 50%) 50%,
         transparent 50%
       ),
-      linear-gradient(to bottom, hsl(200, 74%, 95%), hsl(200, 64%, 80%));
+      linear-gradient(to bottom, hsl(200deg 74% 95%), hsl(200deg 64% 80%));
   }
+
   52.5% {
-    box-shadow: 0 2px 0 hsl(190, 76.25%, 40%), inset 0 0 3.05px 1.525px hsla(190, 100%, 60%, 85%),
-      inset 0 1.5px 1px 1px hsl(0, 0%, 100%), inset 0 -1px 4px hsla(0, 0%, 0%, 25%),
-      0 2px 4px hsla(0, 0%, 50%, 50%);
+    box-shadow: 0 2px 0 hsl(190deg 76.25% 40%), inset 0 0 3.05px 1.525px hsl(190deg 100% 60% / 85%),
+      inset 0 1.5px 1px 1px hsl(0deg 0% 100%), inset 0 -1px 4px hsl(0deg 0% 0% / 25%),
+      0 2px 4px hsl(0deg 0% 50% / 50%);
     background: linear-gradient(
         to bottom,
-        hsla(0, 0%, 100%, 25%),
-        hsla(0, 0%, 100%, 50%) 50%,
+        hsl(0deg 0% 100% / 25%),
+        hsl(0deg 0% 100% / 50%) 50%,
         transparent 50%
       ),
-      linear-gradient(to bottom, hsl(200, 75%, 95%), hsl(200, 65%, 80%));
+      linear-gradient(to bottom, hsl(200deg 75% 95%), hsl(200deg 65% 80%));
   }
+
   55% {
-    box-shadow: 0 2px 0 hsl(190, 77.5%, 40%), inset 0 0 3.1px 1.55px hsla(190, 100%, 60%, 85%),
-      inset 0 1.5px 1px 1px hsl(0, 0%, 100%), inset 0 -1px 4px hsla(0, 0%, 0%, 25%),
-      0 2px 4px hsla(0, 0%, 50%, 50%);
+    box-shadow: 0 2px 0 hsl(190deg 77.5% 40%), inset 0 0 3.1px 1.55px hsl(190deg 100% 60% / 85%),
+      inset 0 1.5px 1px 1px hsl(0deg 0% 100%), inset 0 -1px 4px hsl(0deg 0% 0% / 25%),
+      0 2px 4px hsl(0deg 0% 50% / 50%);
     background: linear-gradient(
         to bottom,
-        hsla(0, 0%, 100%, 25%),
-        hsla(0, 0%, 100%, 50%) 50%,
+        hsl(0deg 0% 100% / 25%),
+        hsl(0deg 0% 100% / 50%) 50%,
         transparent 50%
       ),
-      linear-gradient(to bottom, hsl(200, 76%, 95%), hsl(200, 66%, 80%));
+      linear-gradient(to bottom, hsl(200deg 76% 95%), hsl(200deg 66% 80%));
   }
+
   57.5% {
-    box-shadow: 0 2px 0 hsl(190, 78.75%, 40%), inset 0 0 3.15px 1.575px hsla(190, 100%, 60%, 85%),
-      inset 0 1.5px 1px 1px hsl(0, 0%, 100%), inset 0 -1px 4px hsla(0, 0%, 0%, 25%),
-      0 2px 4px hsla(0, 0%, 50%, 50%);
+    box-shadow: 0 2px 0 hsl(190deg 78.75% 40%), inset 0 0 3.15px 1.575px hsl(190deg 100% 60% / 85%),
+      inset 0 1.5px 1px 1px hsl(0deg 0% 100%), inset 0 -1px 4px hsl(0deg 0% 0% / 25%),
+      0 2px 4px hsl(0deg 0% 50% / 50%);
     background: linear-gradient(
         to bottom,
-        hsla(0, 0%, 100%, 25%),
-        hsla(0, 0%, 100%, 50%) 50%,
+        hsl(0deg 0% 100% / 25%),
+        hsl(0deg 0% 100% / 50%) 50%,
         transparent 50%
       ),
-      linear-gradient(to bottom, hsl(200, 77%, 95%), hsl(200, 67%, 80%));
+      linear-gradient(to bottom, hsl(200deg 77% 95%), hsl(200deg 67% 80%));
   }
+
   60% {
-    box-shadow: 0 2px 0 hsl(190, 80%, 40%), inset 0 0 3.2px 1.6px hsla(190, 100%, 60%, 85%),
-      inset 0 1.5px 1px 1px hsl(0, 0%, 100%), inset 0 -1px 4px hsla(0, 0%, 0%, 25%),
-      0 2px 4px hsla(0, 0%, 50%, 50%);
+    box-shadow: 0 2px 0 hsl(190deg 80% 40%), inset 0 0 3.2px 1.6px hsl(190deg 100% 60% / 85%),
+      inset 0 1.5px 1px 1px hsl(0deg 0% 100%), inset 0 -1px 4px hsl(0deg 0% 0% / 25%),
+      0 2px 4px hsl(0deg 0% 50% / 50%);
     background: linear-gradient(
         to bottom,
-        hsla(0, 0%, 100%, 25%),
-        hsla(0, 0%, 100%, 50%) 50%,
+        hsl(0deg 0% 100% / 25%),
+        hsl(0deg 0% 100% / 50%) 50%,
         transparent 50%
       ),
-      linear-gradient(to bottom, hsl(200, 79%, 95%), hsl(200, 69%, 80%));
+      linear-gradient(to bottom, hsl(200deg 79% 95%), hsl(200deg 69% 80%));
   }
+
   62.5% {
-    box-shadow: 0 2px 0 hsl(190, 81.25%, 40%), inset 0 0 3.25px 1.625px hsla(190, 100%, 60%, 85%),
-      inset 0 1.5px 1px 1px hsl(0, 0%, 100%), inset 0 -1px 4px hsla(0, 0%, 0%, 25%),
-      0 2px 4px hsla(0, 0%, 50%, 50%);
+    box-shadow: 0 2px 0 hsl(190deg 81.25% 40%), inset 0 0 3.25px 1.625px hsl(190deg 100% 60% / 85%),
+      inset 0 1.5px 1px 1px hsl(0deg 0% 100%), inset 0 -1px 4px hsl(0deg 0% 0% / 25%),
+      0 2px 4px hsl(0deg 0% 50% / 50%);
     background: linear-gradient(
         to bottom,
-        hsla(0, 0%, 100%, 25%),
-        hsla(0, 0%, 100%, 50%) 50%,
+        hsl(0deg 0% 100% / 25%),
+        hsl(0deg 0% 100% / 50%) 50%,
         transparent 50%
       ),
-      linear-gradient(to bottom, hsl(200, 80%, 95%), hsl(200, 70%, 80%));
+      linear-gradient(to bottom, hsl(200deg 80% 95%), hsl(200deg 70% 80%));
   }
+
   65% {
-    box-shadow: 0 2px 0 hsl(190, 82.5%, 40%), inset 0 0 3.3px 1.65px hsla(190, 100%, 60%, 85%),
-      inset 0 1.5px 1px 1px hsl(0, 0%, 100%), inset 0 -1px 4px hsla(0, 0%, 0%, 25%),
-      0 2px 4px hsla(0, 0%, 50%, 50%);
+    box-shadow: 0 2px 0 hsl(190deg 82.5% 40%), inset 0 0 3.3px 1.65px hsl(190deg 100% 60% / 85%),
+      inset 0 1.5px 1px 1px hsl(0deg 0% 100%), inset 0 -1px 4px hsl(0deg 0% 0% / 25%),
+      0 2px 4px hsl(0deg 0% 50% / 50%);
     background: linear-gradient(
         to bottom,
-        hsla(0, 0%, 100%, 25%),
-        hsla(0, 0%, 100%, 50%) 50%,
+        hsl(0deg 0% 100% / 25%),
+        hsl(0deg 0% 100% / 50%) 50%,
         transparent 50%
       ),
-      linear-gradient(to bottom, hsl(200, 81%, 95%), hsl(200, 71%, 80%));
+      linear-gradient(to bottom, hsl(200deg 81% 95%), hsl(200deg 71% 80%));
   }
+
   67.5% {
-    box-shadow: 0 2px 0 hsl(190, 83.75%, 40%), inset 0 0 3.35px 1.675px hsla(190, 100%, 60%, 85%),
-      inset 0 1.5px 1px 1px hsl(0, 0%, 100%), inset 0 -1px 4px hsla(0, 0%, 0%, 25%),
-      0 2px 4px hsla(0, 0%, 50%, 50%);
+    box-shadow: 0 2px 0 hsl(190deg 83.75% 40%), inset 0 0 3.35px 1.675px hsl(190deg 100% 60% / 85%),
+      inset 0 1.5px 1px 1px hsl(0deg 0% 100%), inset 0 -1px 4px hsl(0deg 0% 0% / 25%),
+      0 2px 4px hsl(0deg 0% 50% / 50%);
     background: linear-gradient(
         to bottom,
-        hsla(0, 0%, 100%, 25%),
-        hsla(0, 0%, 100%, 50%) 50%,
+        hsl(0deg 0% 100% / 25%),
+        hsl(0deg 0% 100% / 50%) 50%,
         transparent 50%
       ),
-      linear-gradient(to bottom, hsl(200, 82%, 95%), hsl(200, 72%, 80%));
+      linear-gradient(to bottom, hsl(200deg 82% 95%), hsl(200deg 72% 80%));
   }
+
   70% {
-    box-shadow: 0 2px 0 hsl(190, 85%, 40%), inset 0 0 3.4px 1.7px hsla(190, 100%, 60%, 85%),
-      inset 0 1.5px 1px 1px hsl(0, 0%, 100%), inset 0 -1px 4px hsla(0, 0%, 0%, 25%),
-      0 2px 4px hsla(0, 0%, 50%, 50%);
+    box-shadow: 0 2px 0 hsl(190deg 85% 40%), inset 0 0 3.4px 1.7px hsl(190deg 100% 60% / 85%),
+      inset 0 1.5px 1px 1px hsl(0deg 0% 100%), inset 0 -1px 4px hsl(0deg 0% 0% / 25%),
+      0 2px 4px hsl(0deg 0% 50% / 50%);
     background: linear-gradient(
         to bottom,
-        hsla(0, 0%, 100%, 25%),
-        hsla(0, 0%, 100%, 50%) 50%,
+        hsl(0deg 0% 100% / 25%),
+        hsl(0deg 0% 100% / 50%) 50%,
         transparent 50%
       ),
-      linear-gradient(to bottom, hsl(200, 84%, 95%), hsl(200, 74%, 80%));
+      linear-gradient(to bottom, hsl(200deg 84% 95%), hsl(200deg 74% 80%));
   }
+
   72.5% {
-    box-shadow: 0 2px 0 hsl(190, 86.25%, 40%), inset 0 0 3.45px 1.725px hsla(190, 100%, 60%, 85%),
-      inset 0 1.5px 1px 1px hsl(0, 0%, 100%), inset 0 -1px 4px hsla(0, 0%, 0%, 25%),
-      0 2px 4px hsla(0, 0%, 50%, 50%);
+    box-shadow: 0 2px 0 hsl(190deg 86.25% 40%), inset 0 0 3.45px 1.725px hsl(190deg 100% 60% / 85%),
+      inset 0 1.5px 1px 1px hsl(0deg 0% 100%), inset 0 -1px 4px hsl(0deg 0% 0% / 25%),
+      0 2px 4px hsl(0deg 0% 50% / 50%);
     background: linear-gradient(
         to bottom,
-        hsla(0, 0%, 100%, 25%),
-        hsla(0, 0%, 100%, 50%) 50%,
+        hsl(0deg 0% 100% / 25%),
+        hsl(0deg 0% 100% / 50%) 50%,
         transparent 50%
       ),
-      linear-gradient(to bottom, hsl(200, 85%, 95%), hsl(200, 75%, 80%));
+      linear-gradient(to bottom, hsl(200deg 85% 95%), hsl(200deg 75% 80%));
   }
+
   75% {
-    box-shadow: 0 2px 0 hsl(190, 87.5%, 40%), inset 0 0 3.5px 1.75px hsla(190, 100%, 60%, 85%),
-      inset 0 1.5px 1px 1px hsl(0, 0%, 100%), inset 0 -1px 4px hsla(0, 0%, 0%, 25%),
-      0 2px 4px hsla(0, 0%, 50%, 50%);
+    box-shadow: 0 2px 0 hsl(190deg 87.5% 40%), inset 0 0 3.5px 1.75px hsl(190deg 100% 60% / 85%),
+      inset 0 1.5px 1px 1px hsl(0deg 0% 100%), inset 0 -1px 4px hsl(0deg 0% 0% / 25%),
+      0 2px 4px hsl(0deg 0% 50% / 50%);
     background: linear-gradient(
         to bottom,
-        hsla(0, 0%, 100%, 25%),
-        hsla(0, 0%, 100%, 50%) 50%,
+        hsl(0deg 0% 100% / 25%),
+        hsl(0deg 0% 100% / 50%) 50%,
         transparent 50%
       ),
-      linear-gradient(to bottom, hsl(200, 86%, 95%), hsl(200, 76%, 80%));
+      linear-gradient(to bottom, hsl(200deg 86% 95%), hsl(200deg 76% 80%));
   }
+
   77.5% {
-    box-shadow: 0 2px 0 hsl(190, 88.75%, 40%), inset 0 0 3.55px 1.775px hsla(190, 100%, 60%, 85%),
-      inset 0 1.5px 1px 1px hsl(0, 0%, 100%), inset 0 -1px 4px hsla(0, 0%, 0%, 25%),
-      0 2px 4px hsla(0, 0%, 50%, 50%);
+    box-shadow: 0 2px 0 hsl(190deg 88.75% 40%), inset 0 0 3.55px 1.775px hsl(190deg 100% 60% / 85%),
+      inset 0 1.5px 1px 1px hsl(0deg 0% 100%), inset 0 -1px 4px hsl(0deg 0% 0% / 25%),
+      0 2px 4px hsl(0deg 0% 50% / 50%);
     background: linear-gradient(
         to bottom,
-        hsla(0, 0%, 100%, 25%),
-        hsla(0, 0%, 100%, 50%) 50%,
+        hsl(0deg 0% 100% / 25%),
+        hsl(0deg 0% 100% / 50%) 50%,
         transparent 50%
       ),
-      linear-gradient(to bottom, hsl(200, 87%, 95%), hsl(200, 77%, 80%));
+      linear-gradient(to bottom, hsl(200deg 87% 95%), hsl(200deg 77% 80%));
   }
+
   80% {
-    box-shadow: 0 2px 0 hsl(190, 90%, 40%), inset 0 0 3.6px 1.8px hsla(190, 100%, 60%, 85%),
-      inset 0 1.5px 1px 1px hsl(0, 0%, 100%), inset 0 -1px 4px hsla(0, 0%, 0%, 25%),
-      0 2px 4px hsla(0, 0%, 50%, 50%);
+    box-shadow: 0 2px 0 hsl(190deg 90% 40%), inset 0 0 3.6px 1.8px hsl(190deg 100% 60% / 85%),
+      inset 0 1.5px 1px 1px hsl(0deg 0% 100%), inset 0 -1px 4px hsl(0deg 0% 0% / 25%),
+      0 2px 4px hsl(0deg 0% 50% / 50%);
     background: linear-gradient(
         to bottom,
-        hsla(0, 0%, 100%, 25%),
-        hsla(0, 0%, 100%, 50%) 50%,
+        hsl(0deg 0% 100% / 25%),
+        hsl(0deg 0% 100% / 50%) 50%,
         transparent 50%
       ),
-      linear-gradient(to bottom, hsl(200, 89%, 95%), hsl(200, 79%, 80%));
+      linear-gradient(to bottom, hsl(200deg 89% 95%), hsl(200deg 79% 80%));
   }
+
   82.5% {
-    box-shadow: 0 2px 0 hsl(190, 91.25%, 40%), inset 0 0 3.65px 1.825px hsla(190, 100%, 60%, 85%),
-      inset 0 1.5px 1px 1px hsl(0, 0%, 100%), inset 0 -1px 4px hsla(0, 0%, 0%, 25%),
-      0 2px 4px hsla(0, 0%, 50%, 50%);
+    box-shadow: 0 2px 0 hsl(190deg 91.25% 40%), inset 0 0 3.65px 1.825px hsl(190deg 100% 60% / 85%),
+      inset 0 1.5px 1px 1px hsl(0deg 0% 100%), inset 0 -1px 4px hsl(0deg 0% 0% / 25%),
+      0 2px 4px hsl(0deg 0% 50% / 50%);
     background: linear-gradient(
         to bottom,
-        hsla(0, 0%, 100%, 25%),
-        hsla(0, 0%, 100%, 50%) 50%,
+        hsl(0deg 0% 100% / 25%),
+        hsl(0deg 0% 100% / 50%) 50%,
         transparent 50%
       ),
-      linear-gradient(to bottom, hsl(200, 90%, 95%), hsl(200, 80%, 80%));
+      linear-gradient(to bottom, hsl(200deg 90% 95%), hsl(200deg 80% 80%));
   }
+
   85% {
-    box-shadow: 0 2px 0 hsl(190, 92.5%, 40%), inset 0 0 3.7px 1.85px hsla(190, 100%, 60%, 85%),
-      inset 0 1.5px 1px 1px hsl(0, 0%, 100%), inset 0 -1px 4px hsla(0, 0%, 0%, 25%),
-      0 2px 4px hsla(0, 0%, 50%, 50%);
+    box-shadow: 0 2px 0 hsl(190deg 92.5% 40%), inset 0 0 3.7px 1.85px hsl(190deg 100% 60% / 85%),
+      inset 0 1.5px 1px 1px hsl(0deg 0% 100%), inset 0 -1px 4px hsl(0deg 0% 0% / 25%),
+      0 2px 4px hsl(0deg 0% 50% / 50%);
     background: linear-gradient(
         to bottom,
-        hsla(0, 0%, 100%, 25%),
-        hsla(0, 0%, 100%, 50%) 50%,
+        hsl(0deg 0% 100% / 25%),
+        hsl(0deg 0% 100% / 50%) 50%,
         transparent 50%
       ),
-      linear-gradient(to bottom, hsl(200, 91%, 95%), hsl(200, 81%, 80%));
+      linear-gradient(to bottom, hsl(200deg 91% 95%), hsl(200deg 81% 80%));
   }
+
   87.5% {
-    box-shadow: 0 2px 0 hsl(190, 93.75%, 40%), inset 0 0 3.75px 1.875px hsla(190, 100%, 60%, 85%),
-      inset 0 1.5px 1px 1px hsl(0, 0%, 100%), inset 0 -1px 4px hsla(0, 0%, 0%, 25%),
-      0 2px 4px hsla(0, 0%, 50%, 50%);
+    box-shadow: 0 2px 0 hsl(190deg 93.75% 40%), inset 0 0 3.75px 1.875px hsl(190deg 100% 60% / 85%),
+      inset 0 1.5px 1px 1px hsl(0deg 0% 100%), inset 0 -1px 4px hsl(0deg 0% 0% / 25%),
+      0 2px 4px hsl(0deg 0% 50% / 50%);
     background: linear-gradient(
         to bottom,
-        hsla(0, 0%, 100%, 25%),
-        hsla(0, 0%, 100%, 50%) 50%,
+        hsl(0deg 0% 100% / 25%),
+        hsl(0deg 0% 100% / 50%) 50%,
         transparent 50%
       ),
-      linear-gradient(to bottom, hsl(200, 92%, 95%), hsl(200, 82%, 80%));
+      linear-gradient(to bottom, hsl(200deg 92% 95%), hsl(200deg 82% 80%));
   }
+
   90% {
-    box-shadow: 0 2px 0 hsl(190, 95%, 40%), inset 0 0 3.8px 1.9px hsla(190, 100%, 60%, 85%),
-      inset 0 1.5px 1px 1px hsl(0, 0%, 100%), inset 0 -1px 4px hsla(0, 0%, 0%, 25%),
-      0 2px 4px hsla(0, 0%, 50%, 50%);
+    box-shadow: 0 2px 0 hsl(190deg 95% 40%), inset 0 0 3.8px 1.9px hsl(190deg 100% 60% / 85%),
+      inset 0 1.5px 1px 1px hsl(0deg 0% 100%), inset 0 -1px 4px hsl(0deg 0% 0% / 25%),
+      0 2px 4px hsl(0deg 0% 50% / 50%);
     background: linear-gradient(
         to bottom,
-        hsla(0, 0%, 100%, 25%),
-        hsla(0, 0%, 100%, 50%) 50%,
+        hsl(0deg 0% 100% / 25%),
+        hsl(0deg 0% 100% / 50%) 50%,
         transparent 50%
       ),
-      linear-gradient(to bottom, hsl(200, 94%, 95%), hsl(200, 84%, 80%));
+      linear-gradient(to bottom, hsl(200deg 94% 95%), hsl(200deg 84% 80%));
   }
+
   92.5% {
-    box-shadow: 0 2px 0 hsl(190, 96.25%, 40%), inset 0 0 3.85px 1.925px hsla(190, 100%, 60%, 85%),
-      inset 0 1.5px 1px 1px hsl(0, 0%, 100%), inset 0 -1px 4px hsla(0, 0%, 0%, 25%),
-      0 2px 4px hsla(0, 0%, 50%, 50%);
+    box-shadow: 0 2px 0 hsl(190deg 96.25% 40%), inset 0 0 3.85px 1.925px hsl(190deg 100% 60% / 85%),
+      inset 0 1.5px 1px 1px hsl(0deg 0% 100%), inset 0 -1px 4px hsl(0deg 0% 0% / 25%),
+      0 2px 4px hsl(0deg 0% 50% / 50%);
     background: linear-gradient(
         to bottom,
-        hsla(0, 0%, 100%, 25%),
-        hsla(0, 0%, 100%, 50%) 50%,
+        hsl(0deg 0% 100% / 25%),
+        hsl(0deg 0% 100% / 50%) 50%,
         transparent 50%
       ),
-      linear-gradient(to bottom, hsl(200, 95%, 95%), hsl(200, 85%, 80%));
+      linear-gradient(to bottom, hsl(200deg 95% 95%), hsl(200deg 85% 80%));
   }
+
   95% {
-    box-shadow: 0 2px 0 hsl(190, 97.5%, 40%), inset 0 0 3.9px 1.95px hsla(190, 100%, 60%, 85%),
-      inset 0 1.5px 1px 1px hsl(0, 0%, 100%), inset 0 -1px 4px hsla(0, 0%, 0%, 25%),
-      0 2px 4px hsla(0, 0%, 50%, 50%);
+    box-shadow: 0 2px 0 hsl(190deg 97.5% 40%), inset 0 0 3.9px 1.95px hsl(190deg 100% 60% / 85%),
+      inset 0 1.5px 1px 1px hsl(0deg 0% 100%), inset 0 -1px 4px hsl(0deg 0% 0% / 25%),
+      0 2px 4px hsl(0deg 0% 50% / 50%);
     background: linear-gradient(
         to bottom,
-        hsla(0, 0%, 100%, 25%),
-        hsla(0, 0%, 100%, 50%) 50%,
+        hsl(0deg 0% 100% / 25%),
+        hsl(0deg 0% 100% / 50%) 50%,
         transparent 50%
       ),
-      linear-gradient(to bottom, hsl(200, 96%, 95%), hsl(200, 86%, 80%));
+      linear-gradient(to bottom, hsl(200deg 96% 95%), hsl(200deg 86% 80%));
   }
+
   97.5% {
-    box-shadow: 0 2px 0 hsl(190, 98.75%, 40%), inset 0 0 3.95px 1.975px hsla(190, 100%, 60%, 85%),
-      inset 0 1.5px 1px 1px hsl(0, 0%, 100%), inset 0 -1px 4px hsla(0, 0%, 0%, 25%),
-      0 2px 4px hsla(0, 0%, 50%, 50%);
+    box-shadow: 0 2px 0 hsl(190deg 98.75% 40%), inset 0 0 3.95px 1.975px hsl(190deg 100% 60% / 85%),
+      inset 0 1.5px 1px 1px hsl(0deg 0% 100%), inset 0 -1px 4px hsl(0deg 0% 0% / 25%),
+      0 2px 4px hsl(0deg 0% 50% / 50%);
     background: linear-gradient(
         to bottom,
-        hsla(0, 0%, 100%, 25%),
-        hsla(0, 0%, 100%, 50%) 50%,
+        hsl(0deg 0% 100% / 25%),
+        hsl(0deg 0% 100% / 50%) 50%,
         transparent 50%
       ),
-      linear-gradient(to bottom, hsl(200, 97%, 95%), hsl(200, 87%, 80%));
+      linear-gradient(to bottom, hsl(200deg 97% 95%), hsl(200deg 87% 80%));
   }
+
   100% {
-    box-shadow: 0 2px 0 hsl(190, 100%, 40%), inset 0 0 4px 2px hsla(190, 100%, 60%, 85%),
-      inset 0 1.5px 1px 1px hsl(0, 0%, 100%), inset 0 -1px 4px hsla(0, 0%, 0%, 25%),
-      0 2px 4px hsla(0, 0%, 50%, 50%);
+    box-shadow: 0 2px 0 hsl(190deg 100% 40%), inset 0 0 4px 2px hsl(190deg 100% 60% / 85%),
+      inset 0 1.5px 1px 1px hsl(0deg 0% 100%), inset 0 -1px 4px hsl(0deg 0% 0% / 25%),
+      0 2px 4px hsl(0deg 0% 50% / 50%);
     background: linear-gradient(
         to bottom,
-        hsla(0, 0%, 100%, 25%),
-        hsla(0, 0%, 100%, 50%) 50%,
+        hsl(0deg 0% 100% / 25%),
+        hsl(0deg 0% 100% / 50%) 50%,
         transparent 50%
       ),
-      linear-gradient(to bottom, hsl(200, 90%, 95%), hsl(200, 80%, 80%));
+      linear-gradient(to bottom, hsl(200deg 90% 95%), hsl(200deg 80% 80%));
   }
 }
