@@ -10,6 +10,7 @@ const refreshPage = () => {
 
 <template>
   <div class="container">
+    Colors not final and may change.
     <div style="margin: 2em 0; width: 100%; height: 1px"></div>
     <h1>Banners:</h1>
     <Banner topic="Default Banner">
@@ -58,6 +59,8 @@ const refreshPage = () => {
           <th>Link button:</th>
           <td><Button content="Button" href="#" /></td>
           <td><Button content="Button" href="#" defaultButton /></td>
+          <td><Button content="Button" href="#" stayHere /></td>
+          <td><Button content="Button" href="#" defaultButton stayHere /></td>
         </tr>
       </tbody>
     </table>
