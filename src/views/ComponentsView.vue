@@ -11,8 +11,7 @@ const refreshPage = () => {
 <template>
   <div class="container">
     Colors not final and may change.
-    <div style="margin: 2em 0; width: 100%; height: 1px"></div>
-    <h1>Banners:</h1>
+    <h2>Banners:</h2>
     <Banner topic="Default Banner">
       Yeah. You can also put things in here!<br />
       <Button content="Refresh" @click="refreshPage" />
@@ -24,8 +23,7 @@ const refreshPage = () => {
       :content="`${color} banner!`"
       :color="color.toLowerCase()"
     />
-    <div style="margin: 12em 0; width: 100%; height: 1px"></div>
-    <h1>Buttons:</h1>
+    <h2>Buttons:</h2>
     <table>
       <tbody>
         <tr>
