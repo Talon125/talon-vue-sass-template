@@ -1,7 +1,11 @@
 <template>
   <Background />
 
-  <NavBar logo="/src/assets/logo.svg" title="Talon's Vue + Sass Template" :links="links" />
+  <NavBar
+    logo="/src/assets/logo.svg"
+    title="Talon's Vue + Sass Template"
+    :links="links"
+  />
 
   <main>
     <div id="page-name">{{ links.find(link => link.to === $route.path).text }}</div>
@@ -19,7 +23,7 @@ import Background from './components/Background.vue'
 const links = [
   { to: '/', text: 'Home' },
   { to: '/components', text: 'Components' },
-  { to: '/about', text: 'Author' }
+  { to: '/about', text: 'Credits' }
 ]
 </script>
 
@@ -46,5 +50,9 @@ main {
 .container {
   padding: 8em 0;
   width: 75vw;
+}
+
+a[target='_blank']::after {
+  content: url('https://en.wikipedia.org/w/skins/Vector/resources/skins.vector.styles/images/link-external-small-ltr-progressive.svg');
 }
 </style>
