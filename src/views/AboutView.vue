@@ -7,7 +7,7 @@
       <h6>RetroArch Menu Ribbon Like PS3</h6>
       <p>
         by Haxtir on CodePen<br />
-        <a href="https://codepen.io/haxtir/pen/YMJLLZ#" target="_blank">
+        <a href="https://codepen.io/haxtir/pen/YMJLLZ" target="_blank">
           https://codepen.io/haxtir/pen/YMJLLZ
         </a>
       </p>
