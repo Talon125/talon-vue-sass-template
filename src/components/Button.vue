@@ -9,13 +9,10 @@
       ${color ? color : ''}
     `"
   >
-    <span>{{ content }}</span
-    >&zwj;<svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="12"
-      height="12"
-      viewBox="0 0 12 12"
-    >
+    <span>
+      {{ content }}
+    </span>
+    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12">
       <path
         :fill="color ? 'white' : 'black'"
         d="M6 1h5v5L8.86 3.85 4.7 8 4 7.3l4.15-4.16zM2 3h2v1H2v6h6V8h1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1"
@@ -49,12 +46,17 @@ const props = defineProps({
 @use '../assets/variables.scss' as vars;
 
 $button-inner-shadow: inset 0 -1px 4px hsl(0deg 0% 0% / 25%);
-$button-inner-sheen-weak: inset 0 1.5px 3px 1px hsl(0deg 0% 100% / 67%);
+$button-inner-sheen-weak: inset 0 1.5px 3px 1px hsl(0deg 0% 100% / 50%);
 $button-inner-sheen: inset 0 1.5px 1px 1px hsl(0deg 0% 100%);
 
 @mixin button-colored($hue) {
-  $text-shadow-color: if(color.lightness(hsl($hue, 100%, 50%)) > 40, 0%, 100%);
-  $text-color: if(color.lightness(hsl($hue, 100%, 50%)) > 40, 100%, 0%);
+  /* $color: hsl($hue, 100%, 50%);
+  $luminance: (0.299 * color.red($color) + 0.587 * color.green($color) + 0.114 * color.blue($color)) / 255;
+  $text-shadow-color: if($luminance < 0.5, 0%, 100%);
+  $text-color: if($luminance < 0.5, 100%, 0%); */
+
+  $text-shadow-color: 0%;
+  $text-color: 100%;
 
   box-shadow: 0 2px 0 hsl($hue, 75%, 25%), $button-inner-sheen-weak, $button-inner-shadow,
     vars.$outer-shadow;
@@ -65,8 +67,8 @@ $button-inner-sheen: inset 0 1.5px 1px 1px hsl(0deg 0% 100%);
       hsl($hue, 75%, 35%),
       hsl($hue, 75%, 50%)
     );
-  text-shadow: 0 1px 0 hsla(0deg, 0%, $text-shadow-color, 50%);
-  color: hsl(0deg, 0%, $text-color);
+  text-shadow: 0 1px 3px hsla(0deg, 0%, $text-shadow-color, 75%);
+  color: hsla(0deg, 0%, $text-color, 85%);
   font-size: 100%;
 
   /* Hover Color */
@@ -74,9 +76,9 @@ $button-inner-sheen: inset 0 1.5px 1px 1px hsl(0deg 0% 100%);
     background: vars.$reflection,
       linear-gradient(
         to bottom,
-        hsl($hue, 100%, 95%),
-        hsl($hue, 100%, 45%),
-        hsl($hue, 100%, 60%)
+        hsl($hue, 100%, 85%),
+        hsl($hue, 100%, 40%),
+        hsl($hue, 100%, 65%)
       );
   }
 
@@ -103,8 +105,8 @@ $button-inner-sheen: inset 0 1.5px 1px 1px hsl(0deg 0% 100%);
         transparent 50%
       ),
       linear-gradient(to bottom, hsl($hue, 100%, 50%, 25%), hsl($hue, 100%, 40%, 25%));
-    text-shadow: 0 1px 0 hsla(0deg, 0%, $text-shadow-color, 10%);
-    color: hsl(0deg, 0%, $text-color, 50%);
+    text-shadow: 0 1px 3px hsla(0deg, 0%, $text-shadow-color, 17.5%);
+    color: hsla(0deg, 0%, $text-color, if($text-color == 0%, 17.5%, 60%));
   }
 
   &:not(:disabled) {
@@ -122,7 +124,8 @@ $button-inner-sheen: inset 0 1.5px 1px 1px hsl(0deg 0% 100%);
     &:hover:not(:active) {
       box-shadow: 0 2px 0 hsl($hue, 75%, 40%), $button-inner-sheen-weak,
         $button-inner-shadow, 0 2px 8px 4px hsla($hue, 80%, 80%, 100%);
-      text-shadow: 0 1px 1px hsla(0deg, 0%, $text-shadow-color, 50%);
+      text-shadow: 0 1px 4px hsla(0deg, 0%, $text-shadow-color, 90%);
+      color: hsla(0deg, 0%, $text-color, 100%);
     }
   }
 
@@ -162,7 +165,7 @@ button {
   box-sizing: border-box;
   display: inline-block;
   position: relative;
-  transition-property: box-shadow, opacity, text-shadow, transform;
+  transition-property: box-shadow, color, opacity, text-shadow, transform;
   z-index: 0;
   margin: 1em;
   border: none;
@@ -176,6 +179,7 @@ button {
   text-decoration: none;
   text-shadow: 0 1px 0 white;
   line-height: 1em;
+  white-space: nowrap;
   color: hsl(0deg 0% 13%);
   font-size: 100%;
   user-select: none;
@@ -295,7 +299,6 @@ button {
 
 a span {
   text-decoration: underline;
-  text-shadow: none;
 }
 
 .red {
