@@ -3,12 +3,19 @@ import Banner from '../components/Banner.vue'
 import Button from '../components/Button.vue'
 
 const colors = ['Red', 'Orange', 'Yellow', 'Green', 'Blue', 'Purple']
+const refreshPage = () => {
+  window.location.reload()
+}
 </script>
 
 <template>
   <div class="container">
-    <div style="margin: 2em 0; width: 100%; height: 1px;"></div>
+    <div style="margin: 2em 0; width: 100%; height: 1px"></div>
     <h1>Banners:</h1>
+    <Banner topic="Default Banner">
+      Yeah. You can also put things in here!<br />
+      <Button content="Refresh" @click="refreshPage" />
+    </Banner>
     <Banner
       v-for="color in colors"
       :key="color"
@@ -16,7 +23,7 @@ const colors = ['Red', 'Orange', 'Yellow', 'Green', 'Blue', 'Purple']
       :content="`${color} banner!`"
       :color="color.toLowerCase()"
     />
-    <div style="margin: 12em 0; width: 100%; height: 1px;"></div>
+    <div style="margin: 12em 0; width: 100%; height: 1px"></div>
     <h1>Buttons:</h1>
     <table>
       <tbody>
