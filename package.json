@@ -1,0 +1,28 @@
+{
+  "name": "vue-project",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "pinia": "^2.1.7",
+    "vue": "^3.4.21",
+    "vue-router": "^4.3.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.4",
+    "autoprefixer": "^10.4.19",
+    "postcss-html": "^1.6.0",
+    "sass": "^1.72.0",
+    "sass-loader": "^14.1.1",
+    "stylelint-config-concentric-order": "^5.2.0",
+    "stylelint-config-standard-scss": "^13.0.0",
+    "stylelint-config-standard-vue": "^1.0.0",
+    "stylelint-scss": "^6.2.1",
+    "vite": "^5.2.6"
+  }
+}
