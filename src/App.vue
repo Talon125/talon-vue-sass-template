@@ -53,6 +53,6 @@ main {
 }
 
 a[target='_blank']::after {
-  content: url('https://en.wikipedia.org/w/skins/Vector/resources/skins.vector.styles/images/link-external-small-ltr-progressive.svg');
+  content: url('./assets/external\ link.svg');
 }
 </style>
