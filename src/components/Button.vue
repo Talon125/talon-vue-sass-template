@@ -144,7 +144,7 @@ $button-inner-sheen: inset 0 1.5px 1px 1px hsl(0deg 0% 100%);
     &::before {
       box-shadow: 0 2px 0 hsl($hue, 100%, 40%),
         inset 0 0 8px 4px hsla($hue, 100%, 60%, 85%), $button-inner-sheen-weak,
-        $button-inner-shadow, vars.$outer-shadow;
+        $button-inner-shadow, 0 2px 8px 4px hsla($hue, 80%, 50%, 75%);
       background: vars.$reflection-weak,
         linear-gradient(
           to bottom,
@@ -283,7 +283,7 @@ button {
       border-radius: 8px;
       box-shadow: 0 2px 0 hsl(190deg 100% 40%),
         inset 0 0 4px 2px hsl(190deg 100% 60% / 85%), $button-inner-sheen,
-        $button-inner-shadow, vars.$outer-shadow;
+        $button-inner-shadow, 0 2px 8px 4px hsl(190deg 80% 50% / 75%);
       background: vars.$reflection-strong,
         linear-gradient(to bottom, hsl(200deg 90% 95%), hsl(200deg 80% 80%));
       padding: 0;
