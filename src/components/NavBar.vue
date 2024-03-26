@@ -13,7 +13,7 @@
         :to="link.to"
         :class="{ 'nav-active': $route.path === link.to }"
       >
-        {{ link.text }}
+        <span>{{ link.text }}</span>
       </RouterLink>
     </nav>
   </header>
@@ -30,6 +30,8 @@ const props = defineProps({
 </script>
 
 <style lang="scss" scoped>
+@use '../assets/mixins.scss' as mixins;
+
 header {
   display: flex;
   position: sticky;
@@ -44,7 +46,7 @@ header {
       hsl(0deg 0% 100% / 25%) 50%,
       transparent 50%
     ),
-    linear-gradient(to bottom, hsl(0deg 0% 100% / 75%), hsl(0deg 0% 75% / 75%));
+    linear-gradient(to bottom, hsla(0deg 0% 100% / 75%), hsla(0deg 0% 75% / 75%));
   backdrop-filter: blur(8px);
 
   #site-identifier {
@@ -79,10 +81,10 @@ header {
 nav {
   display: flex;
 
-  * {
+  a {
     display: flex;
     align-items: center;
-    transition-duration: 250ms;
+    transition-duration: 100ms;
     padding: 0 2em;
     height: calc(100% - 1px);
     height: 100%;
@@ -91,13 +93,17 @@ nav {
     color: black;
 
     &:hover {
-      text-shadow: 0 1px 0 white, 0 1px 2px white, 0 1px 4px white, 0 1px 8px white,
-        0 1px 16px white;
+      @include mixins.strong-text-glow(white);
+
       color: hsl(0deg 0% 10%);
     }
 
     &:active {
       opacity: 0.5;
+
+      * {
+        transform: translateY(1px);
+      }
     }
 
     &.nav-active {
