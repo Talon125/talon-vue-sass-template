@@ -30,6 +30,7 @@ const props = defineProps({
 </script>
 
 <style lang="scss" scoped>
+@use '../assets/variables.scss' as vars;
 @use '../assets/mixins.scss' as mixins;
 
 header {
@@ -39,7 +40,7 @@ header {
   transition-duration: 250ms;
   z-index: 1000;
   box-shadow: inset 0 -1px 0 hsl(0deg 0% 100% / 40%), 0 1px 0 hsl(0deg 0% 0% / 25%),
-    0 2px 4px hsl(0deg 0% 0% / 50%);
+    vars.$outer-shadow;
   background: linear-gradient(
       to bottom,
       hsl(0deg 0% 100% / 10%),

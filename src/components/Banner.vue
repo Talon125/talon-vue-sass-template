@@ -18,8 +18,8 @@ const props = defineProps({
 @mixin banner($hue) {
   margin: 1em;
   border-radius: 4px;
-  box-shadow: 0 0 0 1px hsl($hue, 100%, 90%, 100%), 0 0 0 2px hsl($hue, 100%, 10%, 50%),
-    0 0 8px black;
+  box-shadow: inset 0 0 0 1px hsla($hue, 100%, 90%, 67%), 0 0 0 1px hsla($hue, 100%, 10%, 50%),
+    vars.$outer-shadow;
   background-image: repeating-linear-gradient(
       -45deg,
       transparent,
