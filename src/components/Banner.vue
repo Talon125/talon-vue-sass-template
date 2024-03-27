@@ -19,7 +19,7 @@ const props = defineProps({
 @use '../assets/variables.scss' as vars;
 
 .banner {
-  margin: 1em;
+  margin: 1em 0;
   border-radius: 4px;
   box-shadow: inset 0 0 0 1px hsl(0deg 0% 90% / 67%), 0 0 0 1px hsl(0deg 0% 10% / 50%),
     vars.$outer-shadow;
