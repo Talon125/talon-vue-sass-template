@@ -1,6 +1,7 @@
 <script setup>
 import Banner from '../components/Banner.vue'
 import Button from '../components/Button.vue'
+import LoadingCircle from '../components/LoadingCircle.vue'
 
 const colors = ['Red', 'Orange', 'Yellow', 'Green', 'Blue', 'Purple']
 const refreshPage = () => {
@@ -11,6 +12,7 @@ const refreshPage = () => {
 <template>
   <div class="container">
     Colors not final and may change.
+
     <h2>Banners:</h2>
     <Banner topic="Default Banner">
       Yeah. You can also put things in here!<br />
@@ -23,6 +25,7 @@ const refreshPage = () => {
       :content="`${color} banner!`"
       :color="color.toLowerCase()"
     />
+
     <h2>Buttons:</h2>
     <table>
       <tbody>
@@ -57,6 +60,11 @@ const refreshPage = () => {
         </tr>
       </tbody>
     </table>
+
+    <h2>Loading Circle:</h2>
+    <LoadingCircle size="32" speed="0.5" />
+    <LoadingCircle/>
+    <LoadingCircle size="128" speed="2" />
   </div>
 </template>
 
