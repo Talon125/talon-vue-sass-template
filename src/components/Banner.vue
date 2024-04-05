@@ -23,7 +23,7 @@ const props = defineProps({
   border-radius: 4px;
   box-shadow: inset 0 0 0 1px hsl(0deg 0% 90% / 67%), 0 0 0 1px hsl(0deg 0% 10% / 50%),
     vars.$outer-shadow;
-  background-image: repeating-linear-gradient(
+  background: repeating-linear-gradient(
       -45deg,
       transparent,
       transparent 2px,
@@ -46,7 +46,7 @@ const props = defineProps({
 @mixin colored-banner($hue) {
   box-shadow: inset 0 0 0 1px hsla($hue, 100%, 90%, 67%),
     0 0 0 1px hsla($hue, 100%, 10%, 50%), vars.$outer-shadow;
-  background-image: repeating-linear-gradient(
+  background: repeating-linear-gradient(
       -45deg,
       transparent,
       transparent 2px,
