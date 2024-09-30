@@ -9,6 +9,7 @@
  * https://github.com/libretro/RetroArch
  */
 
+/*
 import { ref, onMounted, onUnmounted } from 'vue'
 // import * as THREE from 'three'
 
@@ -135,6 +136,7 @@ onMounted(() => {
 onUnmounted(() => {
   window.removeEventListener('resize', resize)
 })
+*/
 </script>
 
 <style lang="scss" scoped>

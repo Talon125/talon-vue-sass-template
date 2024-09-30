@@ -62,9 +62,9 @@ const refreshPage = () => {
     </table>
 
     <h2>Loading Circle:</h2>
-    <LoadingCircle size="32" speed="0.5" />
+    <LoadingCircle :size="32" :speed="0.5" />
     <LoadingCircle/>
-    <LoadingCircle size="128" speed="2" />
+    <LoadingCircle :size="128" :speed="2" />
   </div>
 </template>
 

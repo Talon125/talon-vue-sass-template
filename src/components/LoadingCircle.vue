@@ -146,7 +146,7 @@
 <script setup>
 const props = defineProps({
   size: { type: Number, default: 64 },
-  speed: { type: String, default: 1 }
+  speed: { type: Number, default: 1 }
 })
 </script>
 
