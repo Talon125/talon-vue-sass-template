@@ -28,7 +28,7 @@ const links = [
 </script>
 
 <style lang="scss">
-@import url('./assets/elements.scss');
+@import url('./assets/base.scss');
 
 main {
   #page-name {
