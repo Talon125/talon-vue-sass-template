@@ -9,7 +9,6 @@
  * https://github.com/libretro/RetroArch
  */
 
-/*
 import { ref, onMounted, onUnmounted } from 'vue'
 // import * as THREE from 'three'
 
@@ -19,7 +18,7 @@ let ribbonContainer = ref(null)
 
 const init = () => {
   scene = new THREE.Scene()
-  camera = new THREE.PerspectiveCamera(10, 1, 0.1, 10000)
+  camera = new THREE.PerspectiveCamera(75, 1, 0.1, 10000)
   camera.position.z = 2
 
   renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true })
@@ -120,23 +119,29 @@ const resize = () => {
   ribbon.scale.set(camera.aspect * 1.55, 0.75, 1)
 }
 
-const animate = () => {
-  ribbon.material.uniforms.time.value += 0.01
+let previousTime = 0
+
+const animate = (currentTime) => {
+  // ribbon.material.uniforms.time.value += 0.01
+  const deltaTime = (currentTime - previousTime) / 1000
+  previousTime = currentTime
+
+  ribbon.material.uniforms.time.value += deltaTime * 0.5
 
   renderer.render(scene, camera)
-  requestAnimationFrame(() => animate())
+  // requestAnimationFrame(() => animate())
+  requestAnimationFrame(animate)
 }
 
 onMounted(() => {
   init()
-  animate()
+  animate(0)
   window.addEventListener('resize', resize)
 })
 
 onUnmounted(() => {
   window.removeEventListener('resize', resize)
 })
-*/
 </script>
 
 <style lang="scss" scoped>
