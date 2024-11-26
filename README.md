@@ -1,26 +1,39 @@
-# Vue + Sass "Template"
+# talon-vue-sass-template 
 
-> Work in progress!
+This template should help get you started developing with Vue 3 in Vite.
 
-This repository contains a Vue project showcasing Vue **components** I've made. 
-This is meant to act like a **style framework**, almost. The components' design 
-are insired by **skeuomorphism** and "Web 2.0 Gloss" or "Frutiger Aero". E.g. 
-Aero, found in Windows Vista and 7. Mainly that era of design; between the late 
-2000s and early 2010s.
+## Recommended IDE Setup
 
-This will ultimately be used **for my website**
-([oktalon-szoradi.github.io](oktalon-szoradi.github.io)), as I'm planning to
-switch to Vue and would like the styles to be made using Sass and linted with
-Stylelint.
+[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
 
-**Having performance issues in Firefox?**  
-Make sure software rendering isn't activated by going to `about:config` and
-setting `gfx.webrender.software` to `false`.
+## Type Support for `.vue` Imports in TS
 
-## Pictures
+TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
 
-![Screenshot_Banners](/public/img/Screenshot_Banners.png)
+## Customize configuration
 
-![Screenshot_Buttons](/public/img/Screenshot_Buttons.png)
+See [Vite Configuration Reference](https://vite.dev/config/).
 
-![Screenshot_LoadingCircle](/public/img/Screenshot_LoadingCircle.png)
+## Project Setup
+
+```sh
+npm install
+```
+
+### Compile and Hot-Reload for Development
+
+```sh
+npm run dev
+```
+
+### Type-Check, Compile and Minify for Production
+
+```sh
+npm run build
+```
+
+### Lint with [ESLint](https://eslint.org/)
+
+```sh
+npm run lint
+```

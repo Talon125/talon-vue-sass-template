@@ -1,58 +1,85 @@
-<template>
-  <Background />
-
-  <NavBar
-    logo="/src/assets/logo.svg"
-    title="Talon's Vue + Sass Template"
-    :links="links"
-  />
-
-  <main>
-    <div id="page-name">{{ links.find(link => link.to === $route.path).text }}</div>
-    <div id="page-container">
-      <RouterView />
-    </div>
-  </main>
-</template>
-
-<script setup>
+<script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
-import NavBar from './components/NavBar.vue'
-import Background from './components/Background.vue'
-
-const links = [
-  { to: '/', text: 'Home' },
-  { to: '/components', text: 'Components' },
-  { to: '/about', text: 'Credits' }
-]
+import HelloWorld from './components/HelloWorld.vue'
 </script>
 
-<style lang="scss">
-@import url('./assets/base.scss');
+<template>
+  <header>
+    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
 
-main {
-  #page-name {
-    position: fixed;
-    top: 0;
-    left: -0.125em;
-    opacity: 0.025;
-    z-index: -1;
-    font-size: 16em;
-    user-select: none;
-  }
+    <div class="wrapper">
+      <HelloWorld msg="You did it!" />
 
-  #page-container {
+      <nav>
+        <RouterLink to="/">Home</RouterLink>
+        <RouterLink to="/about">About</RouterLink>
+      </nav>
+    </div>
+  </header>
+
+  <RouterView />
+</template>
+
+<style scoped>
+header {
+  line-height: 1.5;
+  max-height: 100vh;
+}
+
+.logo {
+  display: block;
+  margin: 0 auto 2rem;
+}
+
+nav {
+  width: 100%;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+nav a.router-link-exact-active {
+  color: var(--color-text);
+}
+
+nav a.router-link-exact-active:hover {
+  background-color: transparent;
+}
+
+nav a {
+  display: inline-block;
+  padding: 0 1rem;
+  border-left: 1px solid var(--color-border);
+}
+
+nav a:first-of-type {
+  border: 0;
+}
+
+@media (min-width: 1024px) {
+  header {
     display: flex;
-    justify-content: center;
+    place-items: center;
+    padding-right: calc(var(--section-gap) / 2);
   }
-}
 
-.container {
-  padding: 8em 0;
-  width: 75vw;
-}
+  .logo {
+    margin: 0 2rem 0 0;
+  }
 
-a[target='_blank']::after {
-  content: url('./assets/external\ link.svg');
+  header .wrapper {
+    display: flex;
+    place-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  nav {
+    text-align: left;
+    margin-left: -1rem;
+    font-size: 1rem;
+
+    padding: 1rem 0;
+    margin-top: 1rem;
+  }
 }
 </style>
