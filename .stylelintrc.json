@@ -16,7 +16,8 @@
     "stylelint-media-use-custom-media"
   ],
   "rules": {
-    "plugin/no-low-performance-animation-properties": true,
-    "csstools/media-use-custom-media": "known"
+    "comment-empty-line-before": null,
+    "csstools/media-use-custom-media": "known",
+    "plugin/no-low-performance-animation-properties": true
   }
 }
