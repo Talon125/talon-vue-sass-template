@@ -1,10 +1,12 @@
 <template>
   <header>
-    <a href="/" id="brand">
-      <img alt="Vue logo" class="logo" src="@/assets/logo.svg" />
-      <span>Vue</span>
-    </a>
-    <div class="separator"></div>
+    <div class="container">
+      <a href="/" id="brand">
+        <img alt="Vue logo" class="logo" src="@/assets/logo.svg" />
+        <span>Vue</span>
+      </a>
+      <div class="separator"></div>
+    </div>
   </header>
 </template>
 
@@ -31,28 +33,28 @@ header {
   width: 100%;
   height: 48px;
   backdrop-filter: blur(4px);
+}
 
-  #brand {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: inherit;
+#brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
 
-    img {
-      padding: 8px;
-      height: 32px;
-    }
+  img {
+    padding: 8px;
+    height: 32px;
   }
+}
 
-  .separator {
-    display: block;
-    margin: 0 16px;
-    box-shadow:
-      -1px 0 hsla(0deg 0% 100% / 20%),
-      1px 0 hsla(0deg 0% 100% / 20%);
-    background-color: hsla(0deg 0% 0% / 10%);
-    width: 1px;
-    height: 80%;
-  }
+.separator {
+  display: block;
+  margin: 0 16px;
+  box-shadow:
+    -1px 0 hsla(0deg 0% 100% / 20%),
+    1px 0 hsla(0deg 0% 100% / 20%);
+  background-color: hsla(0deg 0% 0% / 10%);
+  width: 1px;
+  height: 80%;
 }
 </style>
