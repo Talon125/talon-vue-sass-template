@@ -1,0 +1,37 @@
+$reflection-weak: linear-gradient(
+  to bottom,
+  hsl(0deg 0% 100% / 5%),
+  hsl(0deg 0% 100% / 10%) 50%,
+  transparent 50%
+);
+$reflection-moderate: linear-gradient(
+  to bottom,
+  hsl(0deg 0% 100% / 10%),
+  hsl(0deg 0% 100% / 20%) 50%,
+  transparent 50%
+);
+$reflection: linear-gradient(
+  to bottom,
+  hsl(0deg 0% 100% / 17.5%),
+  hsl(0deg 0% 100% / 25%) 50%,
+  transparent 50%
+);
+$reflection-strong: linear-gradient(
+  to bottom,
+  hsl(0deg 0% 100% / 25%),
+  hsl(0deg 0% 100% / 50%) 50%,
+  transparent 50%
+);
+$textshadow-dimensions-nav: 0 1px;
+$gradient-nav: linear-gradient(
+  to right,
+  hsla(0deg 0% 0% / 10%),
+  hsla(0deg 0% 0% / 0%),
+  hsla(0deg 0% 0% / 10%)
+),
+linear-gradient(
+  to bottom,
+  hsla(0deg 0% 95% / 90%),
+  hsla(0deg 0% 80% / 90%),
+  hsla(0deg 0% 90% / 90%)
+);

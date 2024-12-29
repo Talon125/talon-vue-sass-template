@@ -11,7 +11,34 @@ import WebsiteNavigationBar from './components/WebsiteNavigationBar.vue'
 
 <style lang="scss">
 html {
-  background: linear-gradient(to top, hsl(206deg 50% 95%), hsl(206deg 100% 85%));
+  /* background: linear-gradient(to top, hsl(206deg 50% 95%), hsl(206deg 100% 85%)); */
+  background: linear-gradient(
+      190deg,
+      rgb(7 142 112 / 50%),
+      rgb(38 207 170 / 50%),
+      rgb(153 232 193 / 50%),
+      rgb(123 173 226 / 50%),
+      rgb(79 72 203 / 50%),
+      rgb(61 26 119 / 50%)
+    ),
+    linear-gradient(
+      185deg,
+      rgb(7 142 112 / 50%),
+      rgb(38 207 170 / 50%),
+      rgb(153 232 193 / 50%),
+      rgb(123 173 226 / 50%),
+      rgb(79 72 203 / 50%),
+      rgb(61 26 119 / 50%)
+    ),
+    linear-gradient(
+      to bottom,
+      rgb(7 142 112),
+      rgb(38 207 170),
+      rgb(153 232 193),
+      rgb(123 173 226),
+      rgb(79 72 203),
+      rgb(61 26 119)
+    );
   background-attachment: fixed;
   background-clip: border-box;
   background-origin: border-box;

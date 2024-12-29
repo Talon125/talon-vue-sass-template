@@ -1,15 +1,14 @@
-<template>
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
-</template>
+<script setup lang="ts"></script>
 
-<style>
-@media (min-width: 1024px) {
-  .about {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-  }
-}
-</style>
+<template>
+  <main class="container">
+    <h1>This is an about page</h1>
+    <p>
+      Visit
+      <a href="https://github.com/Talon125/talon-vue-sass-template/tree/ark-ui"
+        >https://github.com/Talon125/talon-vue-sass-template/tree/ark-ui</a
+      >
+      for more information.
+    </p>
+  </main>
+</template>
