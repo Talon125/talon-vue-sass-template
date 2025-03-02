@@ -59,6 +59,7 @@ html {
   margin-right: auto;
   margin-left: auto;
   width: 100%;
+  max-width: 1320px;
 
   @media (width >= 576px) {
     max-width: 540px;
