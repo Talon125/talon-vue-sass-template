@@ -1,0 +1,9 @@
+@mixin glossy-color-gradient($hue, $effects...) {
+  background: $effects,
+    linear-gradient(
+      to bottom,
+      hsla($hue 100% 55% / 75%),
+      hsla($hue 100% 20% / 75%),
+      hsla($hue 100% 30% / 75%)
+    )
+}

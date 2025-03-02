@@ -9,7 +9,6 @@ import { RouterLink } from 'vue-router'
         <a href="/" id="brand">
           <img alt="Vue logo" class="logo" src="@/assets/logo.svg" />
           <span>Vue</span>
-          <!-- <span>Vue Website (Title goes here!)</span> -->
         </a>
         <div class="separator"></div>
         <RouterLink to="/">Home</RouterLink>
@@ -22,17 +21,30 @@ import { RouterLink } from 'vue-router'
         -->
       </div>
     </nav>
-    <div class="websitewide-message">Website-wide Banner Message</div>
-    <div class="websitewide-message severe">!!! Under Construction !!!</div>
-    <div class="websitewide-message major">!!! Under Construction !!!</div>
-    <div class="websitewide-message minor">!!! Under Construction !!!</div>
+    <!-- <div class="websitewide-message">Website-wide Banner Message</div> -->
+    <!-- <div class="websitewide-message severe">!!! Something is broken !!!</div> -->
+    <!-- <div class="websitewide-message major">!!! Under Construction !!!</div> -->
+    <!-- <div class="websitewide-message minor">!!! will undergo maintenance on !!!</div> -->
   </header>
 </template>
 
 <style scoped lang="scss">
 @use '@/assets/variables.scss' as vars;
+@use '@/assets/mixins.scss' as mixins;
 
 $navbar-height: 64px;
+$gradient-nav: linear-gradient(
+    to right,
+    hsla(0deg 0% 0% / 50%),
+    hsla(0deg 0% 0% / 0%),
+    hsla(0deg 0% 0% / 50%)
+  ),
+  linear-gradient(
+    to bottom,
+    hsla(0deg 0% 0% / 80%),
+    hsla(0deg 0% 0% / 70%),
+    hsla(0deg 0% 0% / 90%)
+  );
 
 header {
   display: flex;
@@ -41,7 +53,6 @@ header {
   flex-direction: column;
   align-items: center;
   box-shadow: 0 0 16px hsla(0deg 0% 0% / 50%);
-  /* background: vars.$reflection-weak, vars.$gradient-nav; */
   backdrop-filter: blur(8px);
   width: 100%;
   min-height: $navbar-height;
@@ -49,7 +60,7 @@ header {
   .websitewide-message {
     box-shadow: 0 1px hsla(0deg 0% 0% / 75%),
       inset 0 -1px hsla(0deg 0% 100% / 50%), inset 0 1px hsla(0deg 0% 0% / 75%);
-    background: vars.$reflection-weak,
+    background: vars.$reflection-minor,
       linear-gradient(
         to bottom,
         hsla(0deg 0% 55% / 75%),
@@ -61,41 +72,21 @@ header {
     height: 100%;
     text-align: center;
     text-shadow: vars.$textshadow-dimensions-nav hsl(0deg 0% 0% / 50%);
-    /* color: hsla(0deg 100% 50% / 75%); */
     color: hsl(0deg 0% 85%);
     font-family: monospace;
     font-size: 0.8rem;
     font-weight: bold;
 
-    /* TODO: Make into "function" (sass mixin) */
     &.minor {
-      background: vars.$reflection-weak,
-        linear-gradient(
-          to bottom,
-          hsla(45deg 100% 55% / 75%),
-          hsla(45deg 100% 20% / 75%),
-          hsla(45deg 100% 30% / 75%)
-        );
+      @include mixins.glossy-color-gradient(45deg, vars.$reflection-minor, vars.$stripes);
     }
 
     &.major {
-      background: vars.$reflection-weak,
-        linear-gradient(
-          to bottom,
-          hsla(25deg 100% 55% / 75%),
-          hsla(25deg 100% 20% / 75%),
-          hsla(25deg 100% 30% / 75%)
-        );
+      @include mixins.glossy-color-gradient(25deg, vars.$reflection-minor, vars.$stripes);
     }
 
     &.severe {
-      background: vars.$reflection-weak,
-        linear-gradient(
-          to bottom,
-          hsla(0deg 100% 55% / 75%),
-          hsla(0deg 100% 20% / 75%),
-          hsla(0deg 100% 30% / 75%)
-        );
+      @include mixins.glossy-color-gradient(0deg, vars.$reflection-minor, vars.$stripes);
     }
   }
 }
@@ -103,7 +94,19 @@ header {
 nav {
   box-shadow: 0 1px hsla(0deg 0% 0% / 75%),
     inset 0 -1px hsla(0deg 0% 100% / 50%);
-  background: vars.$reflection-weak, vars.$gradient-nav;
+  background: vars.$reflection-weak,
+    linear-gradient(
+      to right,
+      hsla(0deg 0% 0% / 50%),
+      hsla(0deg 0% 0% / 0%),
+      hsla(0deg 0% 0% / 50%)
+    ),
+    linear-gradient(
+      to bottom,
+      hsla(0deg 0% 0% / 80%),
+      hsla(0deg 0% 0% / 70%),
+      hsla(0deg 0% 0% / 90%)
+    );
   width: 100%;
 
   .container {
@@ -118,7 +121,6 @@ nav {
     cursor: pointer;
     padding: 0 32px;
     min-width: 64px;
-    /* min-height: calc($navbar-height / 2); */
     min-height: $navbar-height;
     text-decoration: none;
     text-shadow: vars.$textshadow-dimensions-nav hsl(0deg 0% 0% / 50%);
@@ -166,34 +168,6 @@ nav {
       text-shadow: vars.$textshadow-dimensions-nav hsl(0deg 0% 0% / 50%),
         0 0 8px hsl(0deg 0% 100% / 75%);
       color: hsl(0deg 0% 85%);
-
-      /* &:hover {
-        background: linear-gradient(
-          to right,
-          hsla(0deg 0% 0% / 25%),
-          hsla(0deg 0% 0% / 5%) 25%,
-          hsla(0deg 0% 0% / 5%) 75%,
-          hsla(0deg 0% 0% / 25%)
-        );
-        text-shadow: 0 1px 2px hsla(0deg 0% 0% / 100%),
-          vars.$textshadow-dimensions-nav hsla(0deg 0% 0% / 25%),
-          0 1px 2px hsla(0deg 0% 100% / 100%),
-          0 1px 4px hsla(0deg 0% 100% / 100%),
-          0 1px 6px hsla(0deg 0% 100% / 100%),
-          0 1px 8px hsla(0deg 0% 100% / 100%);
-      }
-
-      &:active {
-        background: linear-gradient(
-          to right,
-          hsla(0deg 0% 0% / 50%),
-          hsla(0deg 0% 0% / 15%),
-          hsla(0deg 0% 0% / 15%),
-          hsla(0deg 0% 0% / 50%)
-        );
-        text-shadow: vars.$textshadow-dimensions-nav hsl(0deg 0% 0% / 25%);
-        color: hsla(0deg 0% 95% / 75%);
-      } */
     }
   }
 
@@ -238,7 +212,6 @@ nav {
 }
 
 .separator {
-  /* box-shadow: -1px 0 hsla(0deg 0% 0% / 25%), 1px 0 hsla(0deg 0% 0% / 25%); */
   background: linear-gradient(
     to bottom,
     transparent,
