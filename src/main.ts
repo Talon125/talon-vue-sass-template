@@ -1,3 +1,6 @@
+const unsupported = document.getElementById('unsupported')
+unsupported?.remove()
+
 import './assets/base.scss'
 
 import { createApp } from 'vue'
