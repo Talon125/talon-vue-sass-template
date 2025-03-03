@@ -7,13 +7,12 @@ import { RouterLink } from 'vue-router'
     <nav>
       <div class="container">
         <a href="/" id="brand">
-          <img alt="Vue logo" class="logo" src="@/assets/logo.svg" />
-          <span>Vue</span>
         </a>
         <div class="separator"></div>
         <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/page2">Page 2</RouterLink>
-        <a class="submenu">Will-be Sub-Menu... maybe</a>
+        <RouterLink to="/projects">Projects</RouterLink>
+        <RouterLink to="/connections">Connections</RouterLink>
+        <RouterLink to="/legal">Legal</RouterLink>
         <RouterLink to="/about">About</RouterLink>
         <!--
         active-class="nav-link-active"
@@ -23,7 +22,7 @@ import { RouterLink } from 'vue-router'
     </nav>
     <!-- <div class="websitewide-message">Website-wide Banner Message</div> -->
     <!-- <div class="websitewide-message severe">!!! Something is broken !!!</div> -->
-    <!-- <div class="websitewide-message major">!!! Under Construction !!!</div> -->
+    <div class="websitewide-message major">!!! Under Construction !!!</div>
     <!-- <div class="websitewide-message minor">!!! will undergo maintenance on !!!</div> -->
   </header>
 </template>
@@ -78,15 +77,27 @@ header {
     font-weight: bold;
 
     &.minor {
-      @include mixins.glossy-color-gradient(45deg, vars.$reflection-minor, vars.$stripes);
+      @include mixins.glossy-color-gradient(
+        45deg,
+        vars.$reflection-minor,
+        vars.$stripes
+      );
     }
 
     &.major {
-      @include mixins.glossy-color-gradient(25deg, vars.$reflection-minor, vars.$stripes);
+      @include mixins.glossy-color-gradient(
+        25deg,
+        vars.$reflection-minor,
+        vars.$stripes
+      );
     }
 
     &.severe {
-      @include mixins.glossy-color-gradient(0deg, vars.$reflection-minor, vars.$stripes);
+      @include mixins.glossy-color-gradient(
+        0deg,
+        vars.$reflection-minor,
+        vars.$stripes
+      );
     }
   }
 }
@@ -190,24 +201,25 @@ nav {
 
 #brand {
   justify-content: start;
-  padding: 0 32px 0 0;
-  min-width: 0;
+  background-image: url('@/assets/TalonLogo/TalonLogo.png');
+  background-position: left 1px;
+  background-repeat: no-repeat;
+  background-size: 128px 171px;
+  padding: 0 16px 0 0;
+  width: 128px;
 
   &:hover {
-    background: none;
-    text-shadow: 0 0 4px hsl(0deg 0% 100% / 100%);
+    background-position: left -56px;
+    text-shadow: vars.$textshadow-dimensions-nav hsl(0deg 0% 0% / 50%),
+      0 0 8px hsl(0deg 0% 100% / 75%);
+    color: hsl(0deg 0% 85%);
   }
 
   &:active {
-    background: none;
-    text-shadow: vars.$textshadow-dimensions-nav hsl(0deg 0% 100% / 25%);
-    color: hsla(0deg 0% 15% / 50%);
-  }
-
-  img {
-    /* padding: 8px 8px 8px 0; */
-    padding-right: 8px;
-    height: 22px;
+    background-position: left -113px;
+    text-shadow: vars.$textshadow-dimensions-nav hsl(0deg 0% 0% / 50%),
+      0 0 8px hsl(0deg 0% 0% / 10%);
+    color: hsl(0deg 0% 45%);
   }
 }
 
