@@ -6,14 +6,15 @@ import { RouterLink } from 'vue-router'
   <header>
     <nav>
       <div class="container">
-        <a href="/" id="brand">
-        </a>
+        <a href="/" id="brand"> </a>
         <div class="separator"></div>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/projects">Projects</RouterLink>
-        <RouterLink to="/connections">Connections</RouterLink>
-        <RouterLink to="/legal">Legal</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
+        <ul>
+          <li><RouterLink to="/">Home</RouterLink></li>
+          <li><RouterLink to="/projects">Projects</RouterLink></li>
+          <li><RouterLink to="/connections">Connections</RouterLink></li>
+          <li><RouterLink to="/legal">Legal</RouterLink></li>
+          <li><RouterLink to="/about">About</RouterLink></li>
+        </ul>
         <!--
         active-class="nav-link-active"
         class="nav-link"
@@ -123,6 +124,12 @@ nav {
   .container {
     display: flex;
     /* justify-content: center; */
+  }
+
+  ul {
+    display: flex;
+    margin: 0;
+    list-style-type: none;
   }
 
   a {
