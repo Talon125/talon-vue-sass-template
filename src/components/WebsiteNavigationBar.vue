@@ -33,7 +33,12 @@ onBeforeUnmount(() => {
             :class="showTouchMenu ? 'brand-adjust' : ''"
           ></a>
           <div class="separator"></div>
-          <a class="menu-button" @click="showTouchMenu = !showTouchMenu">≡</a>
+          <a
+            class="menu-button"
+            :class="showTouchMenu ? 'menu-button-active' : ''"
+            @click="showTouchMenu = !showTouchMenu"
+            >≡</a
+          >
         </div>
         <div class="nav-links">
           <ul :class="showTouchMenu ? '' : 'touch-hidden'">
@@ -50,6 +55,11 @@ onBeforeUnmount(() => {
     <!-- <div class="websitewide-message severe">!!! Something is broken !!!</div> -->
     <div class="websitewide-message major">!!! Under Construction !!!</div>
     <!-- <div class="websitewide-message minor">!!! will undergo maintenance on !!!</div> -->
+    <!-- <div
+      class="touch-close"
+      v-show="showTouchMenu"
+      @click="showTouchMenu = false"
+    ></div> -->
   </header>
 </template>
 
@@ -81,6 +91,10 @@ header {
   backdrop-filter: blur(8px);
   width: 100%;
   min-height: $navbar-height;
+
+  * {
+    z-index: 10;
+  }
 
   .websitewide-message {
     box-shadow: 0 1px hsla(0deg 0% 0% / 75%),
@@ -219,7 +233,16 @@ nav {
   .menu-button {
     display: none;
     padding-right: 0;
-    font-size: 2.6em;
+    font-size: 2.777em;
+  }
+
+  .menu-button-active,
+  .menu-button-active:hover {
+    position: relative;
+    top: 4px;
+    text-shadow: vars.$textshadow-dimensions-nav hsl(0deg 0% 0% / 50%),
+      0 0 8px hsl(0deg 0% 0% / 10%);
+    color: hsl(0deg 0% 45%);
   }
 
   @media (width <= 992px) {
@@ -269,6 +292,15 @@ nav {
       hsla(0deg 0% 0% / 70%),
       hsla(0deg 0% 0% / 90%)
     );
+}
+
+.touch-close {
+  position: absolute;
+  z-index: 1;
+  /* background: hsla(0deg 0% 0% / 10%); */
+  width: 100%;
+  height: 100vh;
+  /* backdrop-filter: blur(4px); */
 }
 
 .brand {
