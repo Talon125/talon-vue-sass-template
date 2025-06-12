@@ -3,7 +3,21 @@ import { RouterLink } from 'vue-router'
 import { onMounted, onBeforeUnmount, ref } from 'vue'
 
 const showTouchMenu = ref(false)
+// const animCloseTouchMenu = ref(false)
 // const currentWindowWidth = ref(0)
+
+const toggleShowTouchMenu = () => {
+  // if (showTouchMenu.value) {
+  //   animCloseTouchMenu.value = true
+  //   setTimeout(() => {
+  //     showTouchMenu.value = false
+  //     animCloseTouchMenu.value = false
+  //   }, 500)
+  // } else {
+  //   showTouchMenu.value = true
+  // }
+  showTouchMenu.value = !showTouchMenu.value
+}
 
 const resizeHandler = () => {
   // currentWindowWidth.value = window.innerWidth
@@ -35,14 +49,24 @@ onBeforeUnmount(() => {
           ></a>
           <div class="separator"></div>
           <a
-            :title="showTouchMenu ? 'Close the navigation menu' : 'Open the navigation menu'"
+            :title="
+              showTouchMenu
+                ? 'Close the navigation menu'
+                : 'Open the navigation menu'
+            "
             class="menu-button"
             :class="showTouchMenu ? 'menu-button-active' : ''"
-            @click="showTouchMenu = !showTouchMenu"
+            @click="toggleShowTouchMenu()"
             >≡</a
           >
         </div>
         <div class="nav-links">
+          <!-- <ul
+            :class="[
+              showTouchMenu ? '' : 'touch-hidden',
+              animCloseTouchMenu ? 'nav-close-anim' : 'nav-open-anim'
+            ]"
+          > -->
           <ul :class="showTouchMenu ? '' : 'touch-hidden'">
             <li><RouterLink to="/">Home</RouterLink></li>
             <li><RouterLink to="/projects">Projects</RouterLink></li>
@@ -166,6 +190,7 @@ nav {
   .nav-other {
     display: flex;
     /* justify-content: center; */
+    /* transition-duration: 500ms; */
   }
 
   ul {
@@ -179,6 +204,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
+    /* transition: color 100ms, text-shadow 100ms, background 0ms; */
     cursor: pointer;
     padding: 0 32px;
     min-width: 64px;
@@ -240,12 +266,36 @@ nav {
 
   .menu-button-active,
   .menu-button-active:hover {
-    position: relative;
-    top: 4px;
+    /* position: relative;
+    top: 4px; */
     text-shadow: vars.$textshadow-dimensions-nav hsl(0deg 0% 0% / 50%),
       0 0 8px hsl(0deg 0% 0% / 10%);
     color: hsl(0deg 0% 45%);
   }
+
+  /* @keyframes slide-in {
+    from {
+      opacity: 0;
+      margin-top: calc(-64px * 5);
+    }
+
+    to {
+      opacity: 1;
+      margin-top: 0;
+    }
+  }
+
+  @keyframes slide-out {
+    from {
+      opacity: 1;
+      margin-top: 0;
+    }
+
+    to {
+      opacity: 0;
+      margin-top: calc(-64px * 5);
+    }
+  } */
 
   @media (width <= 992px) {
     .touch-hidden {
@@ -263,6 +313,15 @@ nav {
 
     ul {
       flex-direction: column;
+      // box-shadow: inset 0 4px 4px -4px hsla(0deg 0% 0% / 10%);
+    }
+
+    .nav-open-anim {
+      animation: slide-in 500ms;
+    }
+
+    .nav-close-anim {
+      animation: slide-out 500ms;
     }
 
     .container {
@@ -271,6 +330,23 @@ nav {
 
     .nav-other {
       justify-content: space-between;
+      /* box-shadow: 0 1px hsla(0deg 0% 0% / 5%);
+      background: radial-gradient(
+        ellipse 100% 50% at bottom,
+        hsla(0deg 0% 100% / 10%),
+        transparent 55%
+      ); */
+      /* border-width: 1px;
+      border-style: solid;
+      border-image: conic-gradient(
+          transparent 95deg,
+          hsla(0deg 0% 50% / 50%) 95.75deg 95.9deg,
+          transparent 96.4deg 261.75deg,
+          hsla(0deg 0% 50% / 50%) 262.75deg 264.5deg,
+          transparent 265deg
+        )
+        1;
+      border-image-outset: 0; */
     }
   }
 }
@@ -279,8 +355,8 @@ nav {
   background: linear-gradient(
       to bottom,
       hsl(0deg 0% 100% / 2.5%),
-      hsl(0deg 0% 100% / 5%) 9.5%,
-      transparent 9.5%
+      hsl(0deg 0% 100% / 5%) 8.33%,
+      transparent 8.33%
     ),
     linear-gradient(
       to right,
@@ -329,7 +405,7 @@ nav {
   }
 }
 
-.brand-adjust {
+/* .brand-adjust {
   background-position: left 4px;
 
   &:hover {
@@ -339,7 +415,7 @@ nav {
   &:active {
     background-position: left calc(-114px + 4px);
   }
-}
+} */
 
 .separator {
   background: linear-gradient(
