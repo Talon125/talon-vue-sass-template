@@ -28,12 +28,14 @@ onBeforeUnmount(() => {
       <div class="container">
         <div class="nav-other">
           <a
+            title="Return to the homepage"
             href="/"
             class="brand"
             :class="showTouchMenu ? 'brand-adjust' : ''"
           ></a>
           <div class="separator"></div>
           <a
+            :title="showTouchMenu ? 'Close the navigation menu' : 'Open the navigation menu'"
             class="menu-button"
             :class="showTouchMenu ? 'menu-button-active' : ''"
             @click="showTouchMenu = !showTouchMenu"
