@@ -1,24 +1,49 @@
 <script setup lang="ts">
 import { RouterLink } from 'vue-router'
+import { onMounted, onBeforeUnmount, ref } from 'vue'
+
+const showTouchMenu = ref(false)
+// const currentWindowWidth = ref(0)
+
+const resizeHandler = () => {
+  // currentWindowWidth.value = window.innerWidth
+  if (window.innerWidth >= 992) {
+    showTouchMenu.value = false
+  }
+}
+
+onMounted(() => {
+  resizeHandler()
+  window.addEventListener('resize', resizeHandler)
+})
+
+onBeforeUnmount(() => {
+  window.removeEventListener('resize', resizeHandler)
+})
 </script>
 
 <template>
   <header>
-    <nav>
+    <nav :class="showTouchMenu ? 'nav-adjust' : ''">
       <div class="container">
-        <a href="/" id="brand"> </a>
-        <div class="separator"></div>
-        <ul>
-          <li><RouterLink to="/">Home</RouterLink></li>
-          <li><RouterLink to="/projects">Projects</RouterLink></li>
-          <li><RouterLink to="/connections">Connections</RouterLink></li>
-          <li><RouterLink to="/legal">Legal</RouterLink></li>
-          <li><RouterLink to="/about">About</RouterLink></li>
-        </ul>
-        <!--
-        active-class="nav-link-active"
-        class="nav-link"
-        -->
+        <div class="nav-other">
+          <a
+            href="/"
+            class="brand"
+            :class="showTouchMenu ? 'brand-adjust' : ''"
+          ></a>
+          <div class="separator"></div>
+          <a class="menu-button" @click="showTouchMenu = !showTouchMenu">≡</a>
+        </div>
+        <div class="nav-links">
+          <ul :class="showTouchMenu ? '' : 'touch-hidden'">
+            <li><RouterLink to="/">Home</RouterLink></li>
+            <li><RouterLink to="/projects">Projects</RouterLink></li>
+            <li><RouterLink to="/connections">Connections</RouterLink></li>
+            <li><RouterLink to="/legal">Legal</RouterLink></li>
+            <li><RouterLink to="/about">About</RouterLink></li>
+          </ul>
+        </div>
       </div>
     </nav>
     <!-- <div class="websitewide-message">Website-wide Banner Message</div> -->
@@ -121,7 +146,8 @@ nav {
     );
   width: 100%;
 
-  .container {
+  .container,
+  .nav-other {
     display: flex;
     /* justify-content: center; */
   }
@@ -129,6 +155,7 @@ nav {
   ul {
     display: flex;
     margin: 0;
+    padding: 0;
     list-style-type: none;
   }
 
@@ -189,44 +216,94 @@ nav {
     }
   }
 
+  .menu-button {
+    display: none;
+    padding-right: 0;
+    font-size: 2.6em;
+  }
+
   @media (width <= 992px) {
-    /* background: vars.$reflection-weak,
-      linear-gradient(
-        to right,
-        hsla(0deg 100% 50% / 25%),
-        hsla(0deg 100% 50% / 0%),
-        hsla(0deg 100% 50% / 25%)
-      ),
-      linear-gradient(
-        to bottom,
-        hsla(0deg 100% 95% / 90%),
-        hsla(0deg 100% 80% / 90%),
-        hsla(0deg 100% 90% / 90%)
-      ); */
+    .touch-hidden {
+      display: none;
+    }
+
+    .menu-button {
+      display: flex;
+      align-items: baseline;
+    }
+
+    .separator {
+      display: none;
+    }
+
+    ul {
+      flex-direction: column;
+    }
+
+    .container {
+      display: block;
+    }
+
+    .nav-other {
+      justify-content: space-between;
+    }
   }
 }
 
-#brand {
+.nav-adjust {
+  background: linear-gradient(
+      to bottom,
+      hsl(0deg 0% 100% / 2.5%),
+      hsl(0deg 0% 100% / 5%) 9.5%,
+      transparent 9.5%
+    ),
+    linear-gradient(
+      to right,
+      hsla(0deg 0% 0% / 50%),
+      hsla(0deg 0% 0% / 0%),
+      hsla(0deg 0% 0% / 50%)
+    ),
+    linear-gradient(
+      to bottom,
+      hsla(0deg 0% 0% / 80%),
+      hsla(0deg 0% 0% / 70%),
+      hsla(0deg 0% 0% / 90%)
+    );
+}
+
+.brand {
   justify-content: start;
   background-image: url('@/assets/TalonLogo/TalonLogo.png');
-  background-position: left 1px;
+  background-position: left -0.5px;
   background-repeat: no-repeat;
   background-size: 128px 171px;
   padding: 0 16px 0 0;
   width: 128px;
 
   &:hover {
-    background-position: left -56px;
+    background-position: left -57.5px;
     text-shadow: vars.$textshadow-dimensions-nav hsl(0deg 0% 0% / 50%),
       0 0 8px hsl(0deg 0% 100% / 75%);
     color: hsl(0deg 0% 85%);
   }
 
   &:active {
-    background-position: left -113px;
+    background-position: left -114.5px;
     text-shadow: vars.$textshadow-dimensions-nav hsl(0deg 0% 0% / 50%),
       0 0 8px hsl(0deg 0% 0% / 10%);
     color: hsl(0deg 0% 45%);
+  }
+}
+
+.brand-adjust {
+  background-position: left 4px;
+
+  &:hover {
+    background-position: left calc(-57px + 4px);
+  }
+
+  &:active {
+    background-position: left calc(-114px + 4px);
   }
 }
 
