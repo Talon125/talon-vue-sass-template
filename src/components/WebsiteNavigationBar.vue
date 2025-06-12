@@ -384,21 +384,21 @@ nav {
 .brand {
   justify-content: start;
   background-image: url('@/assets/TalonLogo/TalonLogo.png');
-  background-position: left -0.5px;
+  background-position: left 1.5px;
   background-repeat: no-repeat;
   background-size: 128px 171px;
   padding: 0 16px 0 0;
   width: 128px;
 
   &:hover {
-    background-position: left -57.5px;
+    background-position: left -58.5px;
     text-shadow: vars.$textshadow-dimensions-nav hsl(0deg 0% 0% / 50%),
       0 0 8px hsl(0deg 0% 100% / 75%);
     color: hsl(0deg 0% 85%);
   }
 
   &:active {
-    background-position: left -114.5px;
+    background-position: left -115.5px;
     text-shadow: vars.$textshadow-dimensions-nav hsl(0deg 0% 0% / 50%),
       0 0 8px hsl(0deg 0% 0% / 10%);
     color: hsl(0deg 0% 45%);
