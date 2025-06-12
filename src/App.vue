@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { RouterView } from 'vue-router'
-import WebsiteNavigationBar from './components/WebsiteNavigationBar.vue'
+import WebsiteNavigationBar from '@/components/WebsiteNavigationBar.vue'
 </script>
 
 <template>
@@ -10,6 +10,8 @@ import WebsiteNavigationBar from './components/WebsiteNavigationBar.vue'
 </template>
 
 <style lang="scss">
+@use '@/assets/util';
+
 html {
   background: linear-gradient(
     to right,
@@ -53,6 +55,10 @@ html {
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
+}
+
+main {
+  padding-bottom: 1em;
 }
 
 .container {
