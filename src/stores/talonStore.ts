@@ -23,7 +23,9 @@ export const useBranchLastUpdatedStore = defineStore('branchLastUpdated', () => 
       if (!commitSha) throw new Error('No commit SHA found for branch')
 
       // Fetch commit info to get the committer date
-      const commitRes = await fetch(`https://api.github.com/repos/${REPOSITORY}/commits/${commitSha}`)
+      const commitRes = await fetch(
+        `https://api.github.com/repos/${REPOSITORY}/commits/${commitSha}`,
+      )
       if (!commitRes.ok) throw new Error('Failed to fetch commit info')
       const commitData = await commitRes.json()
       const committerDate = commitData?.commit?.committer?.date

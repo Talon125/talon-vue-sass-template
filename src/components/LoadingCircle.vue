@@ -62,22 +62,8 @@
         </linearGradient> -->
       </defs>
       <circle cx="50%" cy="50%" r="50%" fill="url(#Glow)" />
-      <circle
-        cx="50%"
-        cy="50%"
-        r="30%"
-        fill="none"
-        stroke="url(#Base)"
-        :stroke-width="size / 8"
-      />
-      <circle
-        cx="50%"
-        cy="50%"
-        r="30%"
-        fill="none"
-        stroke="url(#Base2)"
-        :stroke-width="size / 8"
-      />
+      <circle cx="50%" cy="50%" r="30%" fill="none" stroke="url(#Base)" :stroke-width="size / 8" />
+      <circle cx="50%" cy="50%" r="30%" fill="none" stroke="url(#Base2)" :stroke-width="size / 8" />
       <circle
         cx="50%"
         cy="50%"
@@ -146,7 +132,7 @@
 <script setup lang="ts">
 defineProps({
   size: { type: Number, default: 64 },
-  speed: { type: Number, default: 1 }
+  speed: { type: Number, default: 1 },
 })
 </script>
 
