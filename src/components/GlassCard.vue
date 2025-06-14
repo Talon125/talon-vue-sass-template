@@ -40,7 +40,7 @@ defineProps({
 .card {
   margin: 2em 0 0;
   border-radius: 4px;
-  box-shadow: 0 0 0 1px hsl(0deg 0% 100% / 67%), 0 0 0 2px hsl(0deg 0% 0% / 50%),
+  box-shadow: inset 0 0 0 1px hsl(0deg 0% 100% / 50%), 0 0 0 1px hsl(0deg 0% 0% / 75%),
     0 0 8px black;
   background: radial-gradient(
       ellipse 100% 33% at bottom,
