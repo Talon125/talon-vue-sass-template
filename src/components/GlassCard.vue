@@ -41,15 +41,10 @@ defineProps({
     0 0 0 1px hsl(0deg 0% 0% / 75%),
     0 0 8px black;
   background:
+    vars.$reflection-soft,
     radial-gradient(ellipse 100% 33% at bottom, hsl(0deg 0% 100% / 10%), transparent),
     radial-gradient(ellipse at bottom left, transparent 75%, hsl(0deg 0% 100% / 15%)),
     radial-gradient(ellipse at bottom right, transparent 75%, hsl(0deg 0% 100% / 15%)),
-    linear-gradient(
-      to bottom,
-      hsl(0deg 0% 100% / 2.5%),
-      hsl(0deg 0% 100% / 5%) 49%,
-      transparent 51%
-    ),
     linear-gradient(to bottom, hsl(0deg 0% 0% / 50%), hsl(0deg 0% 0% / 70%), hsl(0deg 0% 0% / 60%));
   padding: 1em;
   text-shadow: 0 2px 2px hsl(0deg 0% 0% / 25%);
