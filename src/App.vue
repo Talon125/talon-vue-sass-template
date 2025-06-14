@@ -12,16 +12,24 @@ import WebsiteNavigationBar from '@/components/WebsiteNavigationBar.vue'
 <style lang="scss">
 @use '@/assets/util';
 
-html {
-  background: linear-gradient(
+#background-gradient {
+  position: fixed;
+  z-index: -1;
+  /* background: linear-gradient(
     to right,
     hsla(0deg 0% 0% / 15%),
     hsla(0deg 0% 0% / 5%) 25%,
     hsla(0deg 0% 0% / 5%) 75%,
     hsla(0deg 0% 0% / 15%)
-  );
-  background: linear-gradient(to top, hsl(206deg 50% 95%), hsl(206deg 100% 85%));
-  background: linear-gradient(
+    );
+    background: linear-gradient(
+      to top,
+      hsl(206deg 50% 95%),
+      hsl(206deg 100% 85%)
+      ); */
+  /* background-attachment: fixed; */
+  /* background-clip: border-box; */
+  background-image: linear-gradient(
       190deg,
       rgb(7 142 112 / 50%),
       rgb(38 207 170 / 50%),
@@ -48,13 +56,13 @@ html {
       rgb(79 72 203),
       rgb(61 26 119)
     );
-  background-attachment: fixed;
-  background-clip: border-box;
-  background-origin: border-box;
+  /* background-origin: border-box; */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
+  /* height: 100%; */
 }
 
 main {
