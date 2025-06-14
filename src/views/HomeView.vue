@@ -8,6 +8,10 @@ const myAge = getAge(MY_BIRTHDAY)
 
 const time = ref('')
 
+const prefersReducedMotion = window.matchMedia(
+  '(prefers-reduced-motion: reduce)'
+).matches
+
 function updateTime(): void {
   const options: Intl.DateTimeFormatOptions = {
     timeZone: 'Europe/Vienna',
@@ -20,7 +24,12 @@ function updateTime(): void {
 
 onMounted(() => {
   updateTime()
-  setInterval(updateTime, 1000)
+
+  if (prefersReducedMotion) {
+    setInterval(updateTime, 60000)
+  } else {
+    setInterval(updateTime, 1000)
+  }
 })
 </script>
 
@@ -61,6 +70,9 @@ onMounted(() => {
         <p>
           Born in Florida, but live in Austria<br />
           Time for me right now: <code class="time">{{ time }}</code>
+          <span v-if="prefersReducedMotion" class="btw">
+            (Only updated every minute to reduce motion)
+          </span>
         </p>
         I know a bit
         <abbr title="Object-Oriented Programming">OOP</abbr>, fullstack
@@ -111,6 +123,10 @@ onMounted(() => {
   /* text-shadow: none; */
   text-shadow: 0 2px 2px hsl(0deg 0% 0% / 15%);
   font-size: 2em;
+}
+
+.btw {
+  font-size: 0.8em;
 }
 
 .intro-flex {
