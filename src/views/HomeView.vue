@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import GlassCard from '@/components/GlassCard.vue'
 import LoadingCircle from '@/components/LoadingCircle.vue'
-import { MY_BIRTHDAY } from '@/assets/constants'
+import PushButton from '@/components/PushButton.vue'
+import { REPOSITORY_LINK, MY_BIRTHDAY } from '@/assets/constants'
 import { getAge, isToday } from '@/assets/util'
 import { ref, onMounted } from 'vue'
 import { useBranchLastUpdatedStore } from '@/stores/talonStore'
@@ -64,7 +65,7 @@ onMounted(() => {
       <a href="https://ark-ui.com/" target="_blank">Ark UI</a>
       for some components.
       <div class="text-center">
-        <button>repo</button>
+        <PushButton :href="REPOSITORY_LINK" defaultButton>GitHub Repository</PushButton>
       </div>
     </GlassCard>
 
