@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { RouterLink } from 'vue-router'
 import { onMounted, onBeforeUnmount, ref } from 'vue'
+import { MY_BIRTHDAY } from '@/assets/constants'
+import { isToday } from '@/assets/util'
 
 const showTouchMenu = ref(false)
 // const animCloseTouchMenu = ref(false)
@@ -71,16 +73,24 @@ onBeforeUnmount(() => {
             <li><RouterLink to="/">Home</RouterLink></li>
             <li><RouterLink to="/projects">Projects</RouterLink></li>
             <li><RouterLink to="/connections">Connections</RouterLink></li>
-            <li><RouterLink to="/legal">Legal</RouterLink></li>
-            <li><RouterLink to="/about">About</RouterLink></li>
+            <li><RouterLink to="/credits">Credits</RouterLink></li>
           </ul>
         </div>
       </div>
     </nav>
-    <!-- <div class="websitewide-message">Website-wide Banner Message</div> -->
     <!-- <div class="websitewide-message severe">!!! Something is broken !!!</div> -->
     <div class="websitewide-message major">!!! Under Construction !!!</div>
     <!-- <div class="websitewide-message minor">!!! will undergo maintenance on !!!</div> -->
+    <div
+      v-if="isToday(MY_BIRTHDAY) && $route.fullPath !== '/'"
+      class="websitewide-message birthday"
+    >
+      🎂 Today is my birthday! 🎂
+    </div>
+    <div v-if="new Date().getMonth() === 5" class="websitewide-message rainbow">
+      🏳️‍🌈 Happy Pride Month! 🏳️‍🌈
+    </div>
+    <!-- <div class="websitewide-message">Website-wide Banner Message</div> -->
     <!-- <div
       class="touch-close"
       v-show="showTouchMenu"
@@ -141,6 +151,58 @@ header {
     font-family: monospace;
     font-size: 0.8rem;
     font-weight: bold;
+
+    &.birthday {
+      background: vars.$reflection-minor,
+        linear-gradient(
+          to right,
+          hsla(0deg 0% 0% / 0%),
+          hsla(0deg 0% 0% / 15%),
+          hsla(0deg 0% 0% / 0%)
+        ),
+        linear-gradient(
+          to bottom,
+          hsla(0deg 0% 100% / 20%),
+          hsla(0deg 0% 0% / 20%),
+          hsla(0deg 0% 0% / 0%)
+        ),
+        linear-gradient(
+          to right,
+          hsla(167deg 91% 29% / 90%),
+          hsla(167deg 69% 48% / 90%),
+          hsla(150deg 63% 75% / 90%),
+          hsla(211deg 64% 68% / 90%),
+          hsla(243deg 56% 54% / 90%),
+          hsla(263deg 64% 28% / 90%)
+        );
+      text-shadow: vars.$textshadow-dimensions-nav 2px hsl(0deg 0% 0% / 100%);
+    }
+
+    &.rainbow {
+      background: vars.$reflection-minor,
+        linear-gradient(
+          to right,
+          hsla(0deg 0% 0% / 0%),
+          hsla(0deg 0% 0% / 15%),
+          hsla(0deg 0% 0% / 0%)
+        ),
+        linear-gradient(
+          to bottom,
+          hsla(0deg 0% 100% / 20%),
+          hsla(0deg 0% 0% / 20%),
+          hsla(0deg 0% 0% / 0%)
+        ),
+        linear-gradient(
+          to right,
+          hsla(0deg 100% 45% / 75%),
+          hsla(33deg 100% 50% / 75%),
+          hsla(56deg 100% 50% / 75%),
+          hsla(135deg 97% 26% / 75%),
+          hsla(222deg 100% 50% / 75%),
+          hsla(293deg 100% 27% / 75%)
+        );
+      text-shadow: vars.$textshadow-dimensions-nav 2px hsl(0deg 0% 0% / 100%);
+    }
 
     &.minor {
       @include mixins.glossy-color-gradient(
