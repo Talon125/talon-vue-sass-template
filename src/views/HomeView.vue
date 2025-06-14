@@ -63,7 +63,7 @@ onMounted(() => {
       <a href="https://ark-ui.com/" target="_blank">Ark UI</a>
       for some components.
       <div class="text-center">
-        <PushButton :href="REPOSITORY_LINK" defaultButton>GitHub Repository</PushButton>
+        <PushButton :href="REPOSITORY_LINK">GitHub Repository</PushButton>
       </div>
     </GlassCard>
 
@@ -114,11 +114,14 @@ onMounted(() => {
 
     <GlassCard clear class="text-center">
       Site last updated on:<br />
-      <code class="time">
-        {{ meow.lastUpdated?.split('T')[0] ?? '?' }}
-      </code>
-      <LoadingCircle v-if="meow.loading" :size="32" />
-      <!-- {{ meow.lastUpdated?.split('T')[1] }} -->
+      <div class="last-updated">
+        <LoadingCircle v-if="meow.loading" :size="32" />
+        <code>
+          {{ meow.lastUpdated?.split('T')[0] }}
+          <!-- {{ meow.lastUpdated?.split('T')[0] ?? '?' }} -->
+          <!-- {{ meow.lastUpdated?.split('T')[1] }} -->
+        </code>
+      </div>
     </GlassCard>
   </main>
 </template>
@@ -162,5 +165,20 @@ onMounted(() => {
 
 .time {
   font-size: 1rem;
+}
+
+.last-updated {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.25rem;
+
+  code {
+    font-size: 1rem;
+  }
+
+  div {
+    margin-bottom: -4px;
+  }
 }
 </style>
