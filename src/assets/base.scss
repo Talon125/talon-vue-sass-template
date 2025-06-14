@@ -19,6 +19,8 @@ body {
 }
 
 a {
+  overflow-wrap: break-word;
+
   &:link {
     color: hsl(211deg 64% 68%);
   }
