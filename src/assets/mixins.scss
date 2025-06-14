@@ -7,3 +7,13 @@
       hsla($hue 100% 30% / 75%)
     )
 }
+
+@mixin glossy-color-gradient-opaque($hue, $effects...) {
+  background: $effects,
+    linear-gradient(
+      to bottom,
+      hsl($hue 100% 55%),
+      hsl($hue 100% 20%),
+      hsl($hue 100% 30%)
+    )
+}

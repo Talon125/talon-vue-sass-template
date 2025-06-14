@@ -378,13 +378,13 @@ nav {
       // box-shadow: inset 0 4px 4px -4px hsla(0deg 0% 0% / 10%);
     }
 
-    .nav-open-anim {
+    /* .nav-open-anim {
       animation: slide-in 500ms;
     }
 
     .nav-close-anim {
       animation: slide-out 500ms;
-    }
+    } */
 
     .container {
       display: block;
@@ -507,6 +507,114 @@ nav {
 
   &::before {
     left: -1px;
+  }
+}
+
+@media (prefers-reduced-transparency) {
+  header {
+    backdrop-filter: none;
+
+    .websitewide-message {
+      background: vars.$reflection-minor,
+        linear-gradient(
+          to bottom,
+          hsl(167deg 25% 55%),
+          hsl(167deg 25% 20%),
+          hsl(167deg 25% 30%)
+        );
+
+      &.birthday {
+        background: vars.$reflection-minor,
+          linear-gradient(
+            to right,
+            hsla(0deg 0% 0% / 0%),
+            hsla(0deg 0% 0% / 15%),
+            hsla(0deg 0% 0% / 0%)
+          ),
+          linear-gradient(
+            to bottom,
+            hsla(0deg 0% 100% / 20%),
+            hsla(0deg 0% 0% / 20%),
+            hsla(0deg 0% 0% / 0%)
+          ),
+          linear-gradient(
+            to right,
+            hsl(167deg 91% 29%),
+            hsl(167deg 69% 48%),
+            hsl(150deg 63% 75%),
+            hsl(211deg 64% 68%),
+            hsl(243deg 56% 54%),
+            hsl(263deg 64% 28%)
+          );
+        text-shadow: vars.$textshadow-dimensions-nav 2px hsl(0deg 0% 0% / 100%);
+      }
+
+      &.rainbow {
+        background: vars.$reflection-minor,
+          linear-gradient(
+            to right,
+            hsla(0deg 0% 0% / 0%),
+            hsla(0deg 0% 0% / 15%),
+            hsla(0deg 0% 0% / 0%)
+          ),
+          linear-gradient(
+            to bottom,
+            hsla(0deg 0% 100% / 20%),
+            hsla(0deg 0% 0% / 20%),
+            hsla(0deg 0% 0% / 0%)
+          ),
+          linear-gradient(
+            to right,
+            hsl(0deg 100% 45%),
+            hsl(33deg 100% 50%),
+            hsl(56deg 100% 50%),
+            hsl(135deg 97% 26%),
+            hsl(222deg 100% 50%),
+            hsl(293deg 100% 27%)
+          );
+        text-shadow: vars.$textshadow-dimensions-nav 2px hsl(0deg 0% 0% / 100%);
+      }
+
+      &.minor {
+        @include mixins.glossy-color-gradient-opaque(
+          45deg,
+          vars.$reflection-minor,
+          vars.$stripes
+        );
+      }
+
+      &.major {
+        @include mixins.glossy-color-gradient-opaque(
+          25deg,
+          vars.$reflection-minor,
+          vars.$stripes
+        );
+      }
+
+      &.severe {
+        @include mixins.glossy-color-gradient-opaque(
+          0deg,
+          vars.$reflection-minor,
+          vars.$stripes
+        );
+      }
+    }
+  }
+
+  nav {
+    background: vars.$reflection-weak,
+      linear-gradient(
+        to right,
+        hsl(0deg 0% 0% / 50%),
+        hsl(0deg 0% 0% / 0%),
+        hsl(0deg 0% 0% / 50%)
+      ),
+      linear-gradient(
+        to bottom,
+        hsl(167deg 25% 7.5%),
+        hsl(167deg 25% 10%),
+        hsl(167deg 25% 5%)
+      );
   }
 }
 </style>
