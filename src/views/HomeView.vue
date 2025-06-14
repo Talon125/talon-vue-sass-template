@@ -3,10 +3,14 @@ import GlassCard from '@/components/GlassCard.vue'
 import { MY_BIRTHDAY } from '@/assets/constants'
 import { getAge, isToday } from '@/assets/util'
 import { ref, onMounted } from 'vue'
+import { useBranchLastUpdatedStore } from '@/stores/talonStore'
 
 const myAge = getAge(MY_BIRTHDAY)
 
 const time = ref('')
+
+const meow = useBranchLastUpdatedStore()
+// meow.fetchLastUpdated()
 
 const prefersReducedMotion = window.matchMedia(
   '(prefers-reduced-motion: reduce)'
@@ -114,7 +118,13 @@ onMounted(() => {
       supportive, then you're cool~
     </GlassCard>
 
-    <GlassCard clear class="text-center"> Site last updated on: </GlassCard>
+    <GlassCard clear class="text-center">
+      Site last updated on:<br />
+      <code class="time">
+        {{ meow.lastUpdated?.split('T')[0] }}
+      </code>
+      <!-- {{ meow.lastUpdated?.split('T')[1] }} -->
+    </GlassCard>
   </main>
 </template>
 
