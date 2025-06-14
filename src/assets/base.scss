@@ -17,3 +17,25 @@ body {
   margin: 0;
   font-family: 'Oxygen Regular', sans-serif;
 }
+
+a {
+  &:link {
+    color: hsl(211deg 64% 68%);
+  }
+
+  &:visited {
+    color: hsl(263deg 64% 75%);
+  }
+
+  &:hover {
+    filter: brightness(1.2);
+  }
+
+  &:active {
+    filter: brightness(0.8);
+  }
+
+  &[target='_blank']::after {
+    content: url('/icons/external\ link.svg');
+  }
+}
