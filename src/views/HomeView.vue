@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import GlassCard from '@/components/GlassCard.vue'
+import LoadingCircle from '@/components/LoadingCircle.vue'
 import { MY_BIRTHDAY } from '@/assets/constants'
 import { getAge, isToday } from '@/assets/util'
 import { ref, onMounted } from 'vue'
@@ -10,7 +11,7 @@ const myAge = getAge(MY_BIRTHDAY)
 const time = ref('')
 
 const meow = useBranchLastUpdatedStore()
-// meow.fetchLastUpdated()
+meow.fetchLastUpdated()
 
 const prefersReducedMotion = window.matchMedia(
   '(prefers-reduced-motion: reduce)'
@@ -121,8 +122,9 @@ onMounted(() => {
     <GlassCard clear class="text-center">
       Site last updated on:<br />
       <code class="time">
-        {{ meow.lastUpdated?.split('T')[0] }}
+        {{ meow.lastUpdated?.split('T')[0] ?? '?' }}
       </code>
+      <LoadingCircle v-if="meow.loading" :size="32" />
       <!-- {{ meow.lastUpdated?.split('T')[1] }} -->
     </GlassCard>
   </main>
