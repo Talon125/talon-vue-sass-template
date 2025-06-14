@@ -364,9 +364,14 @@ nav {
       display: none;
     }
 
+    .brand {
+      padding-right: 0;
+    }
+
     .menu-button {
       display: flex;
       align-items: baseline;
+      padding-left: 0;
     }
 
     .separator {
@@ -417,8 +422,8 @@ nav {
   background: linear-gradient(
       to bottom,
       hsl(0deg 0% 100% / 2.5%),
-      hsl(0deg 0% 100% / 5%) 8.33%,
-      transparent 8.33%
+      hsl(0deg 0% 100% / 5%) 9.9%,
+      transparent 9.9%
     ),
     linear-gradient(
       to right,
