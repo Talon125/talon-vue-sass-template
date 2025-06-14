@@ -110,14 +110,14 @@ header {
   top: 0;
   flex-direction: column;
   align-items: center;
+  z-index: 10;
   box-shadow: 0 0 16px hsla(0deg 0% 0% / 50%);
-  backdrop-filter: blur(8px);
   width: 100%;
   min-height: $navbar-height;
-
-  * {
+  backdrop-filter: blur(8px);
+  /* * {
     z-index: 10;
-  }
+  } */
 
   .websitewide-message {
     box-shadow:
