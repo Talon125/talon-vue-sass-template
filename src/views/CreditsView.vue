@@ -45,7 +45,8 @@ import GlassCard from '@/components/GlassCard.vue'
           alt=" ShareAlike (copyleft)"
       /></a>
     </GlassCard>
-    <GlassCard title="Oxygen" nocenter>
+    <GlassCard title="Fonts">
+      <h1 style="margin-top: 0;">Oxygen</h1>
       The name of the font used throughout this website
       <ul>
         <li>
@@ -75,8 +76,7 @@ import GlassCard from '@/components/GlassCard.vue'
           </a>
         </li>
       </ul>
-    </GlassCard>
-    <GlassCard title="Source Sans 3" nocenter>
+      <h1>Source Sans 3</h1>
       The name of the font used for the copyleft symbol on this page
       <ul>
         <li>
