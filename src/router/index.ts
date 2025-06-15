@@ -25,6 +25,11 @@ const router = createRouter({
       component: () => import('../views/projects/PersonalProjects.vue')
     },
     {
+      path: '/connections',
+      name: 'Connections',
+      component: () => import('../views/ConnectionsView.vue')
+    },
+    {
       path: '/credits',
       name: 'Credits',
       // route level code-splitting
