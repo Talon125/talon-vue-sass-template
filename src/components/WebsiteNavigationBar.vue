@@ -59,7 +59,11 @@ onBeforeUnmount(() => {
           <div class="separator"></div>
           <a class="where-am-i"> {{ $route.name }} </a>
           <a
-            :title="showTouchMenu ? 'Close the navigation menu' : 'Open the navigation menu'"
+            :title="
+              showTouchMenu
+                ? 'Close the navigation menu'
+                : 'Open the navigation menu'
+            "
             class="menu-button"
             :class="showTouchMenu ? 'menu-button-active' : ''"
             @click="toggleShowTouchMenu()"
@@ -109,8 +113,18 @@ onBeforeUnmount(() => {
 
 $navbar-height: 64px;
 $gradient-nav:
-  linear-gradient(to right, hsla(0deg 0% 0% / 50%), hsla(0deg 0% 0% / 0%), hsla(0deg 0% 0% / 50%)),
-  linear-gradient(to bottom, hsla(0deg 0% 0% / 80%), hsla(0deg 0% 0% / 70%), hsla(0deg 0% 0% / 90%));
+  linear-gradient(
+    to right,
+    hsla(0deg 0% 0% / 50%),
+    hsla(0deg 0% 0% / 0%),
+    hsla(0deg 0% 0% / 50%)
+  ),
+  linear-gradient(
+    to bottom,
+    hsla(0deg 0% 0% / 80%),
+    hsla(0deg 0% 0% / 70%),
+    hsla(0deg 0% 0% / 90%)
+  );
 
 header {
   display: flex;
@@ -205,15 +219,27 @@ header {
     }
 
     &.minor {
-      @include mixins.glossy-color-gradient(45deg, vars.$reflection-minor, vars.$stripes);
+      @include mixins.glossy-color-gradient(
+        45deg,
+        vars.$reflection-minor,
+        vars.$stripes
+      );
     }
 
     &.major {
-      @include mixins.glossy-color-gradient(25deg, vars.$reflection-minor, vars.$stripes);
+      @include mixins.glossy-color-gradient(
+        25deg,
+        vars.$reflection-minor,
+        vars.$stripes
+      );
     }
 
     &.severe {
-      @include mixins.glossy-color-gradient(0deg, vars.$reflection-minor, vars.$stripes);
+      @include mixins.glossy-color-gradient(
+        0deg,
+        vars.$reflection-minor,
+        vars.$stripes
+      );
     }
   }
 }
@@ -283,10 +309,28 @@ nav {
 
     &.router-link-active {
       background:
-        linear-gradient(to right, transparent 40%, hsla(0deg 0% 100% / 7.5%), transparent 60%),
-        linear-gradient(to right, transparent 37.5%, hsla(0deg 0% 100% / 7.5%), transparent 62.5%),
-        radial-gradient(ellipse at top, hsl(0deg 0% 100% / 40%), transparent 7.5%),
-        radial-gradient(ellipse at bottom, hsl(0deg 0% 100% / 75%), transparent 7.5%);
+        linear-gradient(
+          to right,
+          transparent 40%,
+          hsla(0deg 0% 100% / 7.5%),
+          transparent 60%
+        ),
+        linear-gradient(
+          to right,
+          transparent 37.5%,
+          hsla(0deg 0% 100% / 7.5%),
+          transparent 62.5%
+        ),
+        radial-gradient(
+          ellipse at top,
+          hsl(0deg 0% 100% / 40%),
+          transparent 7.5%
+        ),
+        radial-gradient(
+          ellipse at bottom,
+          hsl(0deg 0% 100% / 75%),
+          transparent 7.5%
+        );
       background-position: 50% 0%;
       background-size: 350% 100%;
       text-shadow:
@@ -489,7 +533,12 @@ nav {
 } */
 
 .separator {
-  background: linear-gradient(to bottom, transparent, hsla(0deg 0% 100% / 25%), transparent);
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    hsla(0deg 0% 100% / 25%),
+    transparent
+  );
   width: 1px;
   white-space: nowrap;
 
@@ -498,7 +547,12 @@ nav {
     display: inline-block;
     position: relative;
     top: 0;
-    background: linear-gradient(to bottom, transparent, hsla(0deg 0% 0% / 50%), transparent);
+    background: linear-gradient(
+      to bottom,
+      transparent,
+      hsla(0deg 0% 0% / 50%),
+      transparent
+    );
     width: 1px;
     height: 100%;
     content: '';
@@ -516,7 +570,12 @@ nav {
     .websitewide-message {
       background:
         vars.$reflection-minor,
-        linear-gradient(to bottom, hsl(167deg 25% 55%), hsl(167deg 25% 20%), hsl(167deg 25% 30%));
+        linear-gradient(
+          to bottom,
+          hsl(167deg 25% 55%),
+          hsl(167deg 25% 20%),
+          hsl(167deg 25% 30%)
+        );
 
       &.birthday {
         background:
@@ -573,15 +632,27 @@ nav {
       }
 
       &.minor {
-        @include mixins.glossy-color-gradient-opaque(45deg, vars.$reflection-minor, vars.$stripes);
+        @include mixins.glossy-color-gradient-opaque(
+          45deg,
+          vars.$reflection-minor,
+          vars.$stripes
+        );
       }
 
       &.major {
-        @include mixins.glossy-color-gradient-opaque(25deg, vars.$reflection-minor, vars.$stripes);
+        @include mixins.glossy-color-gradient-opaque(
+          25deg,
+          vars.$reflection-minor,
+          vars.$stripes
+        );
       }
 
       &.severe {
-        @include mixins.glossy-color-gradient-opaque(0deg, vars.$reflection-minor, vars.$stripes);
+        @include mixins.glossy-color-gradient-opaque(
+          0deg,
+          vars.$reflection-minor,
+          vars.$stripes
+        );
       }
     }
   }
@@ -589,8 +660,18 @@ nav {
   nav {
     background:
       vars.$reflection-weak,
-      linear-gradient(to right, hsl(0deg 0% 0% / 50%), hsl(0deg 0% 0% / 0%), hsl(0deg 0% 0% / 50%)),
-      linear-gradient(to bottom, hsl(167deg 25% 7.5%), hsl(167deg 25% 10%), hsl(167deg 25% 5%));
+      linear-gradient(
+        to right,
+        hsl(0deg 0% 0% / 50%),
+        hsl(0deg 0% 0% / 0%),
+        hsl(0deg 0% 0% / 50%)
+      ),
+      linear-gradient(
+        to bottom,
+        hsl(167deg 25% 7.5%),
+        hsl(167deg 25% 10%),
+        hsl(167deg 25% 5%)
+      );
   }
 }
 </style>

@@ -1,6 +1,10 @@
 <template>
   <div class="card" :class="[birthday ? 'birthday' : '', clear ? 'clear' : '']">
-    <h1 v-if="title" id="glasscard-title" :class="nocenter ? '' : 'text-center'">
+    <h1
+      v-if="title"
+      id="glasscard-title"
+      :class="nocenter ? '' : 'text-center'"
+    >
       {{ title }}
     </h1>
     <slot />
@@ -12,7 +16,7 @@ defineProps({
   title: { type: String },
   birthday: { type: Boolean },
   nocenter: { type: Boolean },
-  clear: { type: Boolean },
+  clear: { type: Boolean }
 })
 </script>
 
@@ -42,19 +46,48 @@ defineProps({
     0 0 8px black;
   background:
     vars.$reflection-soft,
-    radial-gradient(ellipse 100% 33% at bottom, hsl(0deg 0% 100% / 10%), transparent),
-    radial-gradient(ellipse at bottom left, transparent 75%, hsl(0deg 0% 100% / 15%)),
-    radial-gradient(ellipse at bottom right, transparent 75%, hsl(0deg 0% 100% / 15%)),
-    linear-gradient(to bottom, hsl(0deg 0% 0% / 50%), hsl(0deg 0% 0% / 70%), hsl(0deg 0% 0% / 60%));
+    radial-gradient(
+      ellipse 100% 33% at bottom,
+      hsl(0deg 0% 100% / 10%),
+      transparent
+    ),
+    radial-gradient(
+      ellipse at bottom left,
+      transparent 75%,
+      hsl(0deg 0% 100% / 15%)
+    ),
+    radial-gradient(
+      ellipse at bottom right,
+      transparent 75%,
+      hsl(0deg 0% 100% / 15%)
+    ),
+    linear-gradient(
+      to bottom,
+      hsl(0deg 0% 0% / 50%),
+      hsl(0deg 0% 0% / 70%),
+      hsl(0deg 0% 0% / 60%)
+    );
   padding: 1em;
   text-shadow: 0 2px 2px hsl(0deg 0% 0% / 25%);
   color: hsla(0deg 0% 100% / 90%);
 
   &.clear {
     background:
-      radial-gradient(ellipse 100% 33% at bottom, hsl(0deg 0% 100% / 10%), transparent),
-      radial-gradient(ellipse at bottom left, transparent 75%, hsl(0deg 0% 100% / 15%)),
-      radial-gradient(ellipse at bottom right, transparent 75%, hsl(0deg 0% 100% / 15%)),
+      radial-gradient(
+        ellipse 100% 33% at bottom,
+        hsl(0deg 0% 100% / 10%),
+        transparent
+      ),
+      radial-gradient(
+        ellipse at bottom left,
+        transparent 75%,
+        hsl(0deg 0% 100% / 15%)
+      ),
+      radial-gradient(
+        ellipse at bottom right,
+        transparent 75%,
+        hsl(0deg 0% 100% / 15%)
+      ),
       linear-gradient(
         to bottom,
         hsl(0deg 0% 100% / 2.5%),
@@ -71,9 +104,21 @@ defineProps({
 
   &.birthday {
     background:
-      radial-gradient(ellipse 100% 33% at bottom, hsla(0deg 0% 100% / 25%), transparent),
-      radial-gradient(ellipse at bottom left, transparent 75%, hsla(0deg 0% 100% / 50%)),
-      radial-gradient(ellipse at bottom right, transparent 75%, hsla(0deg 0% 100% / 50%)),
+      radial-gradient(
+        ellipse 100% 33% at bottom,
+        hsla(0deg 0% 100% / 25%),
+        transparent
+      ),
+      radial-gradient(
+        ellipse at bottom left,
+        transparent 75%,
+        hsla(0deg 0% 100% / 50%)
+      ),
+      radial-gradient(
+        ellipse at bottom right,
+        transparent 75%,
+        hsla(0deg 0% 100% / 50%)
+      ),
       linear-gradient(
         to bottom,
         hsla(0deg 0% 100% / 5%),

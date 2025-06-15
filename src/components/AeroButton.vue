@@ -34,7 +34,7 @@ defineProps({
   color: { type: String },
   disabled: { type: Boolean },
   href: { type: String },
-  stayHere: { type: Boolean },
+  stayHere: { type: Boolean }
 })
 </script>
 
@@ -62,7 +62,12 @@ $button-inner-sheen: inset 0 1.5px 1px 1px hsl(0deg 0% 100%);
     vars.$outer-shadow;
   background:
     vars.$reflection-moderate,
-    linear-gradient(to bottom, hsl($hue, 75%, 85%), hsl($hue, 75%, 35%), hsl($hue, 75%, 50%));
+    linear-gradient(
+      to bottom,
+      hsl($hue, 75%, 85%),
+      hsl($hue, 75%, 35%),
+      hsl($hue, 75%, 50%)
+    );
   text-shadow: 0 1px 3px hsla(0deg, 0%, $text-shadow-color, 75%);
   color: hsla(0deg, 0%, $text-color, 85%);
   font-size: 100%;
@@ -71,14 +76,24 @@ $button-inner-sheen: inset 0 1.5px 1px 1px hsl(0deg 0% 100%);
   &::before {
     background:
       vars.$reflection-major,
-      linear-gradient(to bottom, hsl($hue, 100%, 85%), hsl($hue, 100%, 40%), hsl($hue, 100%, 65%));
+      linear-gradient(
+        to bottom,
+        hsl($hue, 100%, 85%),
+        hsl($hue, 100%, 40%),
+        hsl($hue, 100%, 65%)
+      );
   }
 
   /* Active Color */
   &::after {
     background:
       vars.$reflection-moderate,
-      linear-gradient(to bottom, hsl($hue, 90%, 75%), hsl($hue, 90%, 25%), hsl($hue, 90%, 40%));
+      linear-gradient(
+        to bottom,
+        hsl($hue, 90%, 75%),
+        hsl($hue, 90%, 25%),
+        hsl($hue, 90%, 40%)
+      );
   }
 
   /* Disabled Style */
@@ -95,7 +110,11 @@ $button-inner-sheen: inset 0 1.5px 1px 1px hsl(0deg 0% 100%);
         hsl(0deg 0% 100% / 10%) 50%,
         transparent 50%
       ),
-      linear-gradient(to bottom, hsl($hue, 100%, 50%, 25%), hsl($hue, 100%, 40%, 25%));
+      linear-gradient(
+        to bottom,
+        hsl($hue, 100%, 50%, 25%),
+        hsl($hue, 100%, 40%, 25%)
+      );
     text-shadow: 0 1px 3px hsla(0deg, 0%, $text-shadow-color, 17.5%);
     color: hsla(0deg, 0%, $text-color, if($text-color == 0%, 17.5%, 60%));
   }
@@ -134,7 +153,12 @@ $button-inner-sheen: inset 0 1.5px 1px 1px hsl(0deg 0% 100%);
       vars.$outer-shadow;
     background:
       vars.$reflection-weak,
-      linear-gradient(to bottom, hsl($hue, 80%, 95%), hsl($hue, 80%, 45%), hsl($hue, 80%, 60%));
+      linear-gradient(
+        to bottom,
+        hsl($hue, 80%, 95%),
+        hsl($hue, 80%, 45%),
+        hsl($hue, 80%, 60%)
+      );
 
     &::before {
       box-shadow:
@@ -145,7 +169,12 @@ $button-inner-sheen: inset 0 1.5px 1px 1px hsl(0deg 0% 100%);
         0 2px 8px 4px hsla($hue, 80%, 50%, 75%);
       background:
         vars.$reflection-weak,
-        linear-gradient(to bottom, hsl($hue, 75%, 85%), hsl($hue, 75%, 35%), hsl($hue, 75%, 50%));
+        linear-gradient(
+          to bottom,
+          hsl($hue, 75%, 85%),
+          hsl($hue, 75%, 35%),
+          hsl($hue, 75%, 50%)
+        );
     }
 
     /* animation: pulse-anim 1s linear infinite alternate; */
@@ -170,7 +199,8 @@ button {
     $button-inner-shadow,
     vars.$outer-shadow;
   background:
-    vars.$reflection-strong, linear-gradient(to bottom, hsl(0deg 0% 95%), hsl(0deg 0% 80%));
+    vars.$reflection-strong,
+    linear-gradient(to bottom, hsl(0deg 0% 95%), hsl(0deg 0% 80%));
   cursor: pointer;
   padding: 8px 24px;
   text-decoration: none;
@@ -192,7 +222,8 @@ button {
     margin: 0;
     border-radius: 8px;
     background:
-      vars.$reflection-strong, linear-gradient(to bottom, hsl(200deg 90% 95%), hsl(200deg 80% 80%));
+      vars.$reflection-strong,
+      linear-gradient(to bottom, hsl(200deg 90% 95%), hsl(200deg 80% 80%));
     padding: 0;
     width: 100%;
     height: 100%;
@@ -209,7 +240,8 @@ button {
     margin: 0;
     border-radius: 8px;
     background:
-      vars.$reflection-major, linear-gradient(to bottom, hsl(200deg 80% 95%), hsl(200deg 60% 60%));
+      vars.$reflection-major,
+      linear-gradient(to bottom, hsl(200deg 80% 95%), hsl(200deg 60% 60%));
     padding: 0;
     width: 100%;
     height: 100%;
@@ -279,7 +311,8 @@ button {
       $button-inner-shadow,
       vars.$outer-shadow;
     background:
-      vars.$reflection-strong, linear-gradient(to bottom, hsl(200deg 50% 95%), hsl(200deg 40% 80%));
+      vars.$reflection-strong,
+      linear-gradient(to bottom, hsl(200deg 50% 95%), hsl(200deg 40% 80%));
 
     &::before {
       position: absolute;

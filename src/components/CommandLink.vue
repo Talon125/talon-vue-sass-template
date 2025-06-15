@@ -78,7 +78,7 @@ defineProps({
   title: { type: String },
   disabled: { type: Boolean },
   href: { type: String },
-  to: { type: String },
+  to: { type: String }
 })
 </script>
 
@@ -144,10 +144,27 @@ $transdur-press: 50ms;
     0 0 0 1px hsla(0deg 0% 0% / 75%);
   background:
     vars.$reflection-soft, vars.$reflection-weak,
-    radial-gradient(ellipse 100% 33% at bottom, hsl(0deg 0% 100% / 10%), transparent),
-    radial-gradient(ellipse at bottom left, transparent 75%, hsl(0deg 0% 100% / 15%)),
-    radial-gradient(ellipse at bottom right, transparent 75%, hsl(0deg 0% 100% / 15%)),
-    linear-gradient(to bottom, hsl(0deg 0% 0% / 10%), hsl(0deg 0% 0% / 30%), hsl(0deg 0% 0% / 20%));
+    radial-gradient(
+      ellipse 100% 33% at bottom,
+      hsl(0deg 0% 100% / 10%),
+      transparent
+    ),
+    radial-gradient(
+      ellipse at bottom left,
+      transparent 75%,
+      hsl(0deg 0% 100% / 15%)
+    ),
+    radial-gradient(
+      ellipse at bottom right,
+      transparent 75%,
+      hsl(0deg 0% 100% / 15%)
+    ),
+    linear-gradient(
+      to bottom,
+      hsl(0deg 0% 0% / 10%),
+      hsl(0deg 0% 0% / 30%),
+      hsl(0deg 0% 0% / 20%)
+    );
   width: 100%;
   height: 100%;
   text-align: start;

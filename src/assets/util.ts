@@ -7,7 +7,10 @@ export function isToday(birthdateString: string): boolean {
   const birthdate = new Date(birthdateString)
   const today = new Date()
 
-  return birthdate.getMonth() === today.getMonth() && birthdate.getDate() === today.getDate()
+  return (
+    birthdate.getMonth() === today.getMonth() &&
+    birthdate.getDate() === today.getDate()
+  )
 }
 
 /**

@@ -15,16 +15,32 @@ import GlassCard from '@/components/GlassCard.vue'
         target="_blank"
         rel="license noopener noreferrer"
         >CC BY-NC-SA 4.0<img
-          style="margin-left: 3px; height: 22px !important; vertical-align: text-bottom"
+          style="
+            margin-left: 3px;
+            height: 22px !important;
+            vertical-align: text-bottom;
+          "
           src="https://mirrors.creativecommons.org/presskit/icons/cc.svg"
           alt="Creative Commons" /><img
-          style="margin-left: 3px; height: 22px !important; vertical-align: text-bottom"
+          style="
+            margin-left: 3px;
+            height: 22px !important;
+            vertical-align: text-bottom;
+          "
           src="https://mirrors.creativecommons.org/presskit/icons/by.svg"
           alt="Attribution required" /><img
-          style="margin-left: 3px; height: 22px !important; vertical-align: text-bottom"
+          style="
+            margin-left: 3px;
+            height: 22px !important;
+            vertical-align: text-bottom;
+          "
           src="https://mirrors.creativecommons.org/presskit/icons/nc.svg"
           alt="Commercial use forbidden" /><img
-          style="margin-left: 3px; height: 22px !important; vertical-align: text-bottom"
+          style="
+            margin-left: 3px;
+            height: 22px !important;
+            vertical-align: text-bottom;
+          "
           src="https://mirrors.creativecommons.org/presskit/icons/sa.svg"
           alt=" ShareAlike (copyleft)"
       /></a>
@@ -34,7 +50,10 @@ import GlassCard from '@/components/GlassCard.vue'
       The name of the font used throughout this website
       <ul>
         <li>
-          <a href="https://fonts.google.com/specimen/Oxygen/about" target="_blank">
+          <a
+            href="https://fonts.google.com/specimen/Oxygen/about"
+            target="_blank"
+          >
             https://fonts.google.com/specimen/Oxygen/about
           </a>
         </li>
@@ -42,20 +61,29 @@ import GlassCard from '@/components/GlassCard.vue'
           <a href="/fonts/Oxygen/OFL.txt"> /fonts/Oxygen/OFL.txt </a>
         </li>
         <li>
-          <a href="/fonts/Oxygen/Oxygen-Regular.ttf"> /fonts/Oxygen/Oxygen-Regular.ttf </a>
+          <a href="/fonts/Oxygen/Oxygen-Regular.ttf">
+            /fonts/Oxygen/Oxygen-Regular.ttf
+          </a>
         </li>
         <li>
-          <a href="/fonts/Oxygen/Oxygen-Light.ttf"> /fonts/Oxygen/Oxygen-Light.ttf </a>
+          <a href="/fonts/Oxygen/Oxygen-Light.ttf">
+            /fonts/Oxygen/Oxygen-Light.ttf
+          </a>
         </li>
         <li>
-          <a href="/fonts/Oxygen/Oxygen-Bold.ttf"> /fonts/Oxygen/Oxygen-Bold.ttf </a>
+          <a href="/fonts/Oxygen/Oxygen-Bold.ttf">
+            /fonts/Oxygen/Oxygen-Bold.ttf
+          </a>
         </li>
       </ul>
       <h1>Source Sans 3</h1>
       The name of the font used for the copyleft symbol on this page
       <ul>
         <li>
-          <a href="https://fonts.google.com/specimen/Source+Sans+3" target="_blank">
+          <a
+            href="https://fonts.google.com/specimen/Source+Sans+3"
+            target="_blank"
+          >
             https://fonts.google.com/specimen/Source+Sans+3
           </a>
         </li>
@@ -71,7 +99,8 @@ import GlassCard from '@/components/GlassCard.vue'
     </GlassCard>
     <GlassCard title="External Link Icon" nocenter>
       from Wikipedia<br />
-      To indicate links with a target of "_blank" (open in new tab). Modified to have the color
+      To indicate links with a target of "_blank" (open in new tab). Modified to
+      have the color
       <code class="color-code-98a1e5">#98A1E5</code>.<br />
       <a
         href="https://en.wikipedia.org/w/skins/Vector/resources/skins.vector.styles/images/link-external-small-ltr-progressive.svg"
