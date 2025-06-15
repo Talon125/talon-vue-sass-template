@@ -2,6 +2,7 @@
 import GlassCard from '@/components/GlassCard.vue'
 import LoadingCircle from '@/components/LoadingCircle.vue'
 import PushButton from '@/components/PushButton.vue'
+import ImageHandler from '@/components/ImageHandler.vue'
 import { REPOSITORY_LINK, MY_BIRTHDAY } from '@/assets/constants'
 import { getAge, isToday } from '@/assets/util'
 import { ref, onMounted } from 'vue'
@@ -14,14 +15,16 @@ const time = ref('')
 const meow = useBranchLastUpdatedStore()
 meow.fetchLastUpdated()
 
-const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+const prefersReducedMotion = window.matchMedia(
+  '(prefers-reduced-motion: reduce)'
+).matches
 
 function updateTime(): void {
   const options: Intl.DateTimeFormatOptions = {
     timeZone: 'Europe/Vienna',
     hour: '2-digit',
     minute: '2-digit',
-    second: '2-digit',
+    second: '2-digit'
   }
   time.value = new Date().toLocaleTimeString('de-AT', options)
 }
@@ -53,8 +56,8 @@ onMounted(() => {
     <GlassCard title="Hello, World!">
       <div class="text-center">Welcome to my homepage!</div>
       <p>
-        On this website you can find out more about me, my projects, see where else I'm at, and
-        anything else I felt like putting here&nbsp;&nbsp;:3
+        On this website you can find out more about me, my projects, see where
+        else I'm at, and anything else I felt like putting here&nbsp;&nbsp;:3
       </p>
       This website was made using the
       <a href="https://vuejs.org/" target="_blank">Vue.js</a>
@@ -68,7 +71,7 @@ onMounted(() => {
     </GlassCard>
 
     <div class="flex intro-flex">
-      <img src="/images/Coins_FrameAero_MLM_Large.png" />
+      <ImageHandler class="pfp" src="/images/Coins_FrameAero_MLM_Large.png" />
       <GlassCard title="About Me" nocenter>
         Talon, {{ myAge }}, ♂ (he/him)
         <p>
@@ -79,7 +82,8 @@ onMounted(() => {
           </span>
         </p>
         I know a bit
-        <abbr title="Object-Oriented Programming">OOP</abbr>, fullstack development, and some
+        <abbr title="Object-Oriented Programming">OOP</abbr>, fullstack
+        development, and some
         <abbr title="Structured Query Language (for databases)">SQL</abbr>.
         <p>Some stuff I like:</p>
         <ul>
@@ -94,7 +98,10 @@ onMounted(() => {
           <li>Skeuomorphism, "Frutiger Aero"</li>
           <li>
             MIDI-driven animation, like ANIMUSIC and
-            <a href="https://www.youtube.com/@LasersLightsandMusic" target="_blank">
+            <a
+              href="https://www.youtube.com/@LasersLightsandMusic"
+              target="_blank"
+            >
               Lasers, Lights, and Music
             </a>
           </li>
@@ -104,12 +111,14 @@ onMounted(() => {
     </div>
 
     <GlassCard title="Fun Facts">
-      The profile picture I use basically everywhere is of three €0.50 coins stacked on top of each
-      other. I shot it on my first phone, the Samsung Galaxy A5 (2017), on 17 April 2018 at 15:23.
-      It took me quite a while to stack them, but it was well worth it&nbsp;&nbsp;:3
+      The profile picture I use basically everywhere is of three €0.50 coins
+      stacked on top of each other. I shot it on my first phone, the Samsung
+      Galaxy A5 (2017), on 17 April 2018 at 15:23. It took me quite a while to
+      stack them, but it was well worth it&nbsp;&nbsp;:3
       <br /><br />
-      Have you noticed the gradient in the background and my logo? I didn't choose those colors at
-      random. If you know what they mean and are supportive, then you're cool~
+      Have you noticed the gradient in the background and my logo? I didn't
+      choose those colors at random. If you know what they mean and are
+      supportive, then you're cool~
     </GlassCard>
 
     <GlassCard clear class="text-center">
@@ -142,7 +151,7 @@ onMounted(() => {
   justify-content: center;
   margin-top: 2em;
 
-  img {
+  :deep(.pfp) {
     margin-right: 2em;
     height: 205.8px;
   }
@@ -157,7 +166,7 @@ onMounted(() => {
     align-items: center;
     margin: 2em 1em 0;
 
-    img {
+    :deep(.pfp) {
       margin: 2em;
     }
   }
