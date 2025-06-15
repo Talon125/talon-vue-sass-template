@@ -381,8 +381,8 @@ nav {
     top: 4px; */
     text-shadow:
       vars.$textshadow-dimensions-nav hsl(0deg 0% 0% / 50%),
-      0 0 8px hsl(0deg 0% 0% / 10%);
-    color: hsl(0deg 0% 45%);
+      0 0 8px hsl(0deg 0% 0% / 10%) !important;
+    color: hsl(0deg 0% 45%) !important;
   }
 
   /* @keyframes slide-in {
