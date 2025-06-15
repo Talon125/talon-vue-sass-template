@@ -7,7 +7,7 @@ import GlassCard from '@/components/GlassCard.vue'
     <GlassCard class="text-center">
       🄯 Oktalon Szórádi 2025
       <br />
-      Copyleft except my logo. Please do not use my logo without permission.
+      Copyleft, except my logo. Please do not use my logo without permission.
       <br />
       Other media are
       <a
