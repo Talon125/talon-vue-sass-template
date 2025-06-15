@@ -1,12 +1,19 @@
 <script setup lang="ts">
 import { RouterLink } from 'vue-router'
-import { onMounted, onBeforeUnmount, ref } from 'vue'
+import { onMounted, onBeforeUnmount, ref, watch } from 'vue'
+import { useRoute } from 'vue-router'
 import { MY_BIRTHDAY } from '@/assets/constants'
 import { isToday } from '@/assets/util'
+
+const route = useRoute()
 
 const showTouchMenu = ref(false)
 // const animCloseTouchMenu = ref(false)
 // const currentWindowWidth = ref(0)
+
+watch(route, () => {
+  showTouchMenu.value = false
+})
 
 const toggleShowTouchMenu = () => {
   // if (showTouchMenu.value) {
