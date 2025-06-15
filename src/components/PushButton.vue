@@ -51,7 +51,7 @@ defineProps({
 @use '../assets/variables.scss' as vars;
 
 $corner-roundness: 8px;
-$transdur-mouseenter: 250ms;
+$transdur-mouseenter: 100ms;
 $transdur-mouseleave: 1000ms;
 $transdur-press: 50ms;
 
