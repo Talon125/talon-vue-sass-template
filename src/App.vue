@@ -6,11 +6,31 @@ import WebsiteNavigationBar from '@/components/WebsiteNavigationBar.vue'
 <template>
   <WebsiteNavigationBar />
 
+  <!-- <div id="page-name">{{ String($route.name).toLowerCase() }}</div> -->
+  <!-- <div id="page-name">{{ $route.name?.toString().toLowerCase() }}</div> -->
+  <div id="page-name">{{ $route.name }}</div>
+
   <RouterView />
 </template>
 
 <style lang="scss">
 @use '@/assets/util';
+
+#page-name {
+  position: fixed;
+  top: 64px;
+  left: -0.125em;
+  opacity: 0.1;
+  z-index: -1;
+  line-height: 0.9em;
+  font-size: 20vw;
+  user-select: none;
+  filter: blur(0.333vw);
+
+  @media (width <= 992px) {
+    display: none;
+  }
+}
 
 #background-gradient {
   position: fixed;
@@ -29,8 +49,7 @@ import WebsiteNavigationBar from '@/components/WebsiteNavigationBar.vue'
       ); */
   /* background-attachment: fixed; */
   /* background-clip: border-box; */
-  background-image:
-    linear-gradient(
+  background-image: linear-gradient(
       190deg,
       rgb(7 142 112 / 50%),
       rgb(38 207 170 / 50%),
