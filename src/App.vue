@@ -49,7 +49,8 @@ import WebsiteNavigationBar from '@/components/WebsiteNavigationBar.vue'
       ); */
   /* background-attachment: fixed; */
   /* background-clip: border-box; */
-  background-image: linear-gradient(
+  background-image:
+    linear-gradient(
       190deg,
       rgb(7 142 112 / 50%),
       rgb(38 207 170 / 50%),

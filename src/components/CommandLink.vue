@@ -78,7 +78,7 @@ defineProps({
   title: { type: String },
   disabled: { type: Boolean },
   href: { type: String },
-  to: { type: String }
+  to: { type: String },
 })
 </script>
 
@@ -139,30 +139,15 @@ $transdur-press: 50ms;
   position: relative;
   transition-duration: $transdur-mouseleave;
   border-radius: $corner-roundness;
-  box-shadow: inset 0 0 0 1px hsl(0deg 0% 100% / 25%),
+  box-shadow:
+    inset 0 0 0 1px hsl(0deg 0% 100% / 25%),
     0 0 0 1px hsla(0deg 0% 0% / 75%);
-  background: vars.$reflection-soft, vars.$reflection-weak,
-    radial-gradient(
-      ellipse 100% 33% at bottom,
-      hsl(0deg 0% 100% / 10%),
-      transparent
-    ),
-    radial-gradient(
-      ellipse at bottom left,
-      transparent 75%,
-      hsl(0deg 0% 100% / 15%)
-    ),
-    radial-gradient(
-      ellipse at bottom right,
-      transparent 75%,
-      hsl(0deg 0% 100% / 15%)
-    ),
-    linear-gradient(
-      to bottom,
-      hsl(0deg 0% 0% / 10%),
-      hsl(0deg 0% 0% / 30%),
-      hsl(0deg 0% 0% / 20%)
-    );
+  background:
+    vars.$reflection-soft, vars.$reflection-weak,
+    radial-gradient(ellipse 100% 33% at bottom, hsl(0deg 0% 100% / 10%), transparent),
+    radial-gradient(ellipse at bottom left, transparent 75%, hsl(0deg 0% 100% / 15%)),
+    radial-gradient(ellipse at bottom right, transparent 75%, hsl(0deg 0% 100% / 15%)),
+    linear-gradient(to bottom, hsl(0deg 0% 0% / 10%), hsl(0deg 0% 0% / 30%), hsl(0deg 0% 0% / 20%));
   width: 100%;
   height: 100%;
   text-align: start;
@@ -226,8 +211,10 @@ button {
     .face {
       transform: translateY(3px);
       transition-duration: $transdur-press;
-      box-shadow: inset 0 0 0 1px hsl(0deg 0% 100% / 25%),
-        0 0 0 1px hsla(0deg 0% 0% / 75%), inset 0 0 12px hsl(0deg 0% 0% / 75%);
+      box-shadow:
+        inset 0 0 0 1px hsl(0deg 0% 100% / 25%),
+        0 0 0 1px hsla(0deg 0% 0% / 75%),
+        inset 0 0 12px hsl(0deg 0% 0% / 75%);
       color: hsla(0deg 0% 100% / 50%);
       filter: brightness(0.75);
 
