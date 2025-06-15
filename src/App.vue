@@ -23,7 +23,7 @@ import WebsiteNavigationBar from '@/components/WebsiteNavigationBar.vue'
   opacity: 0.1;
   z-index: -1;
   line-height: 0.9em;
-  font-size: 20vw;
+  font-size: 18vw;
   user-select: none;
   filter: blur(0.333vw);
 
