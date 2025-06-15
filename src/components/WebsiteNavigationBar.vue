@@ -78,10 +78,20 @@ onBeforeUnmount(() => {
             ]"
           > -->
           <ul :class="showTouchMenu ? '' : 'touch-hidden'">
-            <li><RouterLink to="/">Home</RouterLink></li>
-            <li><RouterLink to="/projects">Projects</RouterLink></li>
-            <li><RouterLink to="/connections">Connections</RouterLink></li>
-            <li><RouterLink to="/credits">Credits</RouterLink></li>
+            <li><RouterLink class="router-link" to="/">Home</RouterLink></li>
+            <li>
+              <RouterLink class="router-link" to="/projects"
+                >Projects</RouterLink
+              >
+            </li>
+            <li>
+              <RouterLink class="router-link" to="/connections"
+                >Connections</RouterLink
+              >
+            </li>
+            <li>
+              <RouterLink class="router-link" to="/credits">Credits</RouterLink>
+            </li>
           </ul>
         </div>
       </div>
@@ -293,14 +303,14 @@ nav {
     color: hsl(0deg 0% 75%);
     user-select: none;
 
-    &:not(.where-am-i):hover {
+    &:not(.where-am-i, .router-link-active):hover {
       text-shadow:
         vars.$textshadow-dimensions-nav hsl(0deg 0% 0% / 50%),
         0 0 8px hsl(0deg 0% 100% / 75%);
       color: hsl(0deg 0% 85%);
     }
 
-    &:not(.where-am-i):active {
+    &:not(.where-am-i, .router-link-active):active {
       text-shadow:
         vars.$textshadow-dimensions-nav hsl(0deg 0% 0% / 50%),
         0 0 8px hsl(0deg 0% 0% / 10%);

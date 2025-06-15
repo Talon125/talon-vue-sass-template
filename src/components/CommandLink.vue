@@ -4,6 +4,7 @@
     :to="to"
     target="_self"
     :class="`
+      router-link
       ${disabled ? 'disabled' : ''}
     `"
   >

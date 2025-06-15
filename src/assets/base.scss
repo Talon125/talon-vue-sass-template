@@ -29,11 +29,11 @@ a {
     color: hsl(263deg 64% 75%);
   }
 
-  &:hover {
+  &:not(.router-link):hover {
     filter: brightness(1.2);
   }
 
-  &:active {
+  &:not(.router-link):active {
     filter: brightness(0.8);
   }
 
