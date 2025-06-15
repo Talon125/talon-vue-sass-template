@@ -23,5 +23,11 @@ import CommandLink from '@/components/CommandLink.vue'
   > * {
     margin: 2em 0 0;
   }
+
+  @media (width <= 576px) {
+    > * {
+      margin: 2em 1em 0;
+    }
+  }
 }
 </style>
