@@ -45,4 +45,10 @@ const router = createRouter({
   ]
 })
 
+router.beforeEach((to, from, next) => {
+  document.title = `${String(to.name)} - Talon's Homepage`
+  if (to.path === '/') document.title = "Talon's Homepage"
+  next()
+})
+
 export default router
