@@ -10,7 +10,7 @@ import GlassCard from '@/components/GlassCard.vue'
           There's no <code>{{ $route.fullPath }}</code
           >!!!11!1!1
         </p>
-        Grrr...&nbsp;&nbsp;&gt;&omega;&lt;
+        Grrr...&emsp;&gt;&omega;&lt;
       </GlassCard>
     </div>
   </main>

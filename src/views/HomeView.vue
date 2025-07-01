@@ -57,7 +57,7 @@ onMounted(() => {
       <div class="text-center">Welcome to my homepage!</div>
       <p>
         On this website you can find out more about me, my projects, see where
-        else I'm at, and anything else I felt like putting here&nbsp;&nbsp;:3
+        else I'm at, and anything else I felt like putting here&emsp;:3
       </p>
       This website was made using the
       <a href="https://vuejs.org/" target="_blank">Vue.js</a>
