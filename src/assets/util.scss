@@ -2,6 +2,14 @@
   text-align: center;
 }
 
+.text-justify {
+  text-align: justify;
+}
+
 .flex {
   display: flex;
+}
+
+.flex-item {
+  flex: 1;
 }

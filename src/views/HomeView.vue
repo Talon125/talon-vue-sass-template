@@ -53,7 +53,7 @@ onMounted(() => {
       <span class="emoji">🎂</span>
     </GlassCard>
 
-    <GlassCard title="Hello, World!">
+    <GlassCard title="Hello, World!" class="text-justify">
       <div class="text-center">Welcome to my homepage!</div>
       <p>
         On this website you can find out more about me, my projects, see where
@@ -71,7 +71,11 @@ onMounted(() => {
     </GlassCard>
 
     <div class="flex intro-flex">
-      <ImageHandler class="pfp" src="/images/Coins_FrameAero_MLM_Large.png" />
+      <ImageHandler
+        class="pfp"
+        src="/images/Coins_FrameAero_MLM_Large.png"
+        :spaceright="true"
+      />
       <GlassCard title="About Me" nocenter>
         Talon, {{ myAge }}, ♂ (he/him)
         <p>
@@ -110,15 +114,20 @@ onMounted(() => {
       </GlassCard>
     </div>
 
-    <GlassCard title="Fun Facts">
+    <GlassCard title="Fun Facts" class="text-justify">
       The profile picture I use basically everywhere is of three €0.50 coins
       stacked on top of each other. I shot it on my first phone, the Samsung
       Galaxy A5 (2017), on 17 April 2018 at 15:23. It took me quite a while to
-      stack them, but it was well worth it&nbsp;&nbsp;:3
+      stack them, but it was well worth it&emsp;:3
       <br /><br />
       Have you noticed the gradient in the background and my logo? I didn't
       choose those colors at random. If you know what they mean and are
       supportive, then you're cool~
+    </GlassCard>
+
+    <GlassCard title="My Gear">
+      I got a PC. Intel Core i7-7700. 32 GiB DDR4 RAM. Bunch of SSDs. AMD Radeon
+      RX 5700.
     </GlassCard>
 
     <GlassCard clear class="text-center">
