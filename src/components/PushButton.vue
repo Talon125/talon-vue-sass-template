@@ -51,9 +51,6 @@ defineProps({
 @use '../assets/variables.scss' as vars;
 
 $corner-roundness: 8px;
-$transdur-mouseenter: 100ms;
-$transdur-mouseleave: 1000ms;
-$transdur-press: 50ms;
 
 .bottom,
 .side,
@@ -68,7 +65,7 @@ $transdur-press: 50ms;
   top: -4px;
   left: -1px;
   transform: translateY(4px);
-  transition-duration: $transdur-mouseleave;
+  transition-duration: vars.$transdur-mouseleave;
   border: none;
   border-radius: #{$corner-roundness + 1px};
   box-shadow: 0 1px hsla(0deg 0% 100% / 25%);
@@ -86,7 +83,7 @@ $transdur-press: 50ms;
   box-sizing: border-box;
   display: block;
   position: relative;
-  transition-duration: $transdur-mouseleave;
+  transition-duration: vars.$transdur-mouseleave;
   border-radius: $corner-roundness;
   box-shadow:
     inset 0 0 0 1px hsl(0deg 0% 100% / 25%),
@@ -153,13 +150,13 @@ button {
 
   &:not(:disabled):hover {
     .bottom {
-      transition-duration: $transdur-mouseenter;
+      transition-duration: vars.$transdur-mouseenter;
       opacity: 1;
       box-shadow: 0 0 8px 4px hsla(0deg 0% 100% / 50%);
     }
 
     .face {
-      transition-duration: $transdur-mouseenter;
+      transition-duration: vars.$transdur-mouseenter;
       filter: brightness(1.5);
     }
   }
@@ -167,14 +164,14 @@ button {
   /* &:not(:disabled):focus, */
   &:not(:disabled):active {
     .bottom {
-      transition-duration: $transdur-press;
+      transition-duration: vars.$transdur-press;
       opacity: 0;
       box-shadow: none;
     }
 
     .face {
       transform: translateY(3px);
-      transition-duration: $transdur-press;
+      transition-duration: vars.$transdur-press;
       box-shadow:
         inset 0 0 0 1px hsl(0deg 0% 100% / 25%),
         0 0 0 1px hsla(0deg 0% 0% / 75%),
