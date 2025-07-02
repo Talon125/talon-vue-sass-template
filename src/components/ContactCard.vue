@@ -43,11 +43,12 @@ defineProps<{
 #glasscard-title {
   /* margin: -0.55em 0 0; */
   margin: -0.2em 0 0;
+  /* font-style: italic; */
+  text-align: start;
   text-shadow: none;
   color: hsla(0deg 0% 100% / 25%);
   font-size: 4em;
   font-weight: lighter;
-  /* font-style: italic; */
 }
 
 .card {
@@ -88,9 +89,14 @@ defineProps<{
     text-align: center;
   }
 
+  .icon {
+    margin: 0;
+  }
+
   #glasscard-title {
     /* font-size: 3em; */
     hyphens: manual;
+    text-align: center;
   }
 
   .card {
