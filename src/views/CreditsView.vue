@@ -109,6 +109,15 @@ import GlassCard from '@/components/GlassCard.vue'
         https://en.wikipedia.org/w/skins/Vector/resources/skins.vector.styles/images/link-external-small-ltr-progressive.svg
       </a>
     </GlassCard>
+    <GlassCard title="Oxygen Icons" nocenter>
+      Some of the icons I use are from here:<br />
+      <a
+        href="https://github.com/KDE/oxygen-icons"
+        target="_blank"
+      >
+        https://github.com/KDE/oxygen-icons
+      </a>
+    </GlassCard>
   </main>
 </template>
 

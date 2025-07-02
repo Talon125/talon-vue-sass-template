@@ -5,11 +5,11 @@ import CommandLink from '@/components/CommandLink.vue'
 <template>
   <main class="container">
     <div class="command-link-area">
-      <CommandLink title="School Projects" to="/projects/school">
-        This is a description for the School Projects command link.
+      <CommandLink title="School Projects" to="/projects/school" icon_src="/icons/applications-education-university.svg">
+        Check out the stuff I made at school and university.
       </CommandLink>
-      <CommandLink title="Personal Projects" to="/projects/personal">
-        This is a description for the Personal Projects command link.
+      <CommandLink title="Personal Projects" to="/projects/personal" icon_src="/icons/Talon.svg">
+        Check out the stuff I made in my free time.
       </CommandLink>
     </div>
   </main>

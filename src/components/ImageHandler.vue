@@ -1,5 +1,5 @@
 <template>
-  <LoadingCircle v-if="!isLoaded" />
+  <LoadingCircle :class="spaceright ? 'spaceright' : ''" v-if="!isLoaded" />
   <img
     v-show="isLoaded"
     :src="src"
@@ -17,6 +17,7 @@ import { ref } from 'vue'
 defineProps<{
   src: string
   alt?: string
+  spaceright?: boolean
 }>()
 
 const isLoaded = ref(false)
@@ -31,6 +32,10 @@ function handleLoad() {
 @use '../assets/variables.scss' as vars;
 
 div {
+  display: inline;
+}
+
+.spaceright {
   margin-right: 2em;
 }
 </style>

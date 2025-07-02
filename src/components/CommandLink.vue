@@ -13,9 +13,7 @@
     <span class="face">
       <span class="flex">
         <div class="icon">
-          <!-- icon... -->
-          <LoadingCircle />
-          <!-- <IconExternalLink fillColor="white" /> -->
+          <ImageHandler :src="icon_src ?? ''" :alt="icon_alt" />
         </div>
         <div>
           <h1 v-if="title" id="glasscard-title">
@@ -39,13 +37,12 @@
     <span class="face">
       <span class="flex">
         <div class="icon">
-          <!-- icon... -->
-          <LoadingCircle />
-          <!-- <IconExternalLink fillColor="white" /> -->
+          <ImageHandler :src="icon_src ?? ''" :alt="icon_alt" />
         </div>
         <div>
           <h1 v-if="title" id="glasscard-title">
             {{ title }}
+            <IconExternalLink fillColor="white" />
           </h1>
           <slot></slot>
         </div>
@@ -58,7 +55,7 @@
     <span class="face">
       <span class="flex">
         <div class="icon">
-          <IconExternalLink fillColor="white" />
+          <ImageHandler :src="icon_src ?? ''" :alt="icon_alt" />
         </div>
         <div>
           <h1 v-if="title" id="glasscard-title">
@@ -73,10 +70,13 @@
 
 <script setup lang="ts">
 import IconExternalLink from './icons/IconExternalLink.vue'
-import LoadingCircle from '@/components/LoadingCircle.vue'
+import ImageHandler from '@/components/ImageHandler.vue'
+// import LoadingCircle from '@/components/LoadingCircle.vue'
 
 defineProps({
   title: { type: String },
+  icon_src: { type: String },
+  icon_alt: { type: String },
   disabled: { type: Boolean },
   href: { type: String },
   to: { type: String }
@@ -88,9 +88,6 @@ defineProps({
 @use '../assets/variables.scss' as vars;
 
 $corner-roundness: 8px;
-$transdur-mouseenter: 100ms;
-$transdur-mouseleave: 1000ms;
-$transdur-press: 50ms;
 
 #glasscard-title {
   margin: -0.4em 0 0;
@@ -105,6 +102,10 @@ $transdur-press: 50ms;
   display: flex;
   align-items: center;
   margin-right: 2em;
+
+  > * {
+    width: 64px;
+  }
 }
 
 .bottom,
@@ -120,7 +121,7 @@ $transdur-press: 50ms;
   top: -4px;
   left: -1px;
   transform: translateY(4px);
-  transition-duration: $transdur-mouseleave;
+  transition-duration: vars.$transdur-mouseleave;
   border: none;
   border-radius: #{$corner-roundness + 1px};
   box-shadow: 0 1px hsla(0deg 0% 100% / 25%);
@@ -138,13 +139,11 @@ $transdur-press: 50ms;
   box-sizing: border-box;
   display: block;
   position: relative;
-  transition-duration: $transdur-mouseleave;
+  transition-duration: vars.$transdur-mouseleave;
   border-radius: $corner-roundness;
-  box-shadow:
-    inset 0 0 0 1px hsl(0deg 0% 100% / 25%),
+  box-shadow: inset 0 0 0 1px hsl(0deg 0% 100% / 25%),
     0 0 0 1px hsla(0deg 0% 0% / 75%);
-  background:
-    vars.$reflection-soft, vars.$reflection-weak,
+  background: vars.$reflection-soft, vars.$reflection-weak,
     radial-gradient(
       ellipse 100% 33% at bottom,
       hsl(0deg 0% 100% / 10%),
@@ -207,13 +206,13 @@ button {
 
   &:not(:disabled):hover {
     .bottom {
-      transition-duration: $transdur-mouseenter;
+      transition-duration: vars.$transdur-mouseenter;
       opacity: 1;
       box-shadow: 0 0 8px 4px hsla(0deg 0% 100% / 50%);
     }
 
     .face {
-      transition-duration: $transdur-mouseenter;
+      transition-duration: vars.$transdur-mouseenter;
       filter: brightness(1.5);
     }
   }
@@ -221,18 +220,16 @@ button {
   &:not(:disabled):focus,
   &:not(:disabled):active {
     .bottom {
-      transition-duration: $transdur-press;
+      transition-duration: vars.$transdur-press;
       opacity: 0;
       box-shadow: none;
     }
 
     .face {
       transform: translateY(3px);
-      transition-duration: $transdur-press;
-      box-shadow:
-        inset 0 0 0 1px hsl(0deg 0% 100% / 25%),
-        0 0 0 1px hsla(0deg 0% 0% / 75%),
-        inset 0 0 12px hsl(0deg 0% 0% / 75%);
+      transition-duration: vars.$transdur-press;
+      box-shadow: inset 0 0 0 1px hsl(0deg 0% 100% / 25%),
+        0 0 0 1px hsla(0deg 0% 0% / 75%), inset 0 0 12px hsl(0deg 0% 0% / 75%);
       color: hsla(0deg 0% 100% / 50%);
       filter: brightness(0.75);
 
