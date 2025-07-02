@@ -3,6 +3,7 @@ import GlassCard from '@/components/GlassCard.vue'
 import PushButton from '@/components/PushButton.vue'
 import ContactQuick from '@/components/ContactQuick.vue'
 import ContactCard from '@/components/ContactCard.vue'
+import CopyToClipboard from '@/components/CopyToClipboard.vue'
 import { Clipboard } from '@ark-ui/vue/clipboard'
 </script>
 
@@ -46,9 +47,7 @@ import { Clipboard } from '@ark-ui/vue/clipboard'
       <ContactCard title="Discord" src="/icons/Discord.svg">
         I've also got Discord on my phone, so I should be most
         responsive&emsp;:3
-        <div class="text-center">
-          <PushButton></PushButton>
-        </div>
+        <CopyToClipboard class="short" string="oktalon" />
         <div class="text-justify">
           <p>
             <b>Fun Fact:</b>
@@ -60,41 +59,11 @@ import { Clipboard } from '@ark-ui/vue/clipboard'
           I don't use it anymore. It's more of just a "note-to-self" account
           now. I log into it rarely. So... not gonna share it here lol.
         </div>
-        <!-- <img src="/icons/Discord.svg" /> -->
-        <!-- <Clipboard.Root default-value="oktalon">
-          <Clipboard.Label>Discord</Clipboard.Label>
-          <Clipboard.Control>
-            <Clipboard.Input />
-            <Clipboard.Trigger>
-              <Clipboard.Indicator>
-                <img src="/icons/klipper.svg" />
-                <template #copied
-                  ><img src="/icons/dialog-ok-apply.svg"
-                /></template>
-              </Clipboard.Indicator>
-            </Clipboard.Trigger>
-          </Clipboard.Control>
-        </Clipboard.Root> -->
       </ContactCard>
       <ContactCard title="E-Mail" src="/icons/internet-mail.svg">
         Prefer electronic mail? I do check my emails from time to time.
-        <div class="text-center">
-          <PushButton></PushButton>
-        </div>
+        <CopyToClipboard class="wide" string="talonszoradi@gmail.com" />
         <p>This is my personal email address, by the way.</p>
-        <!-- <img src="/icons/internet-mail.svg" />
-        <Clipboard.Root default-value="talonszoradi@gmail.com">
-          <Clipboard.Label>E-Mail</Clipboard.Label>
-          <Clipboard.Control>
-            <Clipboard.Input />
-            <Clipboard.Trigger>
-              <Clipboard.Indicator>
-                Copy
-                <template #copied> Copied! </template>
-              </Clipboard.Indicator>
-            </Clipboard.Trigger>
-          </Clipboard.Control>
-        </Clipboard.Root> -->
       </ContactCard>
     </div>
     <div class="card-group">
@@ -174,7 +143,7 @@ import { Clipboard } from '@ark-ui/vue/clipboard'
           </PushButton>
         </div>
       </ContactCard>
-      <ContactCard title="Roblox" src="/icons/Roblox.svg">
+      <ContactCard title="RŌBLOX" src="/icons/Roblox.svg">
         Description should go here! Meow! Lorem ipsum dolor sit amet!!
         <div class="text-center">
           <PushButton href="https://www.roblox.com/users/70005867/profile">
@@ -247,8 +216,8 @@ import { Clipboard } from '@ark-ui/vue/clipboard'
   }
 
   @media (width <= 576px) {
-      margin-top: 2em;
-    }
+    margin-top: 2em;
+  }
 }
 
 .card-group {
