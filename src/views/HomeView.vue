@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import GlassCard from '@/components/GlassCard.vue'
+import AbbreviationMobile from '@/components/AbbreviationMobile.vue'
 import LoadingCircle from '@/components/LoadingCircle.vue'
 import PushButton from '@/components/PushButton.vue'
 import ImageHandler from '@/components/ImageHandler.vue'
@@ -86,9 +87,12 @@ onMounted(() => {
           </span>
         </p>
         I know a bit
-        <abbr title="Object-Oriented Programming">OOP</abbr>, fullstack
-        development, and some
-        <abbr title="Structured Query Language (for databases)">SQL</abbr>.
+        <AbbreviationMobile title="Object-Oriented Programming"
+          >OOP</AbbreviationMobile
+        >, fullstack development, and some
+        <AbbreviationMobile title="Structured Query Language (for databases)"
+          >SQL</AbbreviationMobile
+        >.
         <p>Some stuff I like:</p>
         <ul>
           <li>IT (Computers, OSes, programming)</li>
