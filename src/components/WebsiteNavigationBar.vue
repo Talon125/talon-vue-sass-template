@@ -170,7 +170,7 @@ header {
     text-align: center;
     text-shadow: vars.$textshadow-dimensions-nav hsl(0deg 0% 0% / 50%);
     color: hsl(0deg 0% 85%);
-    font-family: monospace;
+    font-family: 'Fira Code', monospace;
     font-size: 0.8rem;
     font-weight: bold;
 
