@@ -354,6 +354,8 @@ import CopyToClipboard from '@/components/CopyToClipboard.vue'
   }
 
   @media (width <= 576px) {
+    /* TODO: adjust gap for mobile view */
+    /* gap: 1em; */
     margin-top: 2em;
   }
 }

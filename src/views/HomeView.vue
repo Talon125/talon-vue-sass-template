@@ -95,8 +95,20 @@ onMounted(() => {
         >.
         <p>Some stuff I like:</p>
         <ul>
-          <li>IT (Computers, OSes, programming)</li>
-          <li>FOSS, Copyleft</li>
+          <li>
+            <AbbreviationMobile title="Information Technology"
+              >IT</AbbreviationMobile
+            >
+            (Computers,
+            <AbbreviationMobile title="Operating Systems"
+              >OSes</AbbreviationMobile
+            >, programming)
+          </li>
+          <li>
+            <AbbreviationMobile title="Free and Open-Source Software"
+              >FOSS</AbbreviationMobile
+            >, Copyleft
+          </li>
           <li>
             Companies like
             <a href="https://frame.work/" target="_blank"> Framework </a>
