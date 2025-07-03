@@ -2,6 +2,10 @@
   text-align: center;
 }
 
+.text-right {
+  text-align: right;
+}
+
 .text-justify {
   text-align: justify;
 }
@@ -12,4 +16,9 @@
 
 .flex-item {
   flex: 1;
+}
+
+.inline-icon {
+  margin-bottom: -0.5em;
+  width: 2em;
 }

@@ -325,11 +325,6 @@ import CopyToClipboard from '@/components/CopyToClipboard.vue'
   text-align: justify;
 }
 
-.inline-icon {
-  margin-bottom: -0.5em;
-  width: 2em;
-}
-
 .button-icon {
   width: 24px;
 }

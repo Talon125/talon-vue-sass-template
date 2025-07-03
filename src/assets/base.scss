@@ -50,3 +50,35 @@ b {
   letter-spacing: 0.1em;
   color: rgb(153 232 193);
 }
+
+hr {
+  border: none;
+  box-shadow: 0 0 2px hsla(0deg 0% 0% / 50%);
+  background: linear-gradient(
+    to right,
+    hsla(0deg 0% 100% / 25%),
+    hsla(0deg 0% 100% / 50%),
+    hsla(0deg 0% 100% / 25%)
+  );
+  height: 1px;
+
+  // &::before,
+  // &::after {
+  //   display: inline-block;
+  //   position: relative;
+  //   top: 1px;
+  //   background: linear-gradient(
+  //     to right,
+  //     hsla(0deg 0% 0% / 10%),
+  //     hsla(0deg 0% 0% / 50%),
+  //     hsla(0deg 0% 0% / 10%)
+  //   );
+  //   width: 100%;
+  //   height: 1px;
+  //   content: '';
+  // }
+
+  // &::before {
+  //   top: -1px;
+  // }
+}

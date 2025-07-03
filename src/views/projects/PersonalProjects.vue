@@ -1,50 +1,57 @@
 <script setup lang="ts">
+import NavigationButton1 from '@/components/NavigationButton1.vue'
+import PushButton from '@/components/PushButton.vue'
 import GlassCard from '@/components/GlassCard.vue'
-import { Accordion } from '@ark-ui/vue/accordion'
 </script>
 
 <template>
   <main class="container">
-    <div class="mrow">
-      <GlassCard class="text-center miau"> Coming soon... </GlassCard>
-    </div>
-    <Accordion.Root collapsible multiple>
-      <Accordion.Item value="Gaming">
-        <Accordion.ItemTrigger>
-          Gaming
-          <Accordion.ItemIndicator> ʌ </Accordion.ItemIndicator>
-        </Accordion.ItemTrigger>
-        <Accordion.ItemContent>
-          <div class="content">meow...</div>
-        </Accordion.ItemContent>
-      </Accordion.Item>
-      <Accordion.Item value="Other">
-        <Accordion.ItemTrigger>
-          Other
-          <Accordion.ItemIndicator> ʌ </Accordion.ItemIndicator>
-        </Accordion.ItemTrigger>
-        <Accordion.ItemContent>
-          <div class="content">Meow!!</div>
-        </Accordion.ItemContent>
-      </Accordion.Item>
-    </Accordion.Root>
+    <NavigationButton1 to="/projects">
+      &leftarrow;&ensp;Back to Projects
+    </NavigationButton1>
+    <GlassCard class="info-card">
+      Coming soon...
+    </GlassCard>
   </main>
 </template>
 
 <style scoped lang="scss">
-.mrow {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 50vh;
-}
-
-.miau {
-  min-width: 50vw;
+.inception {
+  padding: 0 0.5em 1px;
 }
 
 .content {
-  padding: 1em;
+  padding: 0.5em;
+}
+
+.amber {
+  color: orange;
+}
+
+.opening-p {
+  margin-top: 0;
+}
+
+.info-card {
+  margin: 1em 0;
+}
+
+.ref-list {
+  padding-left: 1em;
+  list-style: none;
+}
+
+.indent {
+  margin-left: 1em;
+}
+
+@media (width <= 576px) {
+  .flex {
+    flex-direction: column;
+  }
+
+  .info-card {
+    margin: 1em;
+  }
 }
 </style>
