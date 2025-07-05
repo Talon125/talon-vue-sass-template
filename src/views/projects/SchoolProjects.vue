@@ -75,15 +75,23 @@ watch(
         </NavigationButton1>
         <GlassCard class="aside-card navigation">
           <h1>Navigation</h1>
-          <a :href="`/#${$route.path}?scrollTo=HTL`"><b>HTL Wien West</b></a>
+          <a :href="`/#${$route.path}?scrollTo=HTL`" @click="scrollToTarget"
+            ><b>HTL Wien West</b></a
+          >
           <ul class="nav-list">
             <li>
-              <a :href="`/#${$route.path}?scrollTo=HTL-3`">
+              <a
+                :href="`/#${$route.path}?scrollTo=HTL-3`"
+                @click="scrollToTarget"
+              >
                 3rd Grade (Cumulative: 11)
               </a>
             </li>
             <li>
-              <a :href="`/#${$route.path}?scrollTo=HTL-4`">
+              <a
+                :href="`/#${$route.path}?scrollTo=HTL-4`"
+                @click="scrollToTarget"
+              >
                 4th Grade (Cumulative: 12)
               </a>
             </li>
@@ -195,16 +203,98 @@ watch(
           </ProjectLink>
         </div>
         <h2 id="HTL-4">4th Grade (Cumulative: 12)</h2>
-        <p>Meow...</p>
-        <p>Meow...</p>
-        <p>Meow...</p>
-        <p>Meow...</p>
-        <p>Meow...</p>
-        <p>Meow...</p>
-        <p>Meow...</p>
-        <p>Meow...</p>
-        <p>Meow...</p>
-        <p>Meow...</p>
+        <div class="flex flex-many">
+          <ProjectLink
+            title="Water Photo&shy;graphy"
+            icon_src="/images/thumbnails/Thumbnail_WaterPhotography-1080p.png"
+          >
+            <b>Teacher's grade: 1.2</b>
+            <p class="text-justify">
+              I was tasked with taking around 30 photos and editing them. I
+              decided to take photos of water-related stuff. Most of them turned
+              out pretty good.
+            </p>
+            The camera I used (borrowed from school) was a <b>Nikon D300S</b>.
+            <div class="text-center">
+              <PushButton :stay-here="true" :to="`${$route.path}/htl/4/photo`">
+                View
+              </PushButton>
+            </div>
+          </ProjectLink>
+          <ProjectLink
+            title="3D (Blender)"
+            icon_src="/images/thumbnails/Thumbnail_Blender-1080p.png"
+          >
+            <b>Teacher's grade: 1-2</b>
+            <p class="text-justify">
+              The theme was space, but at the time I only had a donut, so I
+              improvised:
+            </p>
+            <p class="text-justify">
+              Suzanne is taking over the universe, I guess and it seems she's
+              turning planets into donuts.
+            </p>
+            <div class="text-center">
+              <PushButton :stay-here="true" :to="`${$route.path}/htl/4/3d`">
+                View
+              </PushButton>
+            </div>
+          </ProjectLink>
+          <ProjectLink
+            title="Video"
+            icon_src="/images/thumbnails/Thumbnail_Video-AnsweringToyLogo.png"
+          >
+            <b>Teacher's grade: 8/10</b>
+            <p class="text-justify">
+              Here I had to make a short ad-style (or, moreso kickstarter-style)
+              video. It had to have at least 10 shots, and some having motion.
+              My initial video was long and boring, but I managed to make it a
+              lot better.
+            </p>
+            <div class="text-center">
+              <PushButton :stay-here="true" :to="`${$route.path}/htl/4/video`">
+                View
+              </PushButton>
+            </div>
+          </ProjectLink>
+          <ProjectLink
+            title="Audio: Soundtrap"
+            icon_src="/images/thumbnails/Thumbnail_Soundtrap-1080p.png"
+          >
+            <b>Teacher's grade: 10/10</b>
+            <p class="text-justify">
+              This felt more like an assignment rather than a project. We
+              learned a couple music basics (like how to make chords/harmony),
+              then we had to make some songs using
+              <a href="https://www.soundtrap.com/" target="_blank">Soundtrap</a
+              >. I made 3 in total, I think they're okay.
+            </p>
+            <div class="text-center">
+              <PushButton :stay-here="true" :to="`${$route.path}/htl/4/video`">
+                View
+              </PushButton>
+            </div>
+          </ProjectLink>
+          <ProjectLink
+            title="Audio: Syn&shy;chro&shy;ni&shy;za&shy;tion"
+            icon_src="/images/thumbnails/Thumbnail_Synchro-1080p.png"
+          >
+            <b>Teacher's grade: 9/10</b>
+            <p class="text-justify">
+              Here I had to pick a random video and basically do a voiceover.
+              Many chose to just translate from English to German. Some, like
+              me, did a parody. I tried to make the new script fit the
+              original's lip movements. I personally am not really satisfied
+              with the script, but it's fine. It's kinda random, like shitposts,
+              hence the name "Hey Vsauce, Random here"
+            </p>
+            <div class="text-center">
+              <PushButton :stay-here="true" :to="`${$route.path}/htl/4/video`">
+                View
+              </PushButton>
+            </div>
+          </ProjectLink>
+        </div>
         <!--
         <h2 id="HTL-5">5th Grade (Cumulative: 13)</h2>
 
@@ -240,6 +330,16 @@ watch(
   }
 }
 
+.flex-many {
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: center;
+
+  > * {
+    width: calc(50% - 2.5em);
+  }
+}
+
 .sticky {
   position: sticky;
   top: calc(64px + 24px);
@@ -249,8 +349,8 @@ watch(
 .navigation {
   a {
     text-decoration: none;
-    text-decoration-color: hsla(0deg 0% 100% / 45%);
-    color: hsla(0deg 0% 100% / 90%);
+    text-decoration-color: hsl(0deg 0% 100% / 45%);
+    color: hsl(0deg 0% 100% / 90%);
 
     &:hover {
       text-decoration: underline;
@@ -285,7 +385,7 @@ watch(
     margin: -0.67em 0 0;
     text-align: center;
     text-shadow: none;
-    color: hsla(0deg 0% 100% / 25%);
+    color: hsl(0deg 0% 100% / 25%);
     font-size: 2.5em;
     font-weight: lighter;
   }
@@ -328,7 +428,7 @@ watch(
         hsl(0deg 0% 0% / 30%)
       );
     text-align: center;
-    color: hsla(0deg 0% 100% / 50%);
+    color: hsl(0deg 0% 100% / 50%);
     scroll-margin-top: calc(64px + 24px);
   }
 
@@ -336,16 +436,16 @@ watch(
   h3 {
     scroll-margin-top: calc(64px + 24px);
     margin: 1em 0 0.5em;
-    color: hsla(0deg 0% 100% / 75%);
+    color: hsl(0deg 0% 100% / 75%);
 
     &::after {
       display: block;
       margin-top: 0.1em;
-      box-shadow: 0 0 2px hsla(0deg 0% 0% / 75%);
+      box-shadow: 0 0 2px hsl(0deg 0% 0% / 75%);
       background: linear-gradient(
         to right,
-        hsla(0deg 0% 100% / 50%),
-        hsla(0deg 0% 100% / 5%)
+        hsl(0deg 0% 100% / 50%),
+        hsl(0deg 0% 100% / 5%)
       );
       width: 100%;
       height: 1px;
@@ -356,7 +456,8 @@ watch(
 
 .nav-list,
 .ref-list {
-  margin: 0.5em 0 1em;
+  /* margin: 0.5em 0 1em; */
+  margin: 0.5em 0 0;
   padding-left: 1em;
   list-style: none;
 
@@ -377,8 +478,8 @@ watch(
   background: linear-gradient(
     to bottom,
     transparent,
-    hsla(0deg 0% 100% / 50%),
-    hsla(0deg 0% 100% / 50%),
+    hsl(0deg 0% 100% / 50%),
+    hsl(0deg 0% 100% / 50%),
     transparent
   );
   width: 1px;
@@ -392,8 +493,8 @@ watch(
     background: linear-gradient(
       to bottom,
       transparent,
-      hsla(0deg 0% 0% / 25%),
-      hsla(0deg 0% 0% / 25%),
+      hsl(0deg 0% 0% / 25%),
+      hsl(0deg 0% 0% / 25%),
       transparent
     );
     width: 1px;
@@ -406,7 +507,7 @@ watch(
   }
 }
 
-@media (width <= 576px) {
+@media (width <= 768px) {
   .flex {
     flex-direction: column;
 
@@ -418,6 +519,13 @@ watch(
       a {
         margin-left: 0;
       }
+    }
+  }
+
+  .flex-many {
+    > * {
+      display: block;
+      width: auto;
     }
   }
 
