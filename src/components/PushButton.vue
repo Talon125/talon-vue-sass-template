@@ -1,4 +1,24 @@
 <template>
+  <RouterLink
+    v-if="to"
+    :to="to"
+    :target="stayHere ? '_self' : '_blank'"
+    :class="`
+      ${disabled ? 'disabled' : ''}
+      ${defaultButton ? 'default' : ''}
+      ${color ? 'colored' : ''}
+      ${color ? color : ''}
+    `"
+  >
+    <span class="bottom"></span>
+    <span class="side"></span>
+    <span class="face">
+      <span>
+        <slot></slot>
+        <IconExternalLink v-if="!stayHere" fillColor="white" />
+      </span>
+    </span>
+  </RouterLink>
   <a
     v-if="href"
     :href="href"
@@ -20,7 +40,7 @@
     </span>
   </a>
   <button
-    v-else
+    v-if="!to && !href"
     :disabled="disabled"
     :class="`
       ${defaultButton ? 'default' : ''}
@@ -43,6 +63,7 @@ defineProps({
   color: { type: String },
   disabled: { type: Boolean },
   href: { type: String },
+  to: { type: String },
   stayHere: { type: Boolean }
 })
 </script>
