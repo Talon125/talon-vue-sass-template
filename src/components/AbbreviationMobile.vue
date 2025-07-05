@@ -58,9 +58,12 @@ button {
 
 [data-part='content'] {
   border-radius: 4px;
-  box-shadow: inset 0 0 0 1px hsl(0deg 0% 100% / 25%),
-    0 0 0 1px hsl(0deg 0% 0% / 75%), 0 4px 16px black;
-  background: radial-gradient(
+  box-shadow:
+    inset 0 0 0 1px hsl(0deg 0% 100% / 25%),
+    0 0 0 1px hsl(0deg 0% 0% / 75%),
+    0 4px 16px black;
+  background:
+    radial-gradient(
       ellipse 100% 33% at bottom,
       hsl(0deg 0% 100% / 10%),
       transparent

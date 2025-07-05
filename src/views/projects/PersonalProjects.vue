@@ -9,9 +9,7 @@ import GlassCard from '@/components/GlassCard.vue'
     <NavigationButton1 to="/projects">
       &leftarrow;&ensp;Back to Projects
     </NavigationButton1>
-    <GlassCard class="info-card">
-      Coming soon...
-    </GlassCard>
+    <GlassCard class="info-card"> Coming soon... </GlassCard>
   </main>
 </template>
 

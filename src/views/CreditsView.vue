@@ -111,10 +111,7 @@ import GlassCard from '@/components/GlassCard.vue'
     </GlassCard>
     <GlassCard title="Oxygen Icons" nocenter>
       Some of the icons I use are from here:<br />
-      <a
-        href="https://github.com/KDE/oxygen-icons"
-        target="_blank"
-      >
+      <a href="https://github.com/KDE/oxygen-icons" target="_blank">
         https://github.com/KDE/oxygen-icons
       </a>
     </GlassCard>
