@@ -25,6 +25,8 @@ defineProps({
 
 .root {
   margin-top: 0;
+  box-shadow: inset 0 0 0 1px hsl(0deg 0% 100% / 25%),
+    0 0 0 1px hsl(0deg 0% 0% / 50%);
 }
 
 :deep(img) {
@@ -35,7 +37,7 @@ defineProps({
 
 h1 {
   margin: 0.25em 0;
-  color: hsla(0deg 0% 100% / 75%);
+  color: hsl(0deg 0% 100% / 75%);
   font-weight: lighter;
 }
 </style>
