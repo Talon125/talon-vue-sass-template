@@ -6,6 +6,7 @@
     :class="`
       ${disabled ? 'disabled' : ''}
       ${defaultButton ? 'default' : ''}
+      ${color ? 'colored' : ''}
       ${color ? color : ''}
     `"
   >
@@ -50,7 +51,72 @@ defineProps({
 @use 'sass:color';
 @use '../assets/variables.scss' as vars;
 
+/* stylelint-disable no-descending-specificity */
+
 $corner-roundness: 8px;
+
+@mixin button-colored($hue, $saturation: 67%) {
+  &:not(:disabled):hover {
+    .bottom {
+      box-shadow: 0 0 8px 4px hsl($hue $saturation 50% / 50%);
+    }
+  }
+
+  .bottom {
+    background: linear-gradient(
+      to bottom,
+      hsl($hue $saturation 50% / 25%),
+      hsl($hue $saturation 50% / 50%)
+    );
+  }
+
+  .side {
+    background: linear-gradient(
+      to bottom,
+      transparent,
+      hsl($hue $saturation 25% / 50%)
+    );
+  }
+
+  .face {
+    box-shadow: inset 0 0 0 1px hsl(0deg 0% 100% / 25%),
+      0 0 0 1px hsl(0deg 0% 0% / 50%);
+    background: vars.$reflection-soft, vars.$reflection-weak,
+      radial-gradient(
+        ellipse 50% 33% at top,
+        hsl($hue $saturation 100% / 25%),
+        transparent
+      ),
+      radial-gradient(
+        ellipse 50% 33% at bottom,
+        hsl($hue $saturation 50% / 25%),
+        transparent
+      ),
+      radial-gradient(
+        ellipse at bottom left,
+        transparent 75%,
+        hsl($hue $saturation 90% / 15%)
+      ),
+      radial-gradient(
+        ellipse at bottom right,
+        transparent 75%,
+        hsl($hue $saturation 90% / 15%)
+      ),
+      linear-gradient(
+        to right,
+        hsl($hue $saturation 0% / 25%),
+        transparent,
+        transparent,
+        hsl($hue $saturation 0% / 25%)
+      ),
+      linear-gradient(
+        to bottom,
+        hsl($hue $saturation 35% / 70%),
+        hsl($hue $saturation 20% / 90%),
+        hsl($hue $saturation 30% / 80%)
+      );
+  }
+}
 
 .bottom,
 .side,
@@ -68,7 +134,7 @@ $corner-roundness: 8px;
   transition-duration: vars.$transdur-mouseleave;
   border: none;
   border-radius: #{$corner-roundness + 1px};
-  box-shadow: 0 1px hsla(0deg 0% 100% / 25%);
+  box-shadow: 0 1px hsl(0deg 0% 100% / 25%);
   background: linear-gradient(to bottom, transparent, hsl(0deg 0% 15% / 50%));
   width: calc(100% + 2px);
   height: calc(100% + 4px);
@@ -86,7 +152,7 @@ $corner-roundness: 8px;
   transition-duration: vars.$transdur-mouseleave;
   border-radius: $corner-roundness;
   box-shadow: inset 0 0 0 1px hsl(0deg 0% 100% / 25%),
-    0 0 0 1px hsla(0deg 0% 0% / 75%);
+    0 0 0 1px hsl(0deg 0% 0% / 75%);
   background: vars.$reflection-soft, vars.$reflection-weak,
     radial-gradient(
       ellipse 100% 33% at bottom,
@@ -112,7 +178,7 @@ $corner-roundness: 8px;
   width: 100%;
   height: 100%;
   text-shadow: 0 2px 2px hsl(0deg 0% 0% / 25%);
-  color: hsla(0deg 0% 100% / 90%);
+  color: hsl(0deg 0% 100% / 90%);
   font-size: 1rem;
 }
 
@@ -142,7 +208,7 @@ button {
     cursor: not-allowed;
 
     .face {
-      color: hsla(0deg 0% 100% / 50%);
+      color: hsl(0deg 0% 100% / 50%);
     }
   }
 
@@ -150,7 +216,7 @@ button {
     .bottom {
       transition-duration: vars.$transdur-mouseenter;
       opacity: 1;
-      box-shadow: 0 0 8px 4px hsla(0deg 0% 100% / 50%);
+      box-shadow: 0 0 8px 4px hsl(0deg 0% 100% / 50%);
     }
 
     .face {
@@ -159,8 +225,7 @@ button {
     }
   }
 
-/* stylelint-disable no-descending-specificity */
-  &.green:not(:disabled):focus,
+  &.colored:not(:disabled):focus,
   &:not(:disabled):active {
     .bottom {
       transition-duration: vars.$transdur-press;
@@ -172,13 +237,13 @@ button {
       transform: translateY(3px);
       transition-duration: vars.$transdur-press;
       box-shadow: inset 0 0 0 1px hsl(0deg 0% 100% / 25%),
-        0 0 0 1px hsla(0deg 0% 0% / 75%), inset 0 0 12px hsl(0deg 0% 0% / 75%);
-      color: hsla(0deg 0% 100% / 50%);
+        0 0 0 1px hsl(0deg 0% 0% / 75%), inset 0 0 12px hsl(0deg 0% 0% / 75%);
+      color: hsl(0deg 0% 100% / 50%);
       filter: brightness(0.75);
 
       span {
         opacity: 0.5;
-        color: hsla(0deg 0% 100% / 90%);
+        color: hsl(0deg 0% 100% / 90%);
         /* filter: brightness(0.75); */
       }
     }
@@ -186,65 +251,10 @@ button {
 }
 
 .green {
-  &:not(:disabled):hover {
-    .bottom {
-      box-shadow: 0 0 8px 4px hsla(150deg 63% 50% / 50%);
-    }
-  }
+  @include button-colored(150deg, 63%);
+}
 
-  .bottom {
-    background: linear-gradient(
-      to bottom,
-      hsla(150deg 63% 50% / 25%),
-      hsla(150deg 63% 50% / 50%)
-    );
-  }
-
-  .side {
-    background: linear-gradient(
-      to bottom,
-      transparent,
-      hsla(150deg 63% 25% / 50%)
-    );
-  }
-
-  .face {
-    box-shadow: inset 0 0 0 1px hsl(0deg 0% 100% / 25%),
-    0 0 0 1px hsla(0deg 0% 0% / 50%);
-    background: vars.$reflection-soft, vars.$reflection-weak,
-      radial-gradient(
-        ellipse 50% 33% at top,
-        hsl(150deg 63% 100% / 25%),
-        transparent
-      ),
-      radial-gradient(
-        ellipse 50% 33% at bottom,
-        hsl(150deg 63% 50% / 25%),
-        transparent
-      ),
-      radial-gradient(
-        ellipse at bottom left,
-        transparent 75%,
-        hsl(150deg 63% 90% / 15%)
-      ),
-      radial-gradient(
-        ellipse at bottom right,
-        transparent 75%,
-        hsl(150deg 63% 90% / 15%)
-      ),
-      linear-gradient(
-        to right,
-        hsl(150deg 63% 0% / 25%),
-        transparent,
-        transparent,
-        hsl(150deg 63% 0% / 25%)
-      ),
-      linear-gradient(
-        to bottom,
-        hsl(150deg 63% 35% / 70%),
-        hsl(150deg 63% 20% / 90%),
-        hsl(150deg 63% 30% / 80%)
-      );
-  }
+.purple {
+  @include button-colored(263deg, 64%);
 }
 </style>
