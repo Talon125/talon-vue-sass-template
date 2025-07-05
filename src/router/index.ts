@@ -45,9 +45,11 @@ const routes = [
 const router = createRouter({
   history: createWebHashHistory(import.meta.env.BASE_URL),
   routes,
-  // scrollBehavior(to, from, savedPosition) {
-  scrollBehavior() {
-    return { left: 0, top: 0 }
+  scrollBehavior(to) {
+    if (!to.query.scrollTo) {
+      return { left: 0, top: 0 }
+    }
+    return false
   }
 })
 
