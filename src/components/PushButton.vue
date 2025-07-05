@@ -85,11 +85,9 @@ $corner-roundness: 8px;
   position: relative;
   transition-duration: vars.$transdur-mouseleave;
   border-radius: $corner-roundness;
-  box-shadow:
-    inset 0 0 0 1px hsl(0deg 0% 100% / 25%),
+  box-shadow: inset 0 0 0 1px hsl(0deg 0% 100% / 25%),
     0 0 0 1px hsla(0deg 0% 0% / 75%);
-  background:
-    vars.$reflection-soft, vars.$reflection-weak,
+  background: vars.$reflection-soft, vars.$reflection-weak,
     radial-gradient(
       ellipse 100% 33% at bottom,
       hsl(0deg 0% 100% / 10%),
@@ -161,7 +159,8 @@ button {
     }
   }
 
-  /* &:not(:disabled):focus, */
+/* stylelint-disable no-descending-specificity */
+  &.green:not(:disabled):focus,
   &:not(:disabled):active {
     .bottom {
       transition-duration: vars.$transdur-press;
@@ -172,10 +171,8 @@ button {
     .face {
       transform: translateY(3px);
       transition-duration: vars.$transdur-press;
-      box-shadow:
-        inset 0 0 0 1px hsl(0deg 0% 100% / 25%),
-        0 0 0 1px hsla(0deg 0% 0% / 75%),
-        inset 0 0 12px hsl(0deg 0% 0% / 75%);
+      box-shadow: inset 0 0 0 1px hsl(0deg 0% 100% / 25%),
+        0 0 0 1px hsla(0deg 0% 0% / 75%), inset 0 0 12px hsl(0deg 0% 0% / 75%);
       color: hsla(0deg 0% 100% / 50%);
       filter: brightness(0.75);
 
@@ -185,6 +182,69 @@ button {
         /* filter: brightness(0.75); */
       }
     }
+  }
+}
+
+.green {
+  &:not(:disabled):hover {
+    .bottom {
+      box-shadow: 0 0 8px 4px hsla(150deg 63% 50% / 50%);
+    }
+  }
+
+  .bottom {
+    background: linear-gradient(
+      to bottom,
+      hsla(150deg 63% 50% / 25%),
+      hsla(150deg 63% 50% / 50%)
+    );
+  }
+
+  .side {
+    background: linear-gradient(
+      to bottom,
+      transparent,
+      hsla(150deg 63% 25% / 50%)
+    );
+  }
+
+  .face {
+    box-shadow: inset 0 0 0 1px hsl(0deg 0% 100% / 25%),
+    0 0 0 1px hsla(0deg 0% 0% / 50%);
+    background: vars.$reflection-soft, vars.$reflection-weak,
+      radial-gradient(
+        ellipse 50% 33% at top,
+        hsl(150deg 63% 100% / 25%),
+        transparent
+      ),
+      radial-gradient(
+        ellipse 50% 33% at bottom,
+        hsl(150deg 63% 50% / 25%),
+        transparent
+      ),
+      radial-gradient(
+        ellipse at bottom left,
+        transparent 75%,
+        hsl(150deg 63% 90% / 15%)
+      ),
+      radial-gradient(
+        ellipse at bottom right,
+        transparent 75%,
+        hsl(150deg 63% 90% / 15%)
+      ),
+      linear-gradient(
+        to right,
+        hsl(150deg 63% 0% / 25%),
+        transparent,
+        transparent,
+        hsl(150deg 63% 0% / 25%)
+      ),
+      linear-gradient(
+        to bottom,
+        hsl(150deg 63% 35% / 70%),
+        hsl(150deg 63% 20% / 90%),
+        hsl(150deg 63% 30% / 80%)
+      );
   }
 }
 </style>
