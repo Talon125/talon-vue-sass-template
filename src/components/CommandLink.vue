@@ -42,7 +42,7 @@
         <div>
           <h1 v-if="title" id="glasscard-title">
             {{ title }}
-            <IconExternalLink fillColor="white" />
+            <IconExternalLink fillColor="white" v-if="!stayHere" />
           </h1>
           <slot></slot>
         </div>
@@ -79,7 +79,8 @@ defineProps({
   icon_alt: { type: String },
   disabled: { type: Boolean },
   href: { type: String },
-  to: { type: String }
+  to: { type: String },
+  stayHere: { type: Boolean }
 })
 </script>
 
