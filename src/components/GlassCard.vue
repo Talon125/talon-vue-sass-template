@@ -27,7 +27,7 @@ defineProps({
 #glasscard-title {
   margin: -0.55em 0 0;
   text-shadow: none;
-  color: hsla(0deg 0% 100% / 25%);
+  color: hsl(0deg 0% 100% / 25%);
   font-size: 4em;
   font-weight: lighter;
   /* font-style: italic; */
@@ -69,7 +69,7 @@ defineProps({
     );
   padding: 1em;
   text-shadow: 0 2px 2px hsl(0deg 0% 0% / 25%);
-  color: hsla(0deg 0% 100% / 90%);
+  color: hsl(0deg 0% 100% / 90%);
 
   &.clear {
     background:
@@ -106,45 +106,45 @@ defineProps({
     background:
       radial-gradient(
         ellipse 100% 33% at bottom,
-        hsla(0deg 0% 100% / 25%),
+        hsl(0deg 0% 100% / 25%),
         transparent
       ),
       radial-gradient(
         ellipse at bottom left,
         transparent 75%,
-        hsla(0deg 0% 100% / 50%)
+        hsl(0deg 0% 100% / 50%)
       ),
       radial-gradient(
         ellipse at bottom right,
         transparent 75%,
-        hsla(0deg 0% 100% / 50%)
+        hsl(0deg 0% 100% / 50%)
       ),
       linear-gradient(
         to bottom,
-        hsla(0deg 0% 100% / 5%),
-        hsla(0deg 0% 100% / 15%) 49%,
+        hsl(0deg 0% 100% / 5%),
+        hsl(0deg 0% 100% / 15%) 49%,
         transparent 51%
       ),
       linear-gradient(
         to bottom,
-        hsla(0deg 0% 0% / 0%),
-        hsla(0deg 0% 0% / 20%),
-        hsla(0deg 0% 0% / 10%)
+        hsl(0deg 0% 0% / 0%),
+        hsl(0deg 0% 0% / 20%),
+        hsl(0deg 0% 0% / 10%)
       ),
       linear-gradient(
         to right,
-        hsla(167deg 91% 29% / 90%),
-        hsla(167deg 69% 48% / 90%),
-        hsla(150deg 63% 75% / 90%),
-        hsla(211deg 64% 68% / 90%),
-        hsla(243deg 56% 54% / 90%),
-        hsla(263deg 64% 28% / 90%)
+        hsl(167deg 91% 29% / 90%),
+        hsl(167deg 69% 48% / 90%),
+        hsl(150deg 63% 75% / 90%),
+        hsl(211deg 64% 68% / 90%),
+        hsl(243deg 56% 54% / 90%),
+        hsl(263deg 64% 28% / 90%)
       );
     text-shadow: 0 2px 2px hsl(0deg 0% 100% / 75%);
     color: black;
 
     #glasscard-title {
-      color: hsla(0deg 0% 0% / 15%);
+      color: hsl(0deg 0% 0% / 15%);
     }
   }
 

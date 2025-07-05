@@ -46,7 +46,7 @@ defineProps<{
   /* font-style: italic; */
   text-align: start;
   text-shadow: none;
-  color: hsla(0deg 0% 100% / 25%);
+  color: hsl(0deg 0% 100% / 25%);
   font-size: 4em;
   font-weight: lighter;
 }
@@ -83,7 +83,7 @@ defineProps<{
     );
   padding: 1em;
   text-shadow: 0 2px 2px hsl(0deg 0% 0% / 25%);
-  color: hsla(0deg 0% 100% / 90%);
+  color: hsl(0deg 0% 100% / 90%);
 }
 
 @media (width <= 576px) {

@@ -68,8 +68,8 @@ $button-inner-sheen: inset 0 1.5px 1px 1px hsl(0deg 0% 100%);
       hsl($hue, 75%, 35%),
       hsl($hue, 75%, 50%)
     );
-  text-shadow: 0 1px 3px hsla(0deg, 0%, $text-shadow-color, 75%);
-  color: hsla(0deg, 0%, $text-color, 85%);
+  text-shadow: 0 1px 3px hsl(0deg, 0%, $text-shadow-color, 75%);
+  color: hsl(0deg, 0%, $text-color, 85%);
   font-size: 100%;
 
   /* Hover Color */
@@ -115,8 +115,8 @@ $button-inner-sheen: inset 0 1.5px 1px 1px hsl(0deg 0% 100%);
         hsl($hue, 100%, 50%, 25%),
         hsl($hue, 100%, 40%, 25%)
       );
-    text-shadow: 0 1px 3px hsla(0deg, 0%, $text-shadow-color, 17.5%);
-    color: hsla(0deg, 0%, $text-color, if($text-color == 0%, 17.5%, 60%));
+    text-shadow: 0 1px 3px hsl(0deg, 0%, $text-shadow-color, 17.5%);
+    color: hsl(0deg, 0%, $text-color, if($text-color == 0%, 17.5%, 60%));
   }
 
   &:not(:disabled) {
@@ -124,10 +124,10 @@ $button-inner-sheen: inset 0 1.5px 1px 1px hsl(0deg 0% 100%);
     &::after,
     &:active {
       box-shadow:
-        inset 0 2px 8px hsla($hue, 100%, 17.5%, 75%),
+        inset 0 2px 8px hsl($hue, 100%, 17.5%, 75%),
         0 1px 2px hsl(0deg 0% 100% / 50%);
       text-shadow: none;
-      color: hsla(0deg, 0%, $text-color, 50%);
+      color: hsl(0deg, 0%, $text-color, 50%);
     }
 
     /* Hover */
@@ -137,9 +137,9 @@ $button-inner-sheen: inset 0 1.5px 1px 1px hsl(0deg 0% 100%);
         0 2px 0 hsl($hue, 75%, 40%),
         $button-inner-sheen-weak,
         $button-inner-shadow,
-        0 2px 8px 4px hsla($hue, 80%, 80%, 100%);
-      text-shadow: 0 1px 4px hsla(0deg, 0%, $text-shadow-color, 90%);
-      color: hsla(0deg, 0%, $text-color, 100%);
+        0 2px 8px 4px hsl($hue, 80%, 80%, 100%);
+      text-shadow: 0 1px 4px hsl(0deg, 0%, $text-shadow-color, 90%);
+      color: hsl(0deg, 0%, $text-color, 100%);
     }
   }
 
@@ -147,7 +147,7 @@ $button-inner-sheen: inset 0 1.5px 1px 1px hsl(0deg 0% 100%);
   &.default:not(:disabled, :hover, :active) {
     box-shadow:
       0 2px 0 hsl($hue, 50%, 40%),
-      inset 0 0 4px 2px hsla($hue, 100%, 60%, 85%),
+      inset 0 0 4px 2px hsl($hue, 100%, 60%, 85%),
       $button-inner-sheen-weak,
       $button-inner-shadow,
       vars.$outer-shadow;
@@ -163,10 +163,10 @@ $button-inner-sheen: inset 0 1.5px 1px 1px hsl(0deg 0% 100%);
     &::before {
       box-shadow:
         0 2px 0 hsl($hue, 100%, 40%),
-        inset 0 0 8px 4px hsla($hue, 100%, 60%, 85%),
+        inset 0 0 8px 4px hsl($hue, 100%, 60%, 85%),
         $button-inner-sheen-weak,
         $button-inner-shadow,
-        0 2px 8px 4px hsla($hue, 80%, 50%, 75%);
+        0 2px 8px 4px hsl($hue, 80%, 50%, 75%);
       background:
         vars.$reflection-weak,
         linear-gradient(

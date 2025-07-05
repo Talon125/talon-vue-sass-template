@@ -49,15 +49,15 @@ $corner-roundness: 8px;
   border: none;
   border-radius: #{$corner-roundness + 1px} 0 0 #{$corner-roundness + 1px};
   box-shadow:
-    inset 0 0 0 1px hsla(0deg 0% 0% / 75%),
-    inset 0 0 0 2px hsla(0deg 0% 100% / 25%),
-    inset 1px 1px 8px hsla(0deg 0% 0% / 50%),
-    0 1px hsla(0deg 0% 100% / 25%);
+    inset 0 0 0 1px hsl(0deg 0% 0% / 75%),
+    inset 0 0 0 2px hsl(0deg 0% 100% / 25%),
+    inset 1px 1px 8px hsl(0deg 0% 0% / 50%),
+    0 1px hsl(0deg 0% 100% / 25%);
   background: linear-gradient(to bottom, transparent, hsl(0deg 0% 15% / 50%));
   padding: 0.25em 0.75em;
   height: 27px;
   text-shadow: 0 2px 2px hsl(0deg 0% 0% / 25%);
-  color: hsla(0deg 0% 100% / 90%);
+  color: hsl(0deg 0% 100% / 90%);
   font-family: 'Fira Code', monospace;
   font-size: 1rem;
 
@@ -65,10 +65,10 @@ $corner-roundness: 8px;
     outline: none;
     box-shadow:
       0 0 8px 4px hsl(211deg 64% 68%),
-      inset 0 0 0 1px hsla(0deg 0% 0% / 75%),
-      inset 0 0 0 2px hsla(0deg 0% 100% / 50%),
-      inset 1px 1px 8px hsla(0deg 0% 0% / 50%),
-      0 1px hsla(0deg 0% 100% / 25%);
+      inset 0 0 0 1px hsl(0deg 0% 0% / 75%),
+      inset 0 0 0 2px hsl(0deg 0% 100% / 50%),
+      inset 1px 1px 8px hsl(0deg 0% 0% / 50%),
+      0 1px hsl(0deg 0% 100% / 25%);
     background: linear-gradient(
       to bottom,
       hsl(0deg 0% 100% / 10%),
@@ -116,7 +116,7 @@ $corner-roundness: 8px;
   transition-duration: vars.$transdur-mouseleave;
   border: none;
   border-radius: 0 #{$corner-roundness + 1px} #{$corner-roundness + 1px} 0;
-  box-shadow: 0 1px hsla(0deg 0% 100% / 25%);
+  box-shadow: 0 1px hsl(0deg 0% 100% / 25%);
   background: linear-gradient(to bottom, transparent, hsl(0deg 0% 15% / 50%));
   width: calc(100% + 2px);
   height: calc(100% + 4px);
@@ -135,7 +135,7 @@ $corner-roundness: 8px;
   border-radius: 0 #{$corner-roundness} #{$corner-roundness} 0;
   box-shadow:
     inset 0 0 0 1px hsl(0deg 0% 100% / 25%),
-    0 0 0 1px hsla(0deg 0% 0% / 75%);
+    0 0 0 1px hsl(0deg 0% 0% / 75%);
   background:
     vars.$reflection-soft, vars.$reflection-weak,
     radial-gradient(
@@ -162,7 +162,7 @@ $corner-roundness: 8px;
   width: 100%;
   height: 100%;
   text-shadow: 0 2px 2px hsl(0deg 0% 0% / 25%);
-  color: hsla(0deg 0% 100% / 90%);
+  color: hsl(0deg 0% 100% / 90%);
   font-size: 1rem;
 }
 
@@ -186,7 +186,7 @@ button {
     cursor: not-allowed;
 
     .face {
-      color: hsla(0deg 0% 100% / 50%);
+      color: hsl(0deg 0% 100% / 50%);
     }
   }
 
@@ -194,7 +194,7 @@ button {
     .bottom {
       transition-duration: vars.$transdur-mouseenter;
       opacity: 1;
-      box-shadow: 0 0 8px 4px hsla(0deg 0% 100% / 50%);
+      box-shadow: 0 0 8px 4px hsl(0deg 0% 100% / 50%);
     }
 
     .face {
@@ -216,14 +216,14 @@ button {
       transition-duration: vars.$transdur-press;
       box-shadow:
         inset 0 0 0 1px hsl(0deg 0% 100% / 25%),
-        0 0 0 1px hsla(0deg 0% 0% / 75%),
+        0 0 0 1px hsl(0deg 0% 0% / 75%),
         inset 0 0 12px hsl(0deg 0% 0% / 75%);
-      color: hsla(0deg 0% 100% / 50%);
+      color: hsl(0deg 0% 100% / 50%);
       filter: brightness(0.75);
 
       span {
         opacity: 0.5;
-        color: hsla(0deg 0% 100% / 90%);
+        color: hsl(0deg 0% 100% / 90%);
       }
     }
   }
@@ -245,9 +245,9 @@ button {
     transition-duration: vars.$transdur-press;
     box-shadow:
       inset 0 0 0 1px hsl(0deg 0% 100% / 25%),
-      0 0 0 1px hsla(0deg 0% 0% / 75%),
+      0 0 0 1px hsl(0deg 0% 0% / 75%),
       inset 0 0 12px hsl(0deg 0% 0% / 75%);
-    color: hsla(0deg 0% 100% / 50%);
+    color: hsl(0deg 0% 100% / 50%);
   }
 
   button:not(:disabled):hover {

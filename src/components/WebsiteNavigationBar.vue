@@ -125,15 +125,15 @@ $navbar-height: 64px;
 $gradient-nav:
   linear-gradient(
     to right,
-    hsla(0deg 0% 0% / 50%),
-    hsla(0deg 0% 0% / 0%),
-    hsla(0deg 0% 0% / 50%)
+    hsl(0deg 0% 0% / 50%),
+    hsl(0deg 0% 0% / 0%),
+    hsl(0deg 0% 0% / 50%)
   ),
   linear-gradient(
     to bottom,
-    hsla(0deg 0% 0% / 80%),
-    hsla(0deg 0% 0% / 70%),
-    hsla(0deg 0% 0% / 90%)
+    hsl(0deg 0% 0% / 80%),
+    hsl(0deg 0% 0% / 70%),
+    hsl(0deg 0% 0% / 90%)
   );
 
 header {
@@ -143,7 +143,7 @@ header {
   flex-direction: column;
   align-items: center;
   z-index: 10;
-  box-shadow: 0 0 16px hsla(0deg 0% 0% / 50%);
+  box-shadow: 0 0 16px hsl(0deg 0% 0% / 50%);
   width: 100%;
   min-height: $navbar-height;
   backdrop-filter: blur(8px);
@@ -153,16 +153,16 @@ header {
 
   .websitewide-message {
     box-shadow:
-      0 1px hsla(0deg 0% 0% / 75%),
-      inset 0 -1px hsla(0deg 0% 100% / 50%),
-      inset 0 1px hsla(0deg 0% 0% / 75%);
+      0 1px hsl(0deg 0% 0% / 75%),
+      inset 0 -1px hsl(0deg 0% 100% / 50%),
+      inset 0 1px hsl(0deg 0% 0% / 75%);
     background:
       vars.$reflection-minor,
       linear-gradient(
         to bottom,
-        hsla(0deg 0% 55% / 75%),
-        hsla(0deg 0% 20% / 75%),
-        hsla(0deg 0% 30% / 75%)
+        hsl(0deg 0% 55% / 75%),
+        hsl(0deg 0% 20% / 75%),
+        hsl(0deg 0% 30% / 75%)
       );
     padding: 4px 0;
     width: 100%;
@@ -179,24 +179,24 @@ header {
         vars.$reflection-minor,
         linear-gradient(
           to right,
-          hsla(0deg 0% 0% / 0%),
-          hsla(0deg 0% 0% / 15%),
-          hsla(0deg 0% 0% / 0%)
+          hsl(0deg 0% 0% / 0%),
+          hsl(0deg 0% 0% / 15%),
+          hsl(0deg 0% 0% / 0%)
         ),
         linear-gradient(
           to bottom,
-          hsla(0deg 0% 100% / 20%),
-          hsla(0deg 0% 0% / 20%),
-          hsla(0deg 0% 0% / 0%)
+          hsl(0deg 0% 100% / 20%),
+          hsl(0deg 0% 0% / 20%),
+          hsl(0deg 0% 0% / 0%)
         ),
         linear-gradient(
           to right,
-          hsla(167deg 91% 29% / 90%),
-          hsla(167deg 69% 48% / 90%),
-          hsla(150deg 63% 75% / 90%),
-          hsla(211deg 64% 68% / 90%),
-          hsla(243deg 56% 54% / 90%),
-          hsla(263deg 64% 28% / 90%)
+          hsl(167deg 91% 29% / 90%),
+          hsl(167deg 69% 48% / 90%),
+          hsl(150deg 63% 75% / 90%),
+          hsl(211deg 64% 68% / 90%),
+          hsl(243deg 56% 54% / 90%),
+          hsl(263deg 64% 28% / 90%)
         );
       text-shadow: vars.$textshadow-dimensions-nav 2px hsl(0deg 0% 0% / 100%);
     }
@@ -206,24 +206,24 @@ header {
         vars.$reflection-minor,
         linear-gradient(
           to right,
-          hsla(0deg 0% 0% / 0%),
-          hsla(0deg 0% 0% / 15%),
-          hsla(0deg 0% 0% / 0%)
+          hsl(0deg 0% 0% / 0%),
+          hsl(0deg 0% 0% / 15%),
+          hsl(0deg 0% 0% / 0%)
         ),
         linear-gradient(
           to bottom,
-          hsla(0deg 0% 100% / 20%),
-          hsla(0deg 0% 0% / 20%),
-          hsla(0deg 0% 0% / 0%)
+          hsl(0deg 0% 100% / 20%),
+          hsl(0deg 0% 0% / 20%),
+          hsl(0deg 0% 0% / 0%)
         ),
         linear-gradient(
           to right,
-          hsla(0deg 100% 45% / 75%),
-          hsla(33deg 100% 50% / 75%),
-          hsla(56deg 100% 50% / 75%),
-          hsla(135deg 97% 26% / 75%),
-          hsla(222deg 100% 50% / 75%),
-          hsla(293deg 100% 27% / 75%)
+          hsl(0deg 100% 45% / 75%),
+          hsl(33deg 100% 50% / 75%),
+          hsl(56deg 100% 50% / 75%),
+          hsl(135deg 97% 26% / 75%),
+          hsl(222deg 100% 50% / 75%),
+          hsl(293deg 100% 27% / 75%)
         );
       text-shadow: vars.$textshadow-dimensions-nav 2px hsl(0deg 0% 0% / 100%);
     }
@@ -256,21 +256,21 @@ header {
 
 nav {
   box-shadow:
-    0 1px hsla(0deg 0% 0% / 75%),
-    inset 0 -1px hsla(0deg 0% 100% / 50%);
+    0 1px hsl(0deg 0% 0% / 75%),
+    inset 0 -1px hsl(0deg 0% 100% / 50%);
   background:
     vars.$reflection-weak,
     linear-gradient(
       to right,
-      hsla(0deg 0% 0% / 50%),
-      hsla(0deg 0% 0% / 0%),
-      hsla(0deg 0% 0% / 50%)
+      hsl(0deg 0% 0% / 50%),
+      hsl(0deg 0% 0% / 0%),
+      hsl(0deg 0% 0% / 50%)
     ),
     linear-gradient(
       to bottom,
-      hsla(0deg 0% 0% / 80%),
-      hsla(0deg 0% 0% / 70%),
-      hsla(0deg 0% 0% / 90%)
+      hsl(0deg 0% 0% / 80%),
+      hsl(0deg 0% 0% / 70%),
+      hsl(0deg 0% 0% / 90%)
     );
   width: 100%;
 
@@ -322,13 +322,13 @@ nav {
         linear-gradient(
           to right,
           transparent 40%,
-          hsla(0deg 0% 100% / 7.5%),
+          hsl(0deg 0% 100% / 7.5%),
           transparent 60%
         ),
         linear-gradient(
           to right,
           transparent 37.5%,
-          hsla(0deg 0% 100% / 7.5%),
+          hsl(0deg 0% 100% / 7.5%),
           transparent 62.5%
         ),
         radial-gradient(
@@ -355,7 +355,7 @@ nav {
     margin: 0 64px 0 0;
     cursor: text;
     padding: 0;
-    color: hsla(0deg 0% 100% / 75%);
+    color: hsl(0deg 0% 100% / 75%);
     /* letter-spacing: 0.1em; */
     font-size: 1.25em;
     user-select: auto;
@@ -435,7 +435,7 @@ nav {
 
     ul {
       flex-direction: column;
-      // box-shadow: inset 0 4px 4px -4px hsla(0deg 0% 0% / 10%);
+      // box-shadow: inset 0 4px 4px -4px hsl(0deg 0% 0% / 10%);
     }
 
     /* .nav-open-anim {
@@ -452,19 +452,19 @@ nav {
 
     .nav-other {
       justify-content: space-between;
-      /* box-shadow: 0 1px hsla(0deg 0% 0% / 5%);
+      /* box-shadow: 0 1px hsl(0deg 0% 0% / 5%);
       background: radial-gradient(
         ellipse 100% 50% at bottom,
-        hsla(0deg 0% 100% / 10%),
+        hsl(0deg 0% 100% / 10%),
         transparent 55%
       ); */
       /* border-width: 1px;
       border-style: solid;
       border-image: conic-gradient(
           transparent 95deg,
-          hsla(0deg 0% 50% / 50%) 95.75deg 95.9deg,
+          hsl(0deg 0% 50% / 50%) 95.75deg 95.9deg,
           transparent 96.4deg 261.75deg,
-          hsla(0deg 0% 50% / 50%) 262.75deg 264.5deg,
+          hsl(0deg 0% 50% / 50%) 262.75deg 264.5deg,
           transparent 265deg
         )
         1;
@@ -483,22 +483,22 @@ nav {
     ),
     linear-gradient(
       to right,
-      hsla(0deg 0% 0% / 50%),
-      hsla(0deg 0% 0% / 0%),
-      hsla(0deg 0% 0% / 50%)
+      hsl(0deg 0% 0% / 50%),
+      hsl(0deg 0% 0% / 0%),
+      hsl(0deg 0% 0% / 50%)
     ),
     linear-gradient(
       to bottom,
-      hsla(0deg 0% 0% / 80%),
-      hsla(0deg 0% 0% / 70%),
-      hsla(0deg 0% 0% / 90%)
+      hsl(0deg 0% 0% / 80%),
+      hsl(0deg 0% 0% / 70%),
+      hsl(0deg 0% 0% / 90%)
     );
 }
 
 .touch-close {
   position: absolute;
   z-index: 1;
-  /* background: hsla(0deg 0% 0% / 10%); */
+  /* background: hsl(0deg 0% 0% / 10%); */
   width: 100%;
   height: 100vh;
   /* backdrop-filter: blur(4px); */
@@ -546,7 +546,7 @@ nav {
   background: linear-gradient(
     to bottom,
     transparent,
-    hsla(0deg 0% 100% / 25%),
+    hsl(0deg 0% 100% / 25%),
     transparent
   );
   width: 1px;
@@ -560,7 +560,7 @@ nav {
     background: linear-gradient(
       to bottom,
       transparent,
-      hsla(0deg 0% 0% / 50%),
+      hsl(0deg 0% 0% / 50%),
       transparent
     );
     width: 1px;
@@ -592,15 +592,15 @@ nav {
           vars.$reflection-minor,
           linear-gradient(
             to right,
-            hsla(0deg 0% 0% / 0%),
-            hsla(0deg 0% 0% / 15%),
-            hsla(0deg 0% 0% / 0%)
+            hsl(0deg 0% 0% / 0%),
+            hsl(0deg 0% 0% / 15%),
+            hsl(0deg 0% 0% / 0%)
           ),
           linear-gradient(
             to bottom,
-            hsla(0deg 0% 100% / 20%),
-            hsla(0deg 0% 0% / 20%),
-            hsla(0deg 0% 0% / 0%)
+            hsl(0deg 0% 100% / 20%),
+            hsl(0deg 0% 0% / 20%),
+            hsl(0deg 0% 0% / 0%)
           ),
           linear-gradient(
             to right,
@@ -619,15 +619,15 @@ nav {
           vars.$reflection-minor,
           linear-gradient(
             to right,
-            hsla(0deg 0% 0% / 0%),
-            hsla(0deg 0% 0% / 15%),
-            hsla(0deg 0% 0% / 0%)
+            hsl(0deg 0% 0% / 0%),
+            hsl(0deg 0% 0% / 15%),
+            hsl(0deg 0% 0% / 0%)
           ),
           linear-gradient(
             to bottom,
-            hsla(0deg 0% 100% / 20%),
-            hsla(0deg 0% 0% / 20%),
-            hsla(0deg 0% 0% / 0%)
+            hsl(0deg 0% 100% / 20%),
+            hsl(0deg 0% 0% / 20%),
+            hsl(0deg 0% 0% / 0%)
           ),
           linear-gradient(
             to right,

@@ -26,7 +26,7 @@ defineProps<{
 @use '../assets/variables.scss' as vars;
 
 /* [data-part='item-trigger'] {
-  background: linear-gradient(to bottom, hsla(0deg 0% 100% / 25%), transparent);
+  background: linear-gradient(to bottom, hsl(0deg 0% 100% / 25%), transparent);
   padding: 0.25em;
 } */
 </style>

@@ -51,7 +51,7 @@ button {
   cursor: text;
   padding: 0;
   text-shadow: 0 2px 2px hsl(0deg 0% 0% / 25%);
-  color: hsla(0deg 0% 100% / 90%);
+  color: hsl(0deg 0% 100% / 90%);
   font-size: 1rem;
   user-select: text;
 }
@@ -92,7 +92,7 @@ button {
     );
   padding: 0.5em 1em;
   animation: 500ms ease fade-from-above;
-  color: hsla(0deg 0% 100% / 80%);
+  color: hsl(0deg 0% 100% / 80%);
   font-size: 0.8rem;
   font-weight: bold;
   backdrop-filter: blur(1em);

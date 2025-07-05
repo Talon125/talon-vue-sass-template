@@ -93,7 +93,7 @@ $corner-roundness: 8px;
 #glasscard-title {
   margin: -0.4em 0 0;
   text-shadow: none;
-  color: hsla(0deg 0% 100% / 25%);
+  color: hsl(0deg 0% 100% / 25%);
   font-size: 4em;
   font-weight: lighter;
   /* font-style: italic; */
@@ -125,7 +125,7 @@ $corner-roundness: 8px;
   transition-duration: vars.$transdur-mouseleave;
   border: none;
   border-radius: #{$corner-roundness + 1px};
-  box-shadow: 0 1px hsla(0deg 0% 100% / 25%);
+  box-shadow: 0 1px hsl(0deg 0% 100% / 25%);
   background: linear-gradient(to bottom, transparent, hsl(0deg 0% 15% / 50%));
   width: calc(100% + 2px);
   height: calc(100% + 4px);
@@ -144,7 +144,7 @@ $corner-roundness: 8px;
   border-radius: $corner-roundness;
   box-shadow:
     inset 0 0 0 1px hsl(0deg 0% 100% / 25%),
-    0 0 0 1px hsla(0deg 0% 0% / 75%);
+    0 0 0 1px hsl(0deg 0% 0% / 75%);
   background:
     vars.$reflection-soft, vars.$reflection-weak,
     radial-gradient(
@@ -172,7 +172,7 @@ $corner-roundness: 8px;
   height: 100%;
   text-align: start;
   text-shadow: 0 2px 2px hsl(0deg 0% 0% / 25%);
-  color: hsla(0deg 0% 100% / 90%);
+  color: hsl(0deg 0% 100% / 90%);
   font-size: 1rem;
 }
 
@@ -203,7 +203,7 @@ button {
     cursor: not-allowed;
 
     .face {
-      color: hsla(0deg 0% 100% / 50%);
+      color: hsl(0deg 0% 100% / 50%);
     }
   }
 
@@ -211,7 +211,7 @@ button {
     .bottom {
       transition-duration: vars.$transdur-mouseenter;
       opacity: 1;
-      box-shadow: 0 0 8px 4px hsla(0deg 0% 100% / 50%);
+      box-shadow: 0 0 8px 4px hsl(0deg 0% 100% / 50%);
     }
 
     .face {
@@ -233,14 +233,14 @@ button {
       transition-duration: vars.$transdur-press;
       box-shadow:
         inset 0 0 0 1px hsl(0deg 0% 100% / 25%),
-        0 0 0 1px hsla(0deg 0% 0% / 75%),
+        0 0 0 1px hsl(0deg 0% 0% / 75%),
         inset 0 0 12px hsl(0deg 0% 0% / 75%);
-      color: hsla(0deg 0% 100% / 50%);
+      color: hsl(0deg 0% 100% / 50%);
       filter: brightness(0.75);
 
       span {
         opacity: 0.8;
-        /* color: hsla(0deg 0% 100% / 90%); */
+        /* color: hsl(0deg 0% 100% / 90%); */
         /* filter: brightness(0.75); */
       }
     }
