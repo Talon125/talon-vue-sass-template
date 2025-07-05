@@ -3,6 +3,7 @@ import { onMounted, watch } from 'vue'
 import { useRoute } from 'vue-router'
 import NavigationButton1 from '@/components/NavigationButton1.vue'
 import AccordionSingle from '@/components/AccordionSingle.vue'
+import ProjectLink from '@/components/ProjectLink.vue'
 import PushButton from '@/components/PushButton.vue'
 import GlassCard from '@/components/GlassCard.vue'
 
@@ -144,27 +145,55 @@ watch(
         <h2 id="HTL-3">3rd Grade (Cumulative: 11)</h2>
         <p class="opening-p text-justify">
           We started learning a bit of JavaScript and were tasked with
-          programming a Cookie Clicker-like game and a match-the-pairs memory
-          game. My JavaScript and overall web development skills at the time
-          were quite... not good. Nevertheless, I'll keep them here as an
-          exhibit.
+          programming a match-the-pairs memory game and a
+          <i>Cookie Clicker</i>-like game. My JavaScript and overall web
+          development skills at the time were quite... not good. Nevertheless,
+          I'll keep them here as an exhibit.
         </p>
         <p>
           <img class="inline-icon" src="/icons/dialog-warning.svg" />
           <b class="amber">Caution:</b> Memory Game and Cookie Clicker Pro were
-          only tested to work on 1080p screens (and at 100% scaling).
+          only tested to work on 1080p desktop screens (and at 100% scaling. No
+          mobile support).
         </p>
-        <PushButton></PushButton>
-        <p>lorem</p>
-        <p>ipsum</p>
-        <p>dolor</p>
-        <p>sit</p>
-        <p>amet</p>
-        <p>consectetur</p>
-        <p>adipiscing</p>
-        <p>Meow</p>
-        <p>Meow</p>
-        <p>Meow</p>
+        <div class="flex">
+          <ProjectLink
+            title="Memory Game"
+            icon_src="/images/thumbnails/Thumbnail_MemoryGame-1080p.png"
+          >
+            <p class="text-justify">
+              Match the pairs of numbers by flipping over the right cards. There
+              are 3 levels, each with increasingly more cards.
+            </p>
+            <div class="text-center">
+              <PushButton
+                color="green"
+                :stay-here="true"
+                href="/non-vue/memory-game/index.html"
+              >
+                Play
+              </PushButton>
+            </div>
+          </ProjectLink>
+          <ProjectLink
+            title="Cookie Clicker Pro"
+            icon_src="/images/thumbnails/Thumbnail_CookieClickerPro-1080p.png"
+          >
+            <p class="text-justify">
+              Click the cookie as many times as you can within 15 seconds. Each
+              click moves the cookie to a new random position.
+            </p>
+            <div class="text-center">
+              <PushButton
+                color="green"
+                :stayHere="true"
+                href="/non-vue/cookie-clicker-pro/index.html"
+              >
+                Play
+              </PushButton>
+            </div>
+          </ProjectLink>
+        </div>
         <h2 id="HTL-4">4th Grade (Cumulative: 12)</h2>
         <p>Meow...</p>
         <p>Meow...</p>
@@ -307,6 +336,7 @@ watch(
   h3 {
     scroll-margin-top: calc(64px + 24px);
     margin: 1em 0 0.5em;
+    color: hsla(0deg 0% 100% / 75%);
 
     &::after {
       display: block;
