@@ -176,7 +176,7 @@ watch(
             <div class="text-center">
               <PushButton
                 color="green"
-                :stay-here="true"
+                :stayHere="true"
                 href="/non-vue/memory-game/index.html"
               >
                 Play
@@ -216,7 +216,7 @@ watch(
             </p>
             The camera I used (borrowed from school) was a <b>Nikon D300S</b>.
             <div class="text-center">
-              <PushButton :stay-here="true" :to="`${$route.path}/htl4_photo`">
+              <PushButton :stayHere="true" :to="`${$route.path}/htl4_photo`">
                 View
               </PushButton>
             </div>
@@ -235,7 +235,7 @@ watch(
               turning planets into donuts.
             </p>
             <div class="text-center">
-              <PushButton :stay-here="true" :to="`${$route.path}/htl4_3d`">
+              <PushButton :stayHere="true" :to="`${$route.path}/htl4_3d`">
                 View
               </PushButton>
             </div>
@@ -252,7 +252,7 @@ watch(
               lot better.
             </p>
             <div class="text-center">
-              <PushButton :stay-here="true" :to="`${$route.path}/htl4_video`">
+              <PushButton :stayHere="true" :to="`${$route.path}/htl4_video`">
                 View
               </PushButton>
             </div>
@@ -271,7 +271,7 @@ watch(
             </p>
             <div class="text-center">
               <PushButton
-                :stay-here="true"
+                :stayHere="true"
                 :to="`${$route.path}/htl4_audio-soundtrap`"
               >
                 View
@@ -293,7 +293,7 @@ watch(
             </p>
             <div class="text-center">
               <PushButton
-                :stay-here="true"
+                :stayHere="true"
                 :to="`${$route.path}/htl4_audio-synchro`"
               >
                 View

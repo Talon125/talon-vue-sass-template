@@ -1,5 +1,5 @@
 <template>
-  <LoadingCircle :class="spaceright ? 'spaceright' : ''" v-if="!isLoaded" />
+  <LoadingCircle :class="spaceRight ? 'spaceright' : ''" v-if="!isLoaded" />
   <img
     v-show="isLoaded"
     :src="src"
@@ -17,7 +17,7 @@ import { ref } from 'vue'
 defineProps<{
   src: string
   alt?: string
-  spaceright?: boolean
+  spaceRight?: boolean
 }>()
 
 const isLoaded = ref(false)

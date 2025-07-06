@@ -3,7 +3,7 @@
     <h1
       v-if="title"
       id="glasscard-title"
-      :class="nocenter ? '' : 'text-center'"
+      :class="noCenter ? '' : 'text-center'"
     >
       {{ title }}
     </h1>
@@ -15,7 +15,7 @@
 defineProps({
   title: { type: String },
   birthday: { type: Boolean },
-  nocenter: { type: Boolean },
+  noCenter: { type: Boolean },
   clear: { type: Boolean }
 })
 </script>

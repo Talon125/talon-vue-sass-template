@@ -75,9 +75,9 @@ onMounted(() => {
       <ImageHandler
         class="pfp"
         src="/images/Coins_FrameAero_MLM_Large.png"
-        :spaceright="true"
+        :spaceRight="true"
       />
-      <GlassCard title="About Me" nocenter>
+      <GlassCard title="About Me" noCenter>
         Talon, {{ myAge }}, ♂ (he/him)
         <p>
           Born in Florida, but live in Austria<br />

@@ -97,7 +97,7 @@ import GlassCard from '@/components/GlassCard.vue'
         </li>
       </ul>
     </GlassCard>
-    <GlassCard title="External Link Icon" nocenter>
+    <GlassCard title="External Link Icon" noCenter>
       from Wikipedia<br />
       To indicate links with a target of "_blank" (open in new tab). Modified to
       have the color
@@ -109,7 +109,7 @@ import GlassCard from '@/components/GlassCard.vue'
         https://en.wikipedia.org/w/skins/Vector/resources/skins.vector.styles/images/link-external-small-ltr-progressive.svg
       </a>
     </GlassCard>
-    <GlassCard title="Oxygen Icons" nocenter>
+    <GlassCard title="Oxygen Icons" noCenter>
       Some of the icons I use are from here:<br />
       <a href="https://github.com/KDE/oxygen-icons" target="_blank">
         https://github.com/KDE/oxygen-icons
