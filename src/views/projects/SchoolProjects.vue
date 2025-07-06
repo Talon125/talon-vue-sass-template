@@ -163,8 +163,8 @@ watch(
         <p>
           <img class="inline-icon" src="/icons/dialog-warning.svg" />
           <b class="amber">Caution:</b> Memory Game and Cookie Clicker Pro were
-          only tested to work on 1080p desktop screens (and at 100% scaling. No
-          mobile support).
+          only tested to work on 1920&times;1080 desktop screens (and at 100% scaling. No
+          mobile support)!
         </p>
         <div class="flex">
           <ProjectLink
