@@ -77,14 +77,14 @@ watch(
         </NavigationButton>
         <GlassCard class="aside-card navigation">
           <h1>Navigation</h1>
-          <a :href="`/#${$route.path}?scrollTo=HTL`" @click="scrollToTarget"
+          <a :href="`/#${$route.path}?scrollTo=HTL`" @click="scrollToTarget()"
             ><b>HTL Wien West</b></a
           >
           <ul class="nav-list">
             <li>
               <a
                 :href="`/#${$route.path}?scrollTo=HTL-3`"
-                @click="scrollToTarget"
+                @click="scrollToTarget()"
               >
                 3rd Grade (Cumulative: 11)
               </a>
@@ -92,7 +92,7 @@ watch(
             <li>
               <a
                 :href="`/#${$route.path}?scrollTo=HTL-4`"
-                @click="scrollToTarget"
+                @click="scrollToTarget()"
               >
                 4th Grade (Cumulative: 12)
               </a>
