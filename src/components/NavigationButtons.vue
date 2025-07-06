@@ -10,7 +10,11 @@
       previousPaths.length > 1 && i === previousPaths.length - 1 ? 'end' : '',
       previousPaths.length === 2 ? 'margin-adjust' : ''
     ]"
-    :to="path"
+    :to="
+      queryParams && i === queryIndex
+        ? `${path}${buildQueryParameterString()}`
+        : path
+    "
     target="_self"
   >
     <span class="bottom"></span>
@@ -23,6 +27,17 @@
 
 <script setup lang="ts">
 import { useRouter } from 'vue-router'
+
+interface QueryParams {
+  [key: string]: string | number | boolean
+}
+
+const props = defineProps<{
+  queryIndex?: number
+  // queryParams?: Array<object>
+  // queryParams?: object
+  queryParams?: QueryParams
+}>()
 
 const router = useRouter()
 
@@ -48,6 +63,18 @@ function populatePreviousPathNames() {
   }
 }
 populatePreviousPathNames()
+
+function buildQueryParameterString(): string {
+  if (!props.queryParams) return ''
+
+  let queries = ''
+  for (const prop in props.queryParams) {
+    queries += `&${prop}=${String(props.queryParams[prop])}`
+  }
+  queries = `?${queries.substring(1)}`
+
+  return queries
+}
 </script>
 
 <style lang="scss" scoped>
