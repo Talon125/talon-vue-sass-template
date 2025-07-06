@@ -6,7 +6,7 @@ import GlassCard from '@/components/GlassCard.vue'
 
 <template>
   <main class="container">
-    <NavigationButtons />
+    <NavigationButtons :queryIndex="1" :queryParams="{ scrollTo: 'HTL-4' }" />
     <GlassCard title="Audio Soundtrap"> Coming soon... </GlassCard>
   </main>
 </template>
