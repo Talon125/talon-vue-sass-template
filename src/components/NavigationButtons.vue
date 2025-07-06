@@ -261,4 +261,10 @@ button {
   margin-left: 0;
 }
 /* stylelint-enable no-descending-specificity */
+
+@media (width <= 576px) {
+  .start {
+    margin-left: 1em;
+  }
+}
 </style>
