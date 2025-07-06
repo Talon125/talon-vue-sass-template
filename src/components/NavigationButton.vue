@@ -53,9 +53,11 @@ $corner-roundness: 8px;
   position: relative;
   transition-duration: vars.$transdur-mouseleave;
   border-radius: $corner-roundness;
-  box-shadow: inset 0 0 0 1px hsl(0deg 0% 100% / 25%),
+  box-shadow:
+    inset 0 0 0 1px hsl(0deg 0% 100% / 25%),
     0 0 0 1px hsl(0deg 0% 0% / 75%);
-  background: vars.$reflection-soft, vars.$reflection-weak,
+  background:
+    vars.$reflection-soft, vars.$reflection-weak,
     radial-gradient(
       ellipse 100% 33% at bottom,
       hsl(0deg 0% 100% / 10%),
@@ -140,8 +142,10 @@ button {
     .face {
       transform: translateY(3px);
       transition-duration: vars.$transdur-press;
-      box-shadow: inset 0 0 0 1px hsl(0deg 0% 100% / 25%),
-        0 0 0 1px hsl(0deg 0% 0% / 75%), inset 0 0 12px hsl(0deg 0% 0% / 75%);
+      box-shadow:
+        inset 0 0 0 1px hsl(0deg 0% 100% / 25%),
+        0 0 0 1px hsl(0deg 0% 0% / 75%),
+        inset 0 0 12px hsl(0deg 0% 0% / 75%);
       color: hsl(0deg 0% 100% / 50%);
       filter: brightness(0.75);
 

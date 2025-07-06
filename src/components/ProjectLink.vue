@@ -25,13 +25,16 @@ defineProps({
 
 .root {
   margin-top: 0;
-  box-shadow: inset 0 0 0 1px hsl(0deg 0% 100% / 25%),
+  box-shadow:
+    inset 0 0 0 1px hsl(0deg 0% 100% / 25%),
     0 0 0 1px hsl(0deg 0% 0% / 50%);
 }
 
 :deep(img) {
   border-radius: 4px;
-  box-shadow: 0 0 0 1px hsl(0deg 0% 0% / 75%), 0 0 0 2px hsl(0deg 0% 100% / 25%);
+  box-shadow:
+    0 0 0 1px hsl(0deg 0% 0% / 75%),
+    0 0 0 2px hsl(0deg 0% 100% / 25%);
   width: 100%;
 }
 
