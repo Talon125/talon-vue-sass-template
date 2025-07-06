@@ -38,7 +38,7 @@ const SCHOOLS = [
 
 const route = useRoute()
 
-function scrollToTarget() {
+function scrollToTarget(timeout: number = 0) {
   const scrollToId = route.query.scrollTo as string | undefined
   if (scrollToId) {
     setTimeout(() => {
@@ -52,11 +52,13 @@ function scrollToTarget() {
         window.scrollTo({ top: y, behavior: 'smooth' })
         // window.scrollTo({ top: y })
       }
-    }, 0)
+    }, timeout)
   }
 }
 
-onMounted(scrollToTarget)
+onMounted(() => {
+  scrollToTarget(100)
+})
 
 watch(
   () => route.fullPath,
