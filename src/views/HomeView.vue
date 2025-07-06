@@ -78,6 +78,10 @@ onMounted(() => {
         :spaceRight="true"
       />
       <GlassCard title="About Me" noCenter>
+        <!--
+          ToDo: Use different font for ♂ and &leftarrow;
+                Also add Fire Code
+        -->
         Talon, {{ myAge }}, ♂ (he/him)
         <p>
           Born in Florida, but live in Austria<br />
