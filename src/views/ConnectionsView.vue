@@ -343,7 +343,7 @@ import CopyToClipboard from '@/components/CopyToClipboard.vue'
 .card-group-two {
   display: flex;
   flex-wrap: wrap;
-  gap: 32px;
+  gap: 2em;
 
   > * {
     flex: 1;
@@ -353,8 +353,13 @@ import CopyToClipboard from '@/components/CopyToClipboard.vue'
     }
   }
 
+  @media (width <= 768px) {
+    gap: 0;
+  }
+
   @media (width <= 576px) {
     flex-direction: column;
+    gap: 2em;
     margin-top: 2em;
   }
 }
