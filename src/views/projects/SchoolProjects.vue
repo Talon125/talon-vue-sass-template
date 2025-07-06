@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { onMounted, watch } from 'vue'
 import { useRoute } from 'vue-router'
-import NavigationButton1 from '@/components/NavigationButton1.vue'
+import NavigationButton from '@/components/NavigationButton.vue'
 import AccordionSingle from '@/components/AccordionSingle.vue'
 import ProjectLink from '@/components/ProjectLink.vue'
 import PushButton from '@/components/PushButton.vue'
@@ -70,9 +70,9 @@ watch(
   <div class="container flex">
     <aside class="sticky flex">
       <div class="main-aside">
-        <NavigationButton1 to="/projects">
+        <NavigationButton to="/projects">
           &leftarrow;&ensp;Back to Projects
-        </NavigationButton1>
+        </NavigationButton>
         <GlassCard class="aside-card navigation">
           <h1>Navigation</h1>
           <a :href="`/#${$route.path}?scrollTo=HTL`" @click="scrollToTarget"
@@ -216,7 +216,7 @@ watch(
             </p>
             The camera I used (borrowed from school) was a <b>Nikon D300S</b>.
             <div class="text-center">
-              <PushButton :stay-here="true" :to="`${$route.path}/htl/4/photo`">
+              <PushButton :stay-here="true" :to="`${$route.path}/htl4_photo`">
                 View
               </PushButton>
             </div>
@@ -235,7 +235,7 @@ watch(
               turning planets into donuts.
             </p>
             <div class="text-center">
-              <PushButton :stay-here="true" :to="`${$route.path}/htl/4/3d`">
+              <PushButton :stay-here="true" :to="`${$route.path}/htl4_3d`">
                 View
               </PushButton>
             </div>
@@ -252,7 +252,7 @@ watch(
               lot better.
             </p>
             <div class="text-center">
-              <PushButton :stay-here="true" :to="`${$route.path}/htl/4/video`">
+              <PushButton :stay-here="true" :to="`${$route.path}/htl4_video`">
                 View
               </PushButton>
             </div>
@@ -270,7 +270,10 @@ watch(
               >. I made 3 in total, I think they're okay.
             </p>
             <div class="text-center">
-              <PushButton :stay-here="true" :to="`${$route.path}/htl/4/video`">
+              <PushButton
+                :stay-here="true"
+                :to="`${$route.path}/htl4_audio-soundtrap`"
+              >
                 View
               </PushButton>
             </div>
@@ -289,7 +292,10 @@ watch(
               hence the name "Hey Vsauce, Random here"
             </p>
             <div class="text-center">
-              <PushButton :stay-here="true" :to="`${$route.path}/htl/4/video`">
+              <PushButton
+                :stay-here="true"
+                :to="`${$route.path}/htl4_audio-synchro`"
+              >
                 View
               </PushButton>
             </div>

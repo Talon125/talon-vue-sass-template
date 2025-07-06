@@ -1,17 +1,53 @@
 <template>
-  <RouterLink :to="to" target="_self" class="router-link">
+  <RouterLink
+    v-for="(path, i) of previousPaths"
+    :key="i"
+    :class="[
+      previousPaths.length > 1 && i !== 0 && i !== previousPaths.length - 1
+        ? 'middle'
+        : '',
+      previousPaths.length > 1 && i === 0 ? 'start' : '',
+      previousPaths.length > 1 && i === previousPaths.length - 1 ? 'end' : '',
+      previousPaths.length === 2 ? 'margin-adjust' : ''
+    ]"
+    :to="path"
+    target="_self"
+  >
     <span class="bottom"></span>
     <span class="side"></span>
     <span class="face">
-      <slot></slot>
+      &leftarrow;&ensp;Back to {{ previousPathsNames[i] }}
     </span>
   </RouterLink>
 </template>
 
 <script setup lang="ts">
-defineProps<{
-  to: string
-}>()
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
+
+const currentRouteParts = router.currentRoute.value.path.substring(1).split('/')
+
+const previousPaths: string[] = []
+const previousPathsNames: string[] = []
+
+function populatePreviousPaths() {
+  let path = ''
+  for (let i = 0; i < currentRouteParts.length - 1; i += 1) {
+    const part = currentRouteParts[i]
+    path += `/${part}`
+    previousPaths.push(path)
+  }
+}
+populatePreviousPaths()
+
+function populatePreviousPathNames() {
+  for (const path of previousPaths) {
+    const resolved = router.resolve({ path })
+    previousPathsNames.push(String(resolved.name))
+  }
+}
+populatePreviousPathNames()
 </script>
 
 <style lang="scss" scoped>
@@ -53,11 +89,9 @@ $corner-roundness: 8px;
   position: relative;
   transition-duration: vars.$transdur-mouseleave;
   border-radius: $corner-roundness;
-  box-shadow:
-    inset 0 0 0 1px hsl(0deg 0% 100% / 25%),
+  box-shadow: inset 0 0 0 1px hsl(0deg 0% 100% / 25%),
     0 0 0 1px hsl(0deg 0% 0% / 75%);
-  background:
-    vars.$reflection-soft, vars.$reflection-weak,
+  background: vars.$reflection-soft, vars.$reflection-weak,
     radial-gradient(
       ellipse 100% 33% at bottom,
       hsl(0deg 0% 100% / 10%),
@@ -142,10 +176,8 @@ button {
     .face {
       transform: translateY(3px);
       transition-duration: vars.$transdur-press;
-      box-shadow:
-        inset 0 0 0 1px hsl(0deg 0% 100% / 25%),
-        0 0 0 1px hsl(0deg 0% 0% / 75%),
-        inset 0 0 12px hsl(0deg 0% 0% / 75%);
+      box-shadow: inset 0 0 0 1px hsl(0deg 0% 100% / 25%),
+        0 0 0 1px hsl(0deg 0% 0% / 75%), inset 0 0 12px hsl(0deg 0% 0% / 75%);
       color: hsl(0deg 0% 100% / 50%);
       filter: brightness(0.75);
 
@@ -158,18 +190,44 @@ button {
   }
 }
 
-@media (width <= 576px) {
-  .flex {
-    flex-direction: column;
+/* stylelint-disable no-descending-specificity */
+.start {
+  margin-right: 1px;
+
+  .bottom,
+  .side {
+    border-radius: #{$corner-roundness + 1px} 0 0 #{$corner-roundness + 1px};
   }
 
   .face {
-    text-align: center;
-  }
-
-  a,
-  button {
-    margin-left: 1em;
+    border-radius: #{$corner-roundness} 0 0 #{$corner-roundness};
   }
 }
+
+.middle {
+  .bottom,
+  .side,
+  .face {
+    border-radius: 0;
+  }
+}
+
+.end {
+  margin-left: 1px;
+
+  .bottom,
+  .side {
+    border-radius: 0 #{$corner-roundness + 1px} #{$corner-roundness + 1px} 0;
+  }
+
+  .face {
+    border-radius: 0 #{$corner-roundness} #{$corner-roundness} 0;
+  }
+}
+
+.margin-adjust {
+  margin-right: 1px;
+  margin-left: 0;
+}
+/* stylelint-enable no-descending-specificity */
 </style>

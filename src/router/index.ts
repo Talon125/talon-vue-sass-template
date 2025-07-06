@@ -18,6 +18,31 @@ const routes = [
     component: () => import('../views/projects/SchoolProjects.vue')
   },
   {
+    path: '/projects/school/htl4_photo',
+    name: 'Photography Project',
+    component: () => import('../views/projects/HTL/4/PhotoProject.vue')
+  },
+  {
+    path: '/projects/school/htl4_3d',
+    name: '3D Project',
+    component: () => import('../views/projects/HTL/4/BlenderProject.vue')
+  },
+  {
+    path: '/projects/school/htl4_video',
+    name: 'Video Project',
+    component: () => import('../views/projects/HTL/4/VideoProject.vue')
+  },
+  {
+    path: '/projects/school/htl4_audio-soundtrap',
+    name: 'Audio: Soundtrap',
+    component: () => import('../views/projects/HTL/4/AudioSoundtrapProject.vue')
+  },
+  {
+    path: '/projects/school/htl4_audio-synchro',
+    name: 'Audio: Synchronization',
+    component: () => import('../views/projects/HTL/4/AudioSynchroProject.vue')
+  },
+  {
     path: '/projects/personal',
     name: 'Personal Projects',
     component: () => import('../views/projects/PersonalProjects.vue')

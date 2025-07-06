@@ -1,14 +1,14 @@
 <script setup lang="ts">
-import NavigationButton1 from '@/components/NavigationButton1.vue'
+import NavigationButton from '@/components/NavigationButton.vue'
 import PushButton from '@/components/PushButton.vue'
 import GlassCard from '@/components/GlassCard.vue'
 </script>
 
 <template>
   <main class="container">
-    <NavigationButton1 to="/projects">
+    <NavigationButton to="/projects">
       &leftarrow;&ensp;Back to Projects
-    </NavigationButton1>
+    </NavigationButton>
     <GlassCard class="info-card"> Coming soon... </GlassCard>
   </main>
 </template>
