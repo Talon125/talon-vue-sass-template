@@ -82,7 +82,7 @@ onMounted(() => {
           ToDo: Use different font for ♂ and &leftarrow;
                 Also add Fire Code
         -->
-        Talon, {{ myAge }}, ♂ (he/him)
+        Talon, {{ myAge }}, <span class="symbol">♂</span> (he/him)
         <p>
           Born in Florida, but live in Austria<br />
           Time for me right now: <code class="time">{{ time }}</code>

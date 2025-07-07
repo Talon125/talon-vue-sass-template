@@ -2,6 +2,7 @@ const unsupported = document.getElementById('unsupported')
 unsupported?.remove()
 
 import './assets/base.scss'
+import './assets/fonts.scss'
 import './assets/ark-ui.scss'
 
 import { createApp } from 'vue'

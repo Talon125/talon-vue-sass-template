@@ -117,4 +117,9 @@ main {
     max-width: 1320px;
   }
 }
+
+.symbol {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 1.15em;
+}
 </style>
