@@ -18,11 +18,11 @@ a {
     color: hsl(263deg 64% 75%);
   }
 
-  &:not(.router-link):hover {
+  &:not(.router-link, .stay-pushed):hover {
     filter: brightness(1.2);
   }
 
-  &:not(.router-link):active {
+  &:not(.router-link, .stay-pushed):active {
     filter: brightness(0.8);
   }
 
