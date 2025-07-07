@@ -36,6 +36,12 @@ b {
   color: rgb(153 232 193);
 }
 
+code {
+  text-rendering: optimizelegibility; /* Force ligatures for Webkit, Blink, Gecko */
+  font-family: 'Fira Code', monospace;
+  font-feature-settings: "calt" 1;  /* Enable ligatures for IE 10+, Edge */
+}
+
 hr {
   border: none;
   box-shadow: 0 0 2px hsl(0deg 0% 0% / 50%);
