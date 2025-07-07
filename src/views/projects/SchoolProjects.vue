@@ -169,7 +169,7 @@ watch(
         <div class="flex">
           <ProjectLink
             title="Memory Game"
-            icon_src="/images/thumbnails/Thumbnail_MemoryGame-1080p.png"
+            icon_src="/images/thumbnails/Thumbnail_MemoryGame-1080p.webp"
           >
             <p class="text-justify">
               Match the pairs of numbers by flipping over the right cards. There
@@ -187,7 +187,7 @@ watch(
           </ProjectLink>
           <ProjectLink
             title="Cookie Clicker Pro"
-            icon_src="/images/thumbnails/Thumbnail_CookieClickerPro-1080p.png"
+            icon_src="/images/thumbnails/Thumbnail_CookieClickerPro-1080p.webp"
           >
             <p class="text-justify">
               Click the cookie as many times as you can within 15 seconds. Each
@@ -208,7 +208,7 @@ watch(
         <div class="flex flex-many">
           <ProjectLink
             title="Water Photo&shy;graphy"
-            icon_src="/images/thumbnails/Thumbnail_WaterPhotography-1080p.png"
+            icon_src="/images/thumbnails/Thumbnail_WaterPhotography-1080p.webp"
           >
             <b>Teacher's grade: 1.2</b>
             <p class="text-justify">
@@ -225,7 +225,7 @@ watch(
           </ProjectLink>
           <ProjectLink
             title="3D (Blender)"
-            icon_src="/images/thumbnails/Thumbnail_Blender-1080p.png"
+            icon_src="/images/thumbnails/Thumbnail_Blender-1080p.webp"
           >
             <b>Teacher's grade: 1-2</b>
             <p class="text-justify">
@@ -244,7 +244,7 @@ watch(
           </ProjectLink>
           <ProjectLink
             title="Video"
-            icon_src="/images/thumbnails/Thumbnail_Video-AnsweringToyLogo.png"
+            icon_src="/images/thumbnails/Thumbnail_Video-AnsweringToyLogo.webp"
           >
             <b>Teacher's grade: 8/10</b>
             <p class="text-justify">
@@ -261,7 +261,7 @@ watch(
           </ProjectLink>
           <ProjectLink
             title="Audio: Soundtrap"
-            icon_src="/images/thumbnails/Thumbnail_Soundtrap-1080p.png"
+            icon_src="/images/thumbnails/Thumbnail_Soundtrap-1080p.webp"
           >
             <b>Teacher's grade: 10/10</b>
             <p class="text-justify">
@@ -282,7 +282,7 @@ watch(
           </ProjectLink>
           <ProjectLink
             title="Audio: Syn&shy;chro&shy;ni&shy;za&shy;tion"
-            icon_src="/images/thumbnails/Thumbnail_Synchro-1080p.png"
+            icon_src="/images/thumbnails/Thumbnail_Synchro-1080p.webp"
           >
             <b>Teacher's grade: 9/10</b>
             <p class="text-justify">
