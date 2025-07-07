@@ -43,14 +43,14 @@ import CopyToClipboard from '@/components/CopyToClipboard.vue'
       </div>
       <div class="text-center space-above">
         I also play Minecraft sometimes. My GamerTag is:
-        <CopyToClipboard string="TalonS125" />
+        <CopyToClipboard width="auto" string="TalonS125" />
       </div>
     </GlassCard>
     <div class="card-group-two">
       <ContactCard title="Discord" src="/icons/Discord.svg">
         I've also got Discord on my phone, so I should be most
         responsive&emsp;:3
-        <CopyToClipboard class="short" string="oktalon" />
+        <CopyToClipboard width="auto" string="oktalon" />
         <div class="text-justify">
           <p>
             <b>Fun Fact:</b>
@@ -65,7 +65,7 @@ import CopyToClipboard from '@/components/CopyToClipboard.vue'
       </ContactCard>
       <ContactCard title="E-Mail" src="/icons/internet-mail.svg">
         Prefer electronic mail? I do check my emails from time to time.
-        <CopyToClipboard class="wide" string="talonszoradi@gmail.com" />
+        <CopyToClipboard width="auto" string="talonszoradi@gmail.com" />
         <p>This is my personal email address, by the way.</p>
 
         It's also my first one. I think I've had it for over a decade now? My
