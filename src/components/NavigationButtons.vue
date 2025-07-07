@@ -257,7 +257,7 @@ button {
 }
 
 .margin-adjust {
-  margin-right: 1px;
+  margin-right: 1.1px;
   margin-left: 0;
 }
 /* stylelint-enable no-descending-specificity */
