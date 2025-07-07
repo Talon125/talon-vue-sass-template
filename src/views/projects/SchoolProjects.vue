@@ -151,9 +151,9 @@ watch(
     </aside>
     <main>
       <GlassCard class="main-card">
-        <h1 id="HTL" class="first-heading">HTL Wien West</h1>
+        <h1 id="HTL" class="no-top-margin">HTL Wien West</h1>
         <h2 id="HTL-3">3rd Grade (Cumulative: 11)</h2>
-        <p class="opening-p text-justify">
+        <p class="no-top-margin text-justify">
           We started learning a bit of JavaScript and were tasked with
           programming a match-the-pairs memory game and a
           <i>Cookie Clicker</i>-like game. My JavaScript and overall web
@@ -376,11 +376,6 @@ watch(
 
 .amber {
   color: orange;
-}
-
-.first-heading,
-.opening-p {
-  margin-top: 0;
 }
 
 .aside-card {

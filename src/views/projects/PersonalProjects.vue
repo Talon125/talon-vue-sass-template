@@ -26,10 +26,6 @@ import GlassCard from '@/components/GlassCard.vue'
   color: orange;
 }
 
-.opening-p {
-  margin-top: 0;
-}
-
 .info-card {
   margin: 1em 0;
 }
