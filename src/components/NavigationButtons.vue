@@ -20,7 +20,7 @@
     <span class="bottom"></span>
     <span class="side"></span>
     <span class="face">
-      &leftarrow;&ensp;Back to {{ previousPathsNames[i] }}
+      <code>&lt;-</code>&ensp;Back to {{ previousPathsNames[i] }}
     </span>
   </RouterLink>
 </template>

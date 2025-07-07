@@ -73,7 +73,7 @@ watch(
     <aside class="sticky flex">
       <div class="main-aside">
         <NavigationButton to="/projects">
-          &leftarrow;&ensp;Back to Projects
+          <code>&lt;-</code>&ensp;Back to Projects
         </NavigationButton>
         <GlassCard class="aside-card navigation">
           <h1>Navigation</h1>
