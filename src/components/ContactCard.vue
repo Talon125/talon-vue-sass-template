@@ -54,12 +54,9 @@ defineProps<{
 .card {
   margin: 2em 0 0;
   border-radius: 4px;
-  box-shadow:
-    inset 0 0 0 1px hsl(0deg 0% 100% / 50%),
-    0 0 0 1px hsl(0deg 0% 0% / 75%),
-    0 0 8px black;
-  background:
-    vars.$reflection-soft,
+  box-shadow: inset 0 0 0 1px hsl(0deg 0% 100% / 50%),
+    0 0 0 1px hsl(0deg 0% 0% / 75%), 0 0 8px black;
+  background: vars.$reflection-soft,
     radial-gradient(
       ellipse 100% 33% at bottom,
       hsl(0deg 0% 100% / 10%),
@@ -86,6 +83,10 @@ defineProps<{
   color: hsl(0deg 0% 100% / 90%);
 }
 
+.no-hyphen {
+  hyphenate-character: '';
+}
+
 @media (width <= 576px) {
   .flex {
     flex-direction: column;
@@ -97,9 +98,9 @@ defineProps<{
   }
 
   #glasscard-title {
-    /* font-size: 3em; */
-    hyphens: manual;
     text-align: center;
+    font-size: 3em;
+    hyphens: manual;
   }
 
   .card {

@@ -266,7 +266,7 @@ import CopyToClipboard from '@/components/CopyToClipboard.vue'
       </ContactCard>
     </div>
     <div class="card-group-two">
-      <ContactCard title="speedrun&shy;.com" src="/icons/speedrun.com.svg">
+      <ContactCard title="speed&shy;run&shy;.com" class="no-hyphen" src="/icons/speedrun.com.svg">
         I kinda only used this once. Playing Tetris Party Deluxe in an emulator.
         Maybe I'll use this again in the future. Probably not, though. I'm not
         too much of a speedrunner lol
