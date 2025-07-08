@@ -34,7 +34,7 @@
         >
           <span class="flex">
             <code class="icon">&DownArrow;</code>
-            <span>Download PNG</span>
+            <span>Download {{ downloadExt.toUpperCase() }}</span>
           </span>
         </PushButton>
       </div>
