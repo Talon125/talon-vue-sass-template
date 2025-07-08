@@ -40,7 +40,7 @@ onMounted(() => {
 <template>
   <main class="container">
     <NavigationButtons :queryIndex="1" :queryParams="{ scrollTo: 'HTL-4' }" />
-    <GlassCard title="Audio Synchronization" :noCenter="true">
+    <GlassCard title="Audio Syn&shy;chro&shy;ni&shy;za&shy;tion" :noCenter="true">
       <h1 class="year-marker">
         HTL 4th Grade (Cumulative: 12) | School year 2022/2023
       </h1>
