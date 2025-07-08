@@ -97,7 +97,7 @@ onBeforeUnmount(() => {
       </div>
     </nav>
     <!-- <div class="websitewide-message severe">!!! Something is broken !!!</div> -->
-    <div class="websitewide-message major">!!! Under Construction !!!</div>
+    <!-- <div class="websitewide-message major">!!! Under Construction !!!</div> -->
     <!-- <div class="websitewide-message minor">!!! will undergo maintenance on !!!</div> -->
     <div
       v-if="isToday(MY_BIRTHDAY) && $route.fullPath !== '/'"
