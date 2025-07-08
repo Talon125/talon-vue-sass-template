@@ -1,15 +1,16 @@
 <template>
   <RouterLink
-    v-if="to"
+    v-bind="$attrs"
+    v-if="to && !href"
     :to="to"
     :target="stayHere ? '_self' : '_blank'"
     :class="`
-      ${disabled ? 'disabled' : ''}
-      ${defaultButton ? 'default' : ''}
-      ${stayHere ? 'stay-pushed' : ''}
-      ${color ? 'colored' : ''}
-      ${color ? color : ''}
-    `"
+        ${disabled ? 'disabled' : ''}
+        ${defaultButton ? 'default' : ''}
+        ${stayHere ? 'stay-pushed' : ''}
+        ${color ? 'colored' : ''}
+        ${color ? color : ''}
+      `"
   >
     <span class="bottom"></span>
     <span class="side"></span>
@@ -21,16 +22,17 @@
     </span>
   </RouterLink>
   <a
-    v-if="href"
+    v-bind="$attrs"
+    v-if="href && !to"
     :href="href"
     :target="stayHere ? '_self' : '_blank'"
     :class="`
-      ${disabled ? 'disabled' : ''}
-      ${defaultButton ? 'default' : ''}
-      ${stayHere ? 'stay-pushed' : ''}
-      ${color ? 'colored' : ''}
-      ${color ? color : ''}
-    `"
+        ${disabled ? 'disabled' : ''}
+        ${defaultButton ? 'default' : ''}
+        ${stayHere ? 'stay-pushed' : ''}
+        ${color ? 'colored' : ''}
+        ${color ? color : ''}
+      `"
   >
     <span class="bottom"></span>
     <span class="side"></span>
@@ -42,12 +44,13 @@
     </span>
   </a>
   <button
+    v-bind="$attrs"
     v-if="!to && !href"
     :disabled="disabled"
     :class="`
-      ${defaultButton ? 'default' : ''}
-      ${color ? color : ''}
-    `"
+        ${defaultButton ? 'default' : ''}
+        ${color ? color : ''}
+      `"
   >
     <span class="bottom"></span>
     <span class="side"></span>
@@ -272,6 +275,10 @@ button {
       }
     }
   }
+}
+
+.red {
+  @include button-colored(0deg);
 }
 
 .green {

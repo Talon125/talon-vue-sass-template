@@ -2,6 +2,7 @@
 import NavigationButtons from '@/components/NavigationButtons.vue'
 // import PushButton from '@/components/PushButton.vue'
 import GlassCard from '@/components/GlassCard.vue'
+import ImageGallery from '@/components/ImageGallery.vue'
 
 const PHOTO_NAMES = [
   'Becken',
@@ -11,8 +12,8 @@ const PHOTO_NAMES = [
   'Enten',
   'FontaeneBaeume',
   'FontaeneBaeumeDunkel',
-  'FontaeneBaeumeLang',
   'FontaeneBaeumeLinsenreflexion',
+  'FontaeneBaeumeLang',
   'FontaeneGras',
   'FontaenePlatscherBlume',
   'FontaenePlatscherEnte',
@@ -44,6 +45,12 @@ function breakIntoWords(s: string): string {
   const words = replaceGermanChars(s).split(/(?=[A-Z])/)
   return words.join(' ')
 }
+
+const IMAGES = PHOTO_NAMES.map(n => ({
+  name: breakIntoWords(n),
+  src: `/images/htl4/water/Szor-${n}.50.webp`,
+  alt: breakIntoWords(n)
+}))
 </script>
 
 <template>
@@ -58,8 +65,6 @@ function breakIntoWords(s: string): string {
       </p>
       <b>By the way:</b> The names of the photos are in German.
     </GlassCard>
-    <GlassCard> Images coming soon... </GlassCard>
+    <ImageGallery :src="IMAGES" :squareImages="true" :perRow="6" :legacyImages="true" downloadExt="jpg" />
   </main>
 </template>
-
-<style scoped lang="scss"></style>

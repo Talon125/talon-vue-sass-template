@@ -2,6 +2,7 @@
 import NavigationButtons from '@/components/NavigationButtons.vue'
 import PushButton from '@/components/PushButton.vue'
 import GlassCard from '@/components/GlassCard.vue'
+import ImageGallery from '@/components/ImageGallery.vue'
 
 const PHOTO_NAMES_19 = [
   'SuzanneCloseupDonut',
@@ -13,19 +14,26 @@ const PHOTO_NAMES_19 = [
 const PHOTO_NAMES_20 = ['Overview1', 'Overview2', 'SuzanneDonutChocolate']
 
 function breakIntoWords(s: string): string {
-  const words = replaceGermanChars(s).split(/(?=[A-Z])/)
+  const words = s.split(/(?=[A-Z])/)
   return words.join(' ')
 }
 
 function getCorrectPath(index: number): string {
+  const BASE_PATH = '/images/htl4/blender'
   if (index < PHOTO_NAMES_19.length) {
-    return `/img/blender/Render_20230619-${PHOTO_NAMES_19[index]}.png`
+    return `${BASE_PATH}/Render_20230619-${PHOTO_NAMES_19[index]}.webp`
   } else {
-    return `/img/blender/Render_20230620-${
+    return `${BASE_PATH}/Render_20230620-${
       PHOTO_NAMES_20[index - PHOTO_NAMES_19.length]
-    }.png`
+    }.webp`
   }
 }
+
+const IMAGES = [...PHOTO_NAMES_19, ...PHOTO_NAMES_20].map((n, i) => ({
+  name: breakIntoWords(n),
+  src: getCorrectPath(i),
+  alt: breakIntoWords(n)
+}))
 </script>
 
 <template>
@@ -44,15 +52,12 @@ function getCorrectPath(index: number): string {
       <div class="text-center">
         <PushButton
           color="purple"
-          href="/other/BlenderProject.zip"
-          :stayHere="true"
+          href="https://github.com/Oktalon-Szoradi/oktalon-szoradi.github.io/raw/refs/heads/legacy/other/BlenderProject.zip"
         >
           Download<code>&emsp;BlenderProject.zip</code>
         </PushButton>
       </div>
     </GlassCard>
-    <GlassCard> Images coming soon... </GlassCard>
+    <ImageGallery :src="IMAGES" :perRow="7" :legacyImages="true" />
   </main>
 </template>
-
-<style scoped lang="scss"></style>
