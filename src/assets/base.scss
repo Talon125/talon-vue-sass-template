@@ -39,7 +39,7 @@ b {
 code {
   text-rendering: optimizelegibility; /* Force ligatures for Webkit, Blink, Gecko */
   font-family: 'Fira Code', monospace;
-  font-feature-settings: "calt" 1;  /* Enable ligatures for IE 10+, Edge */
+  font-feature-settings: 'calt' 1; /* Enable ligatures for IE 10+, Edge */
 }
 
 hr {

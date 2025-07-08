@@ -77,7 +77,8 @@ watch(
     <GlassCard class="text-center author-box">
       <span class="symbol">🄯</span> Oktalon Szórádi 2025
       <br />
-      Copyleft (GPLv3) except for my logo. Please do not use my logo without permission.
+      Copyleft (GPLv3) except for my logo. Please do not use my logo without
+      permission.
       <br />
       Other media are
       <a
@@ -788,7 +789,7 @@ h1 {
 .hyphen-list {
   margin: 0;
   padding-left: 1em;
-  list-style-type: "⁃ ";
+  list-style-type: '⁃ ';
 }
 
 td {

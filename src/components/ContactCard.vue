@@ -54,9 +54,12 @@ defineProps<{
 .card {
   margin: 2em 0 0;
   border-radius: 4px;
-  box-shadow: inset 0 0 0 1px hsl(0deg 0% 100% / 50%),
-    0 0 0 1px hsl(0deg 0% 0% / 75%), 0 0 8px black;
-  background: vars.$reflection-soft,
+  box-shadow:
+    inset 0 0 0 1px hsl(0deg 0% 100% / 50%),
+    0 0 0 1px hsl(0deg 0% 0% / 75%),
+    0 0 8px black;
+  background:
+    vars.$reflection-soft,
     radial-gradient(
       ellipse 100% 33% at bottom,
       hsl(0deg 0% 100% / 10%),

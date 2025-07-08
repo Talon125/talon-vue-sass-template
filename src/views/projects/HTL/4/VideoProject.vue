@@ -84,4 +84,3 @@ import VideoHandler from '@/components/VideoHandler.vue'
     </GlassCard>
   </main>
 </template>
-

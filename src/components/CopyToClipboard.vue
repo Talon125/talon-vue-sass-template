@@ -60,9 +60,11 @@ $height: 4.5px;
   /* margin-right: 1px; */
   border: none;
   border-radius: #{$corner-roundness + 1px} 0 0 #{$corner-roundness + 1px};
-  box-shadow: inset 0 0 0 1px hsl(0deg 0% 0% / 75%),
+  box-shadow:
+    inset 0 0 0 1px hsl(0deg 0% 0% / 75%),
     inset 0 0 0 2px hsl(0deg 0% 100% / 25%),
-    inset 1px 1px 8px hsl(0deg 0% 0% / 50%), 0 1px hsl(0deg 0% 100% / 25%);
+    inset 1px 1px 8px hsl(0deg 0% 0% / 50%),
+    0 1px hsl(0deg 0% 100% / 25%);
   background: linear-gradient(to bottom, transparent, hsl(0deg 0% 15% / 50%));
   padding: 0.25em 0.75em;
   height: 25.4px;
@@ -73,10 +75,12 @@ $height: 4.5px;
 
   &:focus-visible {
     outline: none;
-    box-shadow: 0 0 8px 4px hsl(211deg 64% 68%),
+    box-shadow:
+      0 0 8px 4px hsl(211deg 64% 68%),
       inset 0 0 0 1px hsl(0deg 0% 0% / 75%),
       inset 0 0 0 2px hsl(0deg 0% 100% / 50%),
-      inset 1px 1px 8px hsl(0deg 0% 0% / 50%), 0 1px hsl(0deg 0% 100% / 25%);
+      inset 1px 1px 8px hsl(0deg 0% 0% / 50%),
+      0 1px hsl(0deg 0% 100% / 25%);
     background: linear-gradient(
       to bottom,
       hsl(0deg 0% 100% / 10%),
@@ -136,9 +140,11 @@ $height: 4.5px;
   position: relative;
   transition-duration: vars.$transdur-mouseleave;
   border-radius: 0 #{$corner-roundness} #{$corner-roundness} 0;
-  box-shadow: inset 0 0 0 1px hsl(0deg 0% 100% / 25%),
+  box-shadow:
+    inset 0 0 0 1px hsl(0deg 0% 100% / 25%),
     0 0 0 1px hsl(0deg 0% 0% / 75%);
-  background: vars.$reflection-soft, vars.$reflection-weak,
+  background:
+    vars.$reflection-soft, vars.$reflection-weak,
     radial-gradient(
       ellipse 100% 33% at bottom,
       hsl(0deg 0% 100% / 10%),
@@ -215,8 +221,10 @@ button {
     .face {
       transform: translateY(#{$height});
       transition-duration: vars.$transdur-press;
-      box-shadow: inset 0 0 0 1px hsl(0deg 0% 100% / 25%),
-        0 0 0 1px hsl(0deg 0% 0% / 75%), inset 0 0 12px hsl(0deg 0% 0% / 75%);
+      box-shadow:
+        inset 0 0 0 1px hsl(0deg 0% 100% / 25%),
+        0 0 0 1px hsl(0deg 0% 0% / 75%),
+        inset 0 0 12px hsl(0deg 0% 0% / 75%);
       color: hsl(0deg 0% 100% / 50%);
       filter: brightness(0.75);
 
@@ -242,8 +250,10 @@ button {
   .face {
     transform: translateY(#{$height});
     transition-duration: vars.$transdur-press;
-    box-shadow: inset 0 0 0 1px hsl(0deg 0% 100% / 25%),
-      0 0 0 1px hsl(0deg 0% 0% / 75%), inset 0 0 12px hsl(0deg 0% 0% / 75%);
+    box-shadow:
+      inset 0 0 0 1px hsl(0deg 0% 100% / 25%),
+      0 0 0 1px hsl(0deg 0% 0% / 75%),
+      inset 0 0 12px hsl(0deg 0% 0% / 75%);
     color: hsl(0deg 0% 100% / 50%);
   }
 

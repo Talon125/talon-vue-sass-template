@@ -406,9 +406,11 @@ watch(
 
   h1 {
     border-radius: 2px;
-    box-shadow: inset 0 0 0 1px hsl(0deg 0% 100% / 25%),
+    box-shadow:
+      inset 0 0 0 1px hsl(0deg 0% 100% / 25%),
       0 0 0 1px hsl(0deg 0% 0% / 50%);
-    background: vars.$reflection-soft,
+    background:
+      vars.$reflection-soft,
       radial-gradient(
         ellipse 100% 33% at bottom,
         hsl(0deg 0% 100% / 10%),
