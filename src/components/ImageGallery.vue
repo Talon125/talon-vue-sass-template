@@ -2,7 +2,7 @@
   <div>
     <div class="images" :per-row="perRow">
       <GlassCard
-        class="no-top-margin"
+        class="no-top-margin image-card"
         v-for="(img, i) of src"
         :key="i"
         @click="viewImage(img)"
@@ -300,7 +300,7 @@ document.addEventListener('keydown', (event) => {
         transition-duration: vars.$transdur-mouseleave;
         /* background: red; */
         cursor: pointer;
-        padding: 4em 1em;
+        padding: 4em 5vw;
         text-shadow: 0 2px 8px hsl(0deg 0% 0% / 100%);
         color: hsl(0deg 0% 80%);
         font-size: 5em;
@@ -341,6 +341,7 @@ document.addEventListener('keydown', (event) => {
     :deep(a),
     :deep(button) {
       position: absolute;
+      right: 2em;
 
       .side {
         backdrop-filter: blur(2px);
@@ -349,11 +350,14 @@ document.addEventListener('keydown', (event) => {
       .icon {
         font-size: 2em;
       }
+
+      @media (width <= 576px) {
+        right: 1em;
+      }
     }
 
     :deep(.close) {
       top: 1em;
-      right: 2em;
 
       .bottom,
       .side,
@@ -370,7 +374,6 @@ document.addEventListener('keydown', (event) => {
     }
 
     :deep(.download) {
-      right: 2em;
       bottom: 2em;
 
       .bottom,
@@ -423,6 +426,17 @@ document.addEventListener('keydown', (event) => {
     h1 {
       margin: 0 0 0.5em;
     }
+  }
+}
+
+@media (width <= 576px) {
+  [per-row='6'],
+  [per-row='7'] {
+    --image-size: 9em;
+  }
+
+  .image-card {
+    margin: 0;
   }
 }
 </style>
