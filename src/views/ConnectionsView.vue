@@ -388,7 +388,7 @@ import CopyToClipboard from '@/components/CopyToClipboard.vue'
 .github {
   margin-top: 1em;
 
-  a {
+  :deep(a) {
     margin-top: 1em;
   }
 }
