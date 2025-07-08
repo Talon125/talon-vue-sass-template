@@ -53,7 +53,7 @@ onBeforeUnmount(() => {
           <a
             title="Return to the homepage"
             href="/"
-            class="brand"
+            class="brand stay-pushed"
             :class="showTouchMenu ? 'brand-adjust' : ''"
           ></a>
           <div class="separator"></div>
@@ -310,6 +310,7 @@ nav {
       color: hsl(0deg 0% 85%);
     }
 
+    &:not(.where-am-i, .router-link-active):focus,
     &:not(.where-am-i, .router-link-active):active {
       text-shadow:
         vars.$textshadow-dimensions-nav hsl(0deg 0% 0% / 50%),
@@ -521,6 +522,7 @@ nav {
     color: hsl(0deg 0% 85%);
   }
 
+  &:focus,
   &:active {
     background-position: left -115.5px;
     text-shadow:
