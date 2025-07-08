@@ -40,7 +40,7 @@ const routes = [
   },
   {
     path: '/projects/school/htl4_audio-synchro',
-    name: 'Audio: Synchronization',
+    name: 'Audio: Syncing',
     component: () => import('../views/projects/HTL/4/AudioSynchroProject.vue')
   },
   {
