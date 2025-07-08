@@ -169,7 +169,7 @@ watch(
           only tested to work on 1920&times;1080 desktop screens (and at 100%
           scaling. No mobile support)!
         </p>
-        <div class="flex">
+        <div class="flex flex-many">
           <ProjectLink
             title="Memory Game"
             icon_src="/images/thumbnails/Thumbnail_MemoryGame-1080p.webp"
@@ -534,6 +534,7 @@ watch(
   .flex-many {
     > * {
       display: block;
+      margin: 0;
       width: auto;
     }
   }

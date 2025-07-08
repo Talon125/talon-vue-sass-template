@@ -263,6 +263,14 @@ td {
     gap: 0;
   }
 
+  .flex-many {
+    > * {
+      display: block;
+      margin: 0;
+      width: auto;
+    }
+  }
+
   .area-with-side-nav {
     flex-direction: column;
 
