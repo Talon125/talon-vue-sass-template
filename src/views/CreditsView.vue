@@ -1,7 +1,9 @@
 <script setup lang="ts">
 import { onMounted, watch } from 'vue'
 import { useRoute } from 'vue-router'
+import AbbreviationMobile from '@/components/AbbreviationMobile.vue'
 import GlassCard from '@/components/GlassCard.vue'
+import AccordionSingle from '@/components/AccordionSingle.vue'
 
 const FONT_LOCATIONS_OXYGEN = [
   '/fonts/Oxygen/OFL.txt',
@@ -160,6 +162,53 @@ watch(
               @click="scrollToTarget()"
               ><b>Oxygen Icons</b></a
             >
+            <a
+              :href="`/#${$route.path}?scrollTo=Frameworks`"
+              @click="scrollToTarget()"
+              ><b>Technologies / Frameworks</b></a
+            >
+            <ul class="nav-list">
+              <li>
+                <a
+                  :href="`/#${$route.path}?scrollTo=AudioVisualizations`"
+                  @click="scrollToTarget()"
+                >
+                  Audio Visualizations
+                </a>
+              </li>
+              <li>
+                <a
+                  :href="`/#${$route.path}?scrollTo=ArkUI`"
+                  @click="scrollToTarget()"
+                >
+                  ArkUI
+                </a>
+              </li>
+              <li>
+                <a
+                  :href="`/#${$route.path}?scrollTo=Pinia`"
+                  @click="scrollToTarget()"
+                >
+                  Pinia
+                </a>
+              </li>
+              <li>
+                <a
+                  :href="`/#${$route.path}?scrollTo=Vue`"
+                  @click="scrollToTarget()"
+                >
+                  Vue
+                </a>
+              </li>
+              <li>
+                <a
+                  :href="`/#${$route.path}?scrollTo=VueRouter`"
+                  @click="scrollToTarget()"
+                >
+                  Vue Router
+                </a>
+              </li>
+            </ul>
           </GlassCard>
         </div>
         <div class="separator"></div>
@@ -258,10 +307,369 @@ watch(
           </a>
         </GlassCard>
         <GlassCard id="OxygenIcons" title="Oxygen Icons" noCenter>
-          Some of the icons I use are from here:<br />
-          <a href="https://github.com/KDE/oxygen-icons" target="_blank">
-            https://github.com/KDE/oxygen-icons
-          </a>
+          Some of the icons I use are from here:
+          <p>
+            <a href="https://github.com/KDE/oxygen-icons" target="_blank">
+              https://github.com/KDE/oxygen-icons
+            </a>
+          </p>
+          <hr />
+          <AccordionSingle class="accordion" title="License (LGPL)">
+            <hr />
+            <div class="left-right-padding text-justify">
+              <h3>The Oxygen Icon Theme</h3>
+              <p>
+                Copyright (C) 2007 Nuno Pinheiro
+                &lt;nuno@oxygen-icons.org&gt;<br />
+                Copyright (C) 2007 David Vignoni &lt;david@icon-king.com&gt;<br />
+                Copyright (C) 2007 David Miller
+                &lt;miller@oxygen-icons.org&gt;<br />
+                Copyright (C) 2007 Johann Ollivier Lapeyre
+                &lt;johann@oxygen-icons.org&gt;<br />
+                Copyright (C) 2007 Kenneth Wimer &lt;kwwii@bootsplash.org&gt;<br />
+                Copyright (C) 2007 Riccardo Iaconelli
+                &lt;riccardo@oxygen-icons.org&gt;
+              </p>
+              <p>and others</p>
+              <p>
+                This library is free software; you can redistribute it and/or
+                modify it under the terms of the GNU Lesser General Public
+                License as published by the Free Software Foundation; either
+                version 3 of the License, or (at your option) any later version.
+              </p>
+              <p>
+                This library is distributed in the hope that it will be useful,
+                but WITHOUT ANY WARRANTY; without even the implied warranty of
+                MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+                Lesser General Public License for more details.
+              </p>
+              <p>
+                You should have received a copy of the GNU Lesser General Public
+                License along with this library. If not, see &lt;<a
+                  href="http://www.gnu.org/licenses/"
+                  target="_blank"
+                  >http://www.gnu.org/licenses/</a
+                >&gt;.
+              </p>
+              <h4>Clarification:</h4>
+              <p>
+                The GNU Lesser General Public License or LGPL is written for
+                software libraries in the first place. We expressly want the
+                LGPL to be valid for this artwork library too.
+              </p>
+              <p>
+                KDE Oxygen theme icons is a special kind of software library, it
+                is an artwork library, it's elements can be used in a Graphical
+                User Interface, or GUI.
+              </p>
+              <p class="no-bottom-margin">
+                Source code, for this library means:
+              </p>
+              <ul class="hyphen-list">
+                <li>where they exist, SVG;</li>
+                <li>
+                  otherwise, if applicable, the multi-layered formats xcf or
+                  psd, or otherwise png.
+                </li>
+              </ul>
+              <p>
+                The LGPL in some sections obliges you to make the files carry
+                notices. With images this is in some cases impossible or hardly
+                useful.
+              </p>
+              <p>
+                With this library a notice is placed at a prominent place in the
+                directory containing the elements. You may follow this practice.
+              </p>
+              <p>
+                The exception in section 5 of the GNU Lesser General Public
+                License covers the use of elements of this art library in a GUI.
+              </p>
+              <p>kde-artists [at] kde.org</p>
+            </div>
+          </AccordionSingle>
+          <hr class="no-bottom-margin" />
+        </GlassCard>
+        <GlassCard id="Frameworks" title="Tech&shy;nologies / Frame&shy;works">
+          <!-- #region AudioVisualizations -->
+          <h1 id="AudioVisualizations" class="no-top-margin">
+            Audio Vis&shy;u&shy;al&shy;iza&shy;tions
+          </h1>
+          <p>
+            When there's audio on a page (e.g. 4th grade HTL Soundtrap page), I
+            like to use this.
+          </p>
+          <ul>
+            <li>by Stas Kobzar:</li>
+            <li>
+              <a
+                href="https://www.npmjs.com/package/vue-audio-visual"
+                target="_blank"
+              >
+                https://www.npmjs.com/package/vue-audio-visual
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://github.com/staskobzar/vue-audio-visual"
+                target="_blank"
+              >
+                https://github.com/staskobzar/vue-audio-visual
+              </a>
+            </li>
+          </ul>
+          <hr />
+          <AccordionSingle class="accordion" title="License (MIT)">
+            <hr />
+            <div class="left-right-padding text-justify">
+              <p>The MIT License (MIT)</p>
+              <p>Copyright (c) 2018-present, Stas Kobzar</p>
+              <p>
+                Permission is hereby granted, free of charge, to any person
+                obtaining a copy of this software and associated documentation
+                files (the "Software"), to deal in the Software without
+                restriction, including without limitation the rights to use,
+                copy, modify, merge, publish, distribute, sublicense, and/or
+                sell copies of the Software, and to permit persons to whom the
+                Software is furnished to do so, subject to the following
+                conditions:
+              </p>
+              <p>
+                The above copyright notice and this permission notice shall be
+                included in all copies or substantial portions of the Software.
+              </p>
+              <p>
+                THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+                EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+                OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+                NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+                HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+                WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+                FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+                OTHER DEALINGS IN THE SOFTWARE.
+              </p>
+            </div>
+          </AccordionSingle>
+          <hr />
+          <!-- #endregion -->
+          <!-- #region ArkUI -->
+          <h1 id="ArkUI">Ark UI</h1>
+          <p>
+            I'm using this for some components (e.g. Accordion, Clipboard,
+            Popover)
+          </p>
+          <ul>
+            <li>
+              <a href="https://ark-ui.com/" target="_blank">
+                https://ark-ui.com/
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/chakra-ui/ark" target="_blank">
+                https://github.com/chakra-ui/ark
+              </a>
+            </li>
+          </ul>
+          <hr />
+          <AccordionSingle class="accordion" title="License (MIT)">
+            <hr />
+            <div class="left-right-padding text-justify">
+              <p>MIT License</p>
+              <p>Copyright (c) 2024 Chakra UI</p>
+              <p>
+                Permission is hereby granted, free of charge, to any person
+                obtaining a copy of this software and associated documentation
+                files (the "Software"), to deal in the Software without
+                restriction, including without limitation the rights to use,
+                copy, modify, merge, publish, distribute, sublicense, and/or
+                sell copies of the Software, and to permit persons to whom the
+                Software is furnished to do so, subject to the following
+                conditions:
+              </p>
+              <p>
+                The above copyright notice and this permission notice shall be
+                included in all copies or substantial portions of the Software.
+              </p>
+              <p>
+                THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+                EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+                OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+                NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+                HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+                WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+                FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+                OTHER DEALINGS IN THE SOFTWARE.
+              </p>
+            </div>
+          </AccordionSingle>
+          <hr />
+          <!-- #endregion -->
+          <!-- #region Pinia -->
+          <h1 id="Pinia">Pinia</h1>
+          <p>
+            Not really used much here. One store is to check the GitHub repo
+            branch <code>gh-pages</code> for the date of the last commit ("Site
+            last updated on" in Home)
+          </p>
+          <ul>
+            <li>
+              <a href="https://pinia.vuejs.org/" target="_blank">
+                https://pinia.vuejs.org/
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/vuejs/pinia" target="_blank">
+                https://github.com/vuejs/pinia
+              </a>
+            </li>
+          </ul>
+          <hr />
+          <AccordionSingle class="accordion" title="License (MIT)">
+            <hr />
+            <div class="left-right-padding text-justify">
+              <p>The MIT License (MIT)</p>
+              <p>Copyright (c) 2018-present, Stas Kobzar</p>
+              <p>
+                Permission is hereby granted, free of charge, to any person
+                obtaining a copy of this software and associated documentation
+                files (the "Software"), to deal in the Software without
+                restriction, including without limitation the rights to use,
+                copy, modify, merge, publish, distribute, sublicense, and/or
+                sell copies of the Software, and to permit persons to whom the
+                Software is furnished to do so, subject to the following
+                conditions:
+              </p>
+              <p>
+                The above copyright notice and this permission notice shall be
+                included in all copies or substantial portions of the Software.
+              </p>
+              <p>
+                THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+                EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+                OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+                NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+                HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+                WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+                FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+                OTHER DEALINGS IN THE SOFTWARE.
+              </p>
+            </div>
+          </AccordionSingle>
+          <hr />
+          <!-- #endregion -->
+          <!-- #region Vue -->
+          <h1 id="Vue">Vue.js</h1>
+          <p>
+            This is the JavaScript framework I learned at school/HTL and what
+            this website is using now! I like it&emsp;:3
+          </p>
+          <ul>
+            <li>
+              <a href="https://vuejs.org/" target="_blank">
+                https://vuejs.org/
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/vuejs/core" target="_blank">
+                https://github.com/vuejs/core
+              </a>
+            </li>
+          </ul>
+          <hr />
+          <AccordionSingle class="accordion" title="License (MIT)">
+            <hr />
+            <div class="left-right-padding text-justify">
+              <p>The MIT License (MIT)</p>
+              <p>
+                Copyright (c) 2018-present, Yuxi (Evan) You and Vue contributors
+              </p>
+              <p>
+                Permission is hereby granted, free of charge, to any person
+                obtaining a copy of this software and associated documentation
+                files (the "Software"), to deal in the Software without
+                restriction, including without limitation the rights to use,
+                copy, modify, merge, publish, distribute, sublicense, and/or
+                sell copies of the Software, and to permit persons to whom the
+                Software is furnished to do so, subject to the following
+                conditions:
+              </p>
+              <p>
+                The above copyright notice and this permission notice shall be
+                included in all copies or substantial portions of the Software.
+              </p>
+              <p>
+                THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+                EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+                OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+                NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+                HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+                WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+                FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+                OTHER DEALINGS IN THE SOFTWARE.
+              </p>
+            </div>
+          </AccordionSingle>
+          <hr />
+          <!-- #endregion -->
+          <!-- #region VueRouter -->
+          <h1 id="VueRouter">Vue Router</h1>
+          <p>This is what I use for page navigation.</p>
+          <p>
+            Also, it would be nice to have clean paths, but because this is kind
+            of a Single-Page-Application (just 1 index.html, then a whole bunch
+            of JavaScript), I need to use "Hash Routing". So, there's a silly #
+            in the path all the time. It's important too. Apparently Hash
+            Routing is bad for
+            <AbbreviationMobile title="Search Engine Optimization"
+              >SEO</AbbreviationMobile
+            >, but I don't care about that lol
+          </p>
+          <ul>
+            <li>
+              <a href="https://router.vuejs.org/" target="_blank">
+                https://router.vuejs.org/
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/vuejs/router" target="_blank">
+                https://github.com/vuejs/router
+              </a>
+            </li>
+          </ul>
+          <hr />
+          <AccordionSingle class="accordion" title="License (MIT)">
+            <hr />
+            <div class="left-right-padding text-justify">
+              <p>The MIT License (MIT)</p>
+              <p>Copyright (c) 2019-present Eduardo San Martin Morote</p>
+              <p>
+                Permission is hereby granted, free of charge, to any person
+                obtaining a copy of this software and associated documentation
+                files (the "Software"), to deal in the Software without
+                restriction, including without limitation the rights to use,
+                copy, modify, merge, publish, distribute, sublicense, and/or
+                sell copies of the Software, and to permit persons to whom the
+                Software is furnished to do so, subject to the following
+                conditions:
+              </p>
+              <p>
+                The above copyright notice and this permission notice shall be
+                included in all copies or substantial portions of the Software.
+              </p>
+              <p>
+                THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+                EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+                OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+                NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+                HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+                WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+                FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+                OTHER DEALINGS IN THE SOFTWARE.
+              </p>
+            </div>
+          </AccordionSingle>
+          <hr />
+          <!-- #endregion -->
         </GlassCard>
       </main>
     </div>
@@ -272,6 +680,16 @@ watch(
 .color-code-98a1e5 {
   color: #98a1e5;
   font-size: 1rem;
+}
+
+.accordion {
+  :deep([data-part='item-trigger']) {
+    padding: 0.5em 0.75em;
+  }
+
+  .left-right-padding {
+    padding: 0 1.25em;
+  }
 }
 
 .top-margin {
@@ -304,6 +722,11 @@ watch(
 
 h1 {
   margin: 1em 0 0.5em;
+  background: linear-gradient(
+    to right,
+    hsl(263deg 64% 28% / 25%),
+    hsl(263deg 64% 28% / 5%)
+  );
   color: hsl(0deg 0% 100% / 75%);
 
   &::after {
@@ -327,6 +750,7 @@ h1 {
 
   h1 {
     margin: -0.67em 0 0;
+    background: none;
     text-align: center;
     text-shadow: none;
     color: hsl(0deg 0% 100% / 25%);
@@ -361,14 +785,24 @@ h1 {
   }
 }
 
+.hyphen-list {
+  margin: 0;
+  padding-left: 1em;
+  list-style-type: "⁃ ";
+}
+
 td {
   padding: 0 0.5em;
   vertical-align: top;
 }
 
+hr {
+  opacity: 0.5;
+  margin: 0;
+}
+
 .divider-row {
   hr {
-    opacity: 0.25;
     margin: 0 0 0.333em;
   }
 }
@@ -411,7 +845,7 @@ td {
   .flex {
     gap: 0;
   }
-  
+
   .area-with-side-nav {
     flex-direction: column;
 
