@@ -1,9 +1,14 @@
 <script setup lang="ts">
 import { RouterView } from 'vue-router'
+import { isNextViewLoading } from '@/stores/loadingHandler'
 import WebsiteNavigationBar from '@/components/WebsiteNavigationBar.vue'
+import LoadingCircle from '@/components/LoadingCircle.vue'
 </script>
 
 <template>
+  <div id="status" v-if="isNextViewLoading">
+    <LoadingCircle :size="256" />
+  </div>
   <WebsiteNavigationBar />
 
   <!-- <div id="page-name">{{ String($route.name).toLowerCase() }}</div> -->
@@ -15,6 +20,20 @@ import WebsiteNavigationBar from '@/components/WebsiteNavigationBar.vue'
 
 <style lang="scss">
 @use '@/assets/util';
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
 
 #page-name {
   position: fixed;
@@ -50,8 +69,7 @@ import WebsiteNavigationBar from '@/components/WebsiteNavigationBar.vue'
       ); */
   /* background-attachment: fixed; */
   /* background-clip: border-box; */
-  background-image:
-    linear-gradient(
+  background-image: linear-gradient(
       190deg,
       rgb(7 142 112 / 50%),
       rgb(38 207 170 / 50%),
@@ -85,6 +103,29 @@ import WebsiteNavigationBar from '@/components/WebsiteNavigationBar.vue'
   width: 100vw;
   height: 100vh;
   /* height: 100%; */
+}
+
+#status {
+  display: block;
+  position: fixed;
+  top: calc(50vh - 256px);
+  z-index: 30;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    hsl(0deg 0% 0% / 75%),
+    transparent
+  );
+  width: 100%;
+  height: 512px;
+  animation: fade-in 1s;
+
+  > * {
+    position: fixed;
+    right: calc(50vw - 128px);
+    bottom: calc(50vh - 128px);
+    opacity: 0.9;
+  }
 }
 
 main {

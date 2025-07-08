@@ -7,7 +7,7 @@ import ImageHandler from '@/components/ImageHandler.vue'
 import { REPOSITORY_LINK, MY_BIRTHDAY } from '@/assets/constants'
 import { getAge, isToday } from '@/assets/util'
 import { ref, onMounted } from 'vue'
-import { useBranchLastUpdatedStore } from '@/stores/talonStore'
+import { useBranchLastUpdatedStore } from '@/stores/branchLastUpdatedStore'
 
 const myAge = getAge(MY_BIRTHDAY)
 
