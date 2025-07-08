@@ -150,9 +150,9 @@ watch(
       <div class="separator"></div>
     </aside>
     <main>
-      <GlassCard class="main-card">
-        <h1 id="HTL" class="no-top-margin">HTL Wien West</h1>
-        <h2 id="HTL-3">3rd Grade (Cumulative: 11)</h2>
+      <GlassCard id="HTL" title="HTL Wien West" class="main-card">
+        <!-- <h1 id="HTL" class="no-top-margin">HTL Wien West</h1> -->
+        <h2 id="HTL-3" class="no-top-margin">3rd Grade (Cumulative: 11)</h2>
         <p class="no-top-margin">
           <b>School year 2021/2022</b>
         </p>
