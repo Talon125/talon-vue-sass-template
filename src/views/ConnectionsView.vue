@@ -38,7 +38,7 @@ import CopyToClipboard from '@/components/CopyToClipboard.vue'
         />
         <ContactQuick
           src="/icons/TETR.IO.svg"
-          href="https://steamcommunity.com/id/Talon_S/"
+          href="https://ch.tetr.io/u/talon"
         />
       </div>
       <div class="text-center space-above">
