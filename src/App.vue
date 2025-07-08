@@ -163,4 +163,17 @@ main {
   font-family: 'Source Sans 3', sans-serif;
   font-size: 1.15em;
 }
+
+.year-marker {
+  margin: -2em 0 0.75em;
+  text-align: end;
+  text-shadow: none;
+  color: hsl(0deg 0% 100% / 50%);
+  font-size: 1.5em;
+  font-weight: lighter;
+
+  @media (width <= 1400px) {
+    margin: 0 0 0.75em;
+  }
+}
 </style>
