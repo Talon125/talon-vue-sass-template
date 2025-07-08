@@ -51,6 +51,7 @@ import GlassCard from '@/components/GlassCard.vue'
         The font I used in this video is called
         <a
           href="https://learn.microsoft.com/en-us/typography/font-list/mv-boli"
+          target="_blank"
         >
           MV Boli </a
         >. It's a font that comes with Windows.
@@ -58,17 +59,21 @@ import GlassCard from '@/components/GlassCard.vue'
       <p><b>Links:</b></p>
       <ul>
         <li>
-          <a href="https://shotcut.com/">Shotcut</a>
+          <a href="https://shotcut.com/" target="_blank">Shotcut</a>
           — a free, open source, cross-platform video editor
         </li>
         <li>
           <a
             href="https://pixabay.com/music/corporate-upbeat-inspiration-106838/"
+            target="_blank"
           >
             Upbeat Inspiration | Royalty-free Music - Pixabay
           </a>
           — the music I used in this video. Found it here:
-          <a href="https://pixabay.com/music/search/infomercial/">
+          <a
+            href="https://pixabay.com/music/search/infomercial/"
+            target="_blank"
+          >
             https://pixabay.com/music/search/infomercial/
           </a>
         </li>

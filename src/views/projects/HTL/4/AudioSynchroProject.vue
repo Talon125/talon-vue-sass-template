@@ -78,27 +78,27 @@ onMounted(() => {
       </p>
       <p>
         Healthy Station is the name of a nearby small restaurant:<br />
-        <a href="https://www.healthy-station.at/"
+        <a href="https://www.healthy-station.at/" target="_blank"
           >https://www.healthy-station.at/</a
         >
       </p>
       <p><b>Links:</b></p>
       <ul>
         <li>
-          <a href="https://www.youtube.com/watch?v=QDCcuCHOIyY">
+          <a href="https://www.youtube.com/watch?v=QDCcuCHOIyY" target="_blank">
             The Power of Suggestion by Vsauce (Mind Field S2E6)
           </a>
           — the original video
         </li>
         <li>
-          <a href="https://vocalremover.org/"
+          <a href="https://vocalremover.org/" target="_blank"
             >Vocal Remover and Isolation [AI]</a
           >
           — free online AI tool I used to "extract" the music from the original
           video
         </li>
         <li>
-          <a href="https://podcast.adobe.com/enhance">
+          <a href="https://podcast.adobe.com/enhance" target="_blank">
             Enhance Speech from Adobe | Free AI filter for cleaning up spoken
             audio
           </a>
@@ -107,23 +107,24 @@ onMounted(() => {
         <li>
           <a
             href="https://www.zoom.co.jp/sites/default/files/products/downloads/pdfs/E_H4nSP_0.pdf"
+            target="_blank"
           >
             H4n - E_H4nSP_0.pdf
           </a>
           — the manual for the microphone used
         </li>
         <li>
-          <a href="https://shotcut.com/">Shotcut</a>
+          <a href="https://shotcut.com/" target="_blank">Shotcut</a>
           — a free, open source, cross-platform video editor
         </li>
         <li>
-          <a href="https://www.youtube.com/watch?v=g_UMoi_EVqg"
+          <a href="https://www.youtube.com/watch?v=g_UMoi_EVqg" target="_blank"
             >Jake Chudnow - "Atlas" (Theme from Mind Field)</a
           >
           — outro theme of this video
         </li>
         <li>
-          <a href="https://www.dafont.com/alsina.font"
+          <a href="https://www.dafont.com/alsina.font" target="_blank"
             >Alsina Font | dafont.com</a
           >
           — font I used for the outro text. Same as the one Vsauce uses
