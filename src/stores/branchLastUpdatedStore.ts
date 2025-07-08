@@ -1,11 +1,8 @@
 import { defineStore } from 'pinia'
 import { ref } from 'vue'
 
-// ToDo: Change before going live!
-// const REPOSITORY = 'Oktalon-Szoradi/oktalon-szoradi.github.io'
-// const BRANCH = 'gh-pages'
-const REPOSITORY = 'Talon125/talon-vue-sass-template'
-const BRANCH = 'ark-ui'
+const REPOSITORY = 'Oktalon-Szoradi/oktalon-szoradi.github.io'
+const BRANCH = 'gh-pages'
 
 export const useBranchLastUpdatedStore = defineStore(
   'branchLastUpdated',
