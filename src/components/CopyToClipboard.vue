@@ -43,6 +43,7 @@ preload.src = '/icons/dialog-ok-apply.svg'
 @use '../assets/variables.scss' as vars;
 
 $corner-roundness: 8px;
+$height: 4.5px;
 
 [data-part='root'] {
   margin-top: 8px;
@@ -55,7 +56,7 @@ $corner-roundness: 8px;
 }
 
 [data-part='input'] {
-  transform: translateY(4px);
+  transform: translateY(#{$height});
   /* margin-right: 1px; */
   border: none;
   border-radius: #{$corner-roundness + 1px} 0 0 #{$corner-roundness + 1px};
@@ -64,7 +65,7 @@ $corner-roundness: 8px;
     inset 1px 1px 8px hsl(0deg 0% 0% / 50%), 0 1px hsl(0deg 0% 100% / 25%);
   background: linear-gradient(to bottom, transparent, hsl(0deg 0% 15% / 50%));
   padding: 0.25em 0.75em;
-  height: 26px;
+  height: 25.4px;
   text-shadow: 0 2px 2px hsl(0deg 0% 0% / 25%);
   color: hsl(0deg 0% 100% / 90%);
   font-family: 'Fira Code', monospace;
@@ -104,7 +105,8 @@ $corner-roundness: 8px;
 .bottom,
 .side,
 .face {
-  padding: 0.25em 0.75em;
+  padding: 4px 0.75em;
+  /* padding: 0.25em 0.75em; */
 }
 
 .bottom,
@@ -113,7 +115,7 @@ $corner-roundness: 8px;
   position: absolute;
   top: -4px;
   left: -1px;
-  transform: translateY(4px);
+  transform: translateY(#{$height});
   transition-duration: vars.$transdur-mouseleave;
   border: none;
   border-radius: 0 #{$corner-roundness + 1px} #{$corner-roundness + 1px} 0;
@@ -211,7 +213,7 @@ button {
     }
 
     .face {
-      transform: translateY(4px);
+      transform: translateY(#{$height});
       transition-duration: vars.$transdur-press;
       box-shadow: inset 0 0 0 1px hsl(0deg 0% 100% / 25%),
         0 0 0 1px hsl(0deg 0% 0% / 75%), inset 0 0 12px hsl(0deg 0% 0% / 75%);
@@ -238,7 +240,7 @@ button {
   }
 
   .face {
-    transform: translateY(4px);
+    transform: translateY(#{$height});
     transition-duration: vars.$transdur-press;
     box-shadow: inset 0 0 0 1px hsl(0deg 0% 100% / 25%),
       0 0 0 1px hsl(0deg 0% 0% / 75%), inset 0 0 12px hsl(0deg 0% 0% / 75%);
