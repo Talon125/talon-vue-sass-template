@@ -61,7 +61,7 @@ function handleLoad() {
   align-items: center;
 
   :deep(audio) {
-    width: 67%;
+    width: 100%;
   }
 }
 </style>
