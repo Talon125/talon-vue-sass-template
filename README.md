@@ -1,18 +1,12 @@
-# Vue + Sass "Template"
+# MOVED
 
-> Work in progress!
+This branch is where I worked to create my new website.
 
-This repository contains a Vue project showcasing Vue **components** I've made. 
-This is meant to act like a **style framework**, almost. The components' design 
-are insired by **skeuomorphism** and "Web 2.0 Gloss" or "Frutiger Aero". E.g. 
-Aero, found in Windows Vista and 7. Mainly that era of design; between the late 
-2000s and early 2010s.
+As of
+2025-07-08 13:28 UTC+2
+this repository is out of date.
 
-This will ultimately be used **for my website**
-([oktalon-szoradi.github.io](oktalon-szoradi.github.io)), as I'm planning to
-switch to Vue and would like the styles to be made using Sass and linted with
-Stylelint.
+All further work is being done at
+<https://github.com/Oktalon-Szoradi/oktalon-szoradi.github.io/tree/main>
 
-**Having performance issues in Firefox?**  
-Make sure software rendering isn't activated by going to `about:config` and
-setting `gfx.webrender.software` to `false`.
+You may check out the commit history to see the, well, history of my work!
