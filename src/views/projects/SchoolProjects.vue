@@ -556,15 +556,3 @@ watch(
   }
 }
 </style>
-
-<style lang="scss">
-.year-marker {
-  margin: -2em 0 0.75em;
-  text-align: end;
-  text-shadow: none;
-  color: hsl(0deg 0% 100% / 50%);
-  font-size: 1.5em;
-  font-weight: lighter;
-}
-</style>
-
