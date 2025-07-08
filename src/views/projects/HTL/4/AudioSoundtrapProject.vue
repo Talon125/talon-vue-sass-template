@@ -7,7 +7,12 @@ import GlassCard from '@/components/GlassCard.vue'
 <template>
   <main class="container">
     <NavigationButtons :queryIndex="1" :queryParams="{ scrollTo: 'HTL-4' }" />
-    <GlassCard title="Audio Soundtrap"> Coming soon... </GlassCard>
+    <GlassCard title="Audio Soundtrap" :noCenter="true">
+      <h1 class="year-marker">
+        HTL 4th Grade (Cumulative: 12) | School year 2022/2023
+      </h1>
+      Coming soon...
+    </GlassCard>
   </main>
 </template>
 

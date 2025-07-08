@@ -40,6 +40,9 @@ const IMAGES = [...PHOTO_NAMES_19, ...PHOTO_NAMES_20].map((n, i) => ({
   <main class="container">
     <NavigationButtons :queryIndex="1" :queryParams="{ scrollTo: 'HTL-4' }" />
     <GlassCard title="3D (Blender)" :noCenter="true">
+      <h1 class="year-marker">
+        HTL 4th Grade (Cumulative: 12) | School year 2022/2023
+      </h1>
       <b>Teacher's grade: 1-2 </b>
       <p>
         Ah, the 3D modeling software. The theme was space, but at the time I

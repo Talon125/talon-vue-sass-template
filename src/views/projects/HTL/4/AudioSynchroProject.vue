@@ -2,6 +2,7 @@
 import { onMounted, ref, nextTick } from 'vue'
 import NavigationButtons from '@/components/NavigationButtons.vue'
 import GlassCard from '@/components/GlassCard.vue'
+import VideoHandler from '@/components/VideoHandler.vue'
 
 const tableTransEdit = ref<HTMLTableElement | null>(null)
 const tableTransOrig = ref<HTMLTableElement | null>(null)
@@ -39,8 +40,11 @@ onMounted(() => {
 <template>
   <main class="container">
     <NavigationButtons :queryIndex="1" :queryParams="{ scrollTo: 'HTL-4' }" />
-    <GlassCard title="Audio Synchronization">
-      <div>VideoHandler</div>
+    <GlassCard title="Audio Synchronization" :noCenter="true">
+      <h1 class="year-marker">
+        HTL 4th Grade (Cumulative: 12) | School year 2022/2023
+      </h1>
+      <VideoHandler src="/videos/Szoradi_HeyVSauceRandomHere.mp4" />
       <h1>Hey Vsauce, Random Here</h1>
       <p><b>Teacher's grade: 9/10</b></p>
       <p>

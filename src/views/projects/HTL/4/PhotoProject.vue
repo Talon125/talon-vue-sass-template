@@ -46,7 +46,7 @@ function breakIntoWords(s: string): string {
   return words.join(' ')
 }
 
-const IMAGES = PHOTO_NAMES.map(n => ({
+const IMAGES = PHOTO_NAMES.map((n) => ({
   name: breakIntoWords(n),
   src: `/images/htl4/water/Szor-${n}.50.webp`,
   alt: breakIntoWords(n)
@@ -57,6 +57,9 @@ const IMAGES = PHOTO_NAMES.map(n => ({
   <main class="container">
     <NavigationButtons :queryIndex="1" :queryParams="{ scrollTo: 'HTL-4' }" />
     <GlassCard title="Kurpark Oberlaa" :noCenter="true">
+      <h1 class="year-marker">
+        HTL 4th Grade (Cumulative: 12) | School year 2022/2023
+      </h1>
       <b>Teacher's grade: 1.2 </b>
       <p>
         I actually took a total of 108 photos! But here are the best 30 (edited,
@@ -65,6 +68,12 @@ const IMAGES = PHOTO_NAMES.map(n => ({
       </p>
       <b>By the way:</b> The names of the photos are in German.
     </GlassCard>
-    <ImageGallery :src="IMAGES" :squareImages="true" :perRow="6" :legacyImages="true" downloadExt="jpg" />
+    <ImageGallery
+      :src="IMAGES"
+      :squareImages="true"
+      :perRow="6"
+      :legacyImages="true"
+      downloadExt="jpg"
+    />
   </main>
 </template>

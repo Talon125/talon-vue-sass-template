@@ -153,7 +153,10 @@ watch(
       <GlassCard class="main-card">
         <h1 id="HTL" class="no-top-margin">HTL Wien West</h1>
         <h2 id="HTL-3">3rd Grade (Cumulative: 11)</h2>
-        <p class="no-top-margin text-justify">
+        <p class="no-top-margin">
+          <b>School year 2021/2022</b>
+        </p>
+        <p class="text-justify">
           We started learning a bit of JavaScript and were tasked with
           programming a match-the-pairs memory game and a
           <i>Cookie Clicker</i>-like game. My JavaScript and overall web
@@ -163,8 +166,8 @@ watch(
         <p>
           <img class="inline-icon" src="/icons/dialog-warning.svg" />
           <b class="amber">Caution:</b> Memory Game and Cookie Clicker Pro were
-          only tested to work on 1920&times;1080 desktop screens (and at 100% scaling. No
-          mobile support)!
+          only tested to work on 1920&times;1080 desktop screens (and at 100%
+          scaling. No mobile support)!
         </p>
         <div class="flex">
           <ProjectLink
@@ -205,6 +208,9 @@ watch(
           </ProjectLink>
         </div>
         <h2 id="HTL-4">4th Grade (Cumulative: 12)</h2>
+        <p class="no-top-margin">
+          <b>School year 2022/2023</b>
+        </p>
         <div class="flex flex-many">
           <ProjectLink
             title="Water Photo&shy;graphy"
@@ -400,11 +406,9 @@ watch(
 
   h1 {
     border-radius: 2px;
-    box-shadow:
-      inset 0 0 0 1px hsl(0deg 0% 100% / 25%),
+    box-shadow: inset 0 0 0 1px hsl(0deg 0% 100% / 25%),
       0 0 0 1px hsl(0deg 0% 0% / 50%);
-    background:
-      vars.$reflection-soft,
+    background: vars.$reflection-soft,
       radial-gradient(
         ellipse 100% 33% at bottom,
         hsl(0deg 0% 100% / 10%),
@@ -552,3 +556,15 @@ watch(
   }
 }
 </style>
+
+<style lang="scss">
+.year-marker {
+  margin: -2em 0 0.75em;
+  text-align: end;
+  text-shadow: none;
+  color: hsl(0deg 0% 100% / 50%);
+  font-size: 1.5em;
+  font-weight: lighter;
+}
+</style>
+

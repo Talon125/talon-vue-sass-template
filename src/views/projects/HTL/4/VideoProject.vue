@@ -1,14 +1,17 @@
 <script setup lang="ts">
 import NavigationButtons from '@/components/NavigationButtons.vue'
-// import PushButton from '@/components/PushButton.vue'
 import GlassCard from '@/components/GlassCard.vue'
+import VideoHandler from '@/components/VideoHandler.vue'
 </script>
 
 <template>
   <main class="container">
     <NavigationButtons :queryIndex="1" :queryParams="{ scrollTo: 'HTL-4' }" />
-    <GlassCard title="Video Project">
-      <div>VideoHandler</div>
+    <GlassCard title="Video Project" :noCenter="true">
+      <h1 class="year-marker">
+        HTL 4th Grade (Cumulative: 12) | School year 2022/2023
+      </h1>
+      <VideoHandler src="/videos/AnsweringToy.mp4" />
       <h1>Answering Toy</h1>
       <p><b>Teacher's grade: 8/10</b></p>
       <p>
@@ -81,3 +84,4 @@ import GlassCard from '@/components/GlassCard.vue'
     </GlassCard>
   </main>
 </template>
+
