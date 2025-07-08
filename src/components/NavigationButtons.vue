@@ -1,29 +1,31 @@
 <template>
-  <RouterLink
-    v-for="(path, i) of previousPaths"
-    :key="i"
-    :class="[
-      previousPaths.length > 1 && i !== 0 && i !== previousPaths.length - 1
-        ? 'middle'
-        : '',
-      previousPaths.length > 1 && i === 0 ? 'start' : '',
-      previousPaths.length > 1 && i === previousPaths.length - 1 ? 'end' : '',
-      previousPaths.length === 2 ? 'margin-adjust' : ''
-    ]"
-    :to="
-      queryParams && i === queryIndex
-        ? `${path}${buildQueryParameterString()}`
-        : path
-    "
-    target="_self"
-  >
-    <span class="bottom"></span>
-    <span class="side"></span>
-    <span class="face">
-      <code>&lt;-</code>&ensp;Back to {{ previousPathsNames[i] }}
-    </span>
-  </RouterLink>
-  <span class="extraneous-text"><slot /></span>
+  <div class="root">
+    <RouterLink
+      v-for="(path, i) of previousPaths"
+      :key="i"
+      :class="[
+        previousPaths.length > 1 && i !== 0 && i !== previousPaths.length - 1
+          ? 'middle'
+          : '',
+        previousPaths.length > 1 && i === 0 ? 'start' : '',
+        previousPaths.length > 1 && i === previousPaths.length - 1 ? 'end' : '',
+        previousPaths.length === 2 ? 'margin-adjust' : ''
+      ]"
+      :to="
+        queryParams && i === queryIndex
+          ? `${path}${buildQueryParameterString()}`
+          : path
+      "
+      target="_self"
+    >
+      <span class="bottom"></span>
+      <span class="side"></span>
+      <span class="face">
+        <code>&lt;-</code>&ensp;Back to {{ previousPathsNames[i] }}
+      </span>
+    </RouterLink>
+    <!-- <span class="extraneous-text"><slot /></span> -->
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -264,7 +266,7 @@ button {
 /* stylelint-enable no-descending-specificity */
 
 @media (width <= 576px) {
-  .start {
+  .root {
     margin-left: 1em;
   }
 }
