@@ -74,7 +74,7 @@ onMounted(() => {
     <div class="flex intro-flex">
       <ImageHandler
         class="pfp"
-        src="/images/Coins_FrameAero_MLM_Large.png"
+        src="/images/Coins_FrameAero_MLM_Large.webp"
         :spaceRight="true"
       />
       <GlassCard title="About Me" noCenter>
@@ -177,8 +177,9 @@ onMounted(() => {
   margin-top: 2em;
 
   :deep(.pfp) {
+    margin-top: -8px;
     margin-right: 2em;
-    height: 205.8px;
+    height: 256px;
   }
 
   div {
