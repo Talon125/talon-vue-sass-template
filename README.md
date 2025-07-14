@@ -1,5 +1,6 @@
 # Vue + Sass "Template"
 
+> [!WARNING]
 > Development paused/stalled
 
 This was originally gonna be just components that I can then use for my website.
